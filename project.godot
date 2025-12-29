@@ -14,6 +14,10 @@ config/name="Tower Defense Basic"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://scripts/Global.cs"
+
 [dotnet]
 
 project/assembly_name="Tower Defense Basic"
