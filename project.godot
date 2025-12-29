@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Tower Defense Basic"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://crrcee4co5cwp"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/Global.cs"
 
 [dotnet]
 

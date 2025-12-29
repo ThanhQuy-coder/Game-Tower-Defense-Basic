@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca0wcj4feyhui"]
+
+[ext_resource type="Script" uid="uid://ctmroqls3ijcv" path="res://scenes/ui/hud.cs" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://dmj2p5mqv13o5" path="res://scenes/ui/HudContainer.cs" id="2_hqnrr"]
+
+[node name="hud" type="CanvasLayer"]
+script = ExtResource("1_0mwgc")
+
+[node name="HUDContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 100.0
+script = ExtResource("2_hqnrr")
+
+[node name="GoldLabel" type="Label" parent="HUDContainer"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 123.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Tiền: 100"
+
+[node name="HealthLabel" type="Label" parent="HUDContainer"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(1, 0.26666668, 0.26666668, 1)
+theme_override_font_sizes/font_size = 24
+text = "Máu: 10"
