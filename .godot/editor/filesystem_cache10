@@ -1,7 +1,25 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1766265372
+::res://::1766976281
 icon.svg::CompressedTexture2D::9092180206798670574::1766265344::1766265374::1::::<><><>0<>0<>859c2873d3aa55db0b711de1d02d1ab3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1765783432::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1766395236::0::1::::<><><>0<>0<><>::
+::res://assets/::1766979234
+::res://assets/audio/::1766980692
+Pixel 4.ogg::AudioStreamOggVorbis::6016419292374283840::1678871648::1766980694::1::::<><><>0<>0<>fca27b42e72c684a0fb7ce97dc5fe22a<>res://.godot/imported/Pixel 4.ogg-6b3c1e4100ef2e8ead118154af914fa4.oggvorbisstr::
+::res://assets/images/::1766979240
+Kiet.png::CompressedTexture2D::5115589799081485833::1766979238::1766979240::1::::<><><>0<>0<>8e6ce3a18df642a978466dc0cda8bc21<>res://.godot/imported/Kiet.png-0f14107fc68b7e64ad58a545a25fca9c.ctex::
+::res://assets/sprites/::1766398077
+::res://assets/tilesets/::1766967832
+tileset1.png::CompressedTexture2D::4024036795686991748::1744156903::1766915764::1::::<><><>0<>0<>e03c0263f6044131f585d1aa7ea3d3a3<>res://.godot/imported/tileset1.png-a6bc1116f3758d976341faaa82531ca5.ctex::
+world_tileset.png::CompressedTexture2D::8652222745762791660::1709899936::1766915764::1::::<><><>0<>0<>8b23b104472d502e38cd3fab7e0f101c<>res://.godot/imported/world_tileset.png-a558ce5668feb977163096060c4516db.ctex::
 ::res://diagrams/::1765780422
 ::res://docs/::1765880221
 ::res://docs/meeting/::1765857208
+::res://scenes/::1766398077
+::res://scenes/actors/::1766979674
+TempEnemy.tscn::PackedScene::3525859990892434446::1766979674::0::1::::<><><>0<>0<><>::uid://ce5batgg7s3cf::::res://assets/images/Kiet.png
+::res://scenes/levels/::1766979673
+level_1.tscn::PackedScene::8084334480006183560::1766979673::0::1::::<><><>0<>0<><>::uid://bxljkeu0s3kq3::::res://assets/tilesets/tileset1.png<>uid://dvjg3yi5w1kgi::::res://assets/tilesets/world_tileset.png<>uid://bnc65x4x30cvr::::res://scripts/Spawner.cs<>uid://bqh7nte8awb63::::res://scenes/actors/TempEnemy.tscn
+::res://scenes/ui/::1766398077
+::res://scripts/::1766973042
+EnemyPathFollow.cs::CSharpScript::491505998692925477::1766973023::0::1::::<>PathFollow2D<><>0<>0<><>::
+Spawner.cs::CSharpScript::3304941461008348043::1766973042::0::1::::<>Node2D<><>0<>0<><>::
