@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmmayu0guck16"]
+
+[ext_resource type="PackedScene" uid="uid://c6s5o3g5sj05q" path="res://scenes/Tower.tscn" id="1_amxg5"]
+[ext_resource type="PackedScene" uid="uid://c1yagvio5jbg" path="res://scenes/Enemy.tscn" id="2_3263u"]
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="Tower" parent="." instance=ExtResource("1_amxg5")]
+position = Vector2(615, 315)
+
+[node name="Enemy" parent="." instance=ExtResource("2_3263u")]
+position = Vector2(703, 486)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_3263u")]
+position = Vector2(430, 203)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_3263u")]
+position = Vector2(845, 234)
