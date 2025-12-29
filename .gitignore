@@ -3,3 +3,23 @@
 *.import
 *.tmp
 *.log
+# Godot specific
+.godot/
+.import/
+
+# Mono / C#
+.mono/
+.vscode/
+
+# Build
+bin/
+obj/
+.export/
+exports/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
