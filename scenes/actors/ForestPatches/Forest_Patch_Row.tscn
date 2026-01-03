@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://kgokhq1sjo7f"]
+
+[ext_resource type="PackedScene" uid="uid://b7w1kf61pucpp" path="res://scenes/actors/Trees/TreeGreen01.tscn" id="1_qvign"]
+[ext_resource type="PackedScene" uid="uid://cl4qo0iv2rv7m" path="res://scenes/actors/Grass/GrassGreen01.tscn" id="2_t2pki"]
+[ext_resource type="PackedScene" uid="uid://ddwjrempthau6" path="res://scenes/actors/Grass/GrassGreen02.tscn" id="3_wt4k1"]
+
+[node name="Forest_Patch_1" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TreeGreen01" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(-14, 12)
+
+[node name="TreeGreen02" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(6, 13)
+
+[node name="TreeGreen03" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(27, 11)
+
+[node name="TreeGreen04" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(48, 12)
+
+[node name="TreeGreen05" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(68, 11)
+
+[node name="TreeGreen06" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(89, 11)
+
+[node name="TreeGreen07" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(113, 10)
+
+[node name="TreeGreen08" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(132, 10)
+
+[node name="TreeGreen09" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(154, 10)
+
+[node name="TreeGreen10" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(175, 8)
+
+[node name="TreeGreen11" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(197, 10)
+
+[node name="TreeGreen12" parent="." instance=ExtResource("1_qvign")]
+position = Vector2(218, 9)
+
+[node name="GrassGreen01" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(-15, 30)
+
+[node name="GrassGreen02" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(5, 31)
+
+[node name="GrassGreen03" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(88, 29)
+
+[node name="GrassGreen06" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(174, 26)
+
+[node name="GrassGreen04" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(47, 30)
+
+[node name="GrassGreen05" parent="." instance=ExtResource("2_t2pki")]
+position = Vector2(112, 28)
+
+[node name="GrassGreen07" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(25, 28)
+
+[node name="GrassGreen08" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(66, 28)
+
+[node name="GrassGreen09" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(130, 27)
+
+[node name="GrassGreen10" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(152, 27)
+
+[node name="GrassGreen11" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(195, 27)
+
+[node name="GrassGreen12" parent="." instance=ExtResource("3_wt4k1")]
+position = Vector2(216, 26)

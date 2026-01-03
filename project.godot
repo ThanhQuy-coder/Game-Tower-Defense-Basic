@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Tower Defense Basic"
+config/name="Tower_Defense_Basic"
+run/main_scene="uid://dngd2p0167bie"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcm123damj1kh"]
+
+[ext_resource type="PackedScene" uid="uid://b7w1kf61pucpp" path="res://scenes/actors/Trees/TreeGreen01.tscn" id="1_ghqxh"]
+
+[node name="Forest_Patch_Column" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TreeGreen01" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-14, 12)
+
+[node name="TreeGreen02" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-15, 29)
+
+[node name="TreeGreen03" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-17, 45)
+
+[node name="TreeGreen04" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-19, 63)
+
+[node name="TreeGreen05" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-5, 57)
+
+[node name="TreeGreen06" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-1, 38)
+
+[node name="TreeGreen07" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(3, 23)
+
+[node name="TreeGreen08" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(6, 8)
+
+[node name="TreeGreen09" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-3, 71)
+
+[node name="TreeGreen10" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(-20, 81)
+
+[node name="TreeGreen11" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(16, 62)
+
+[node name="TreeGreen12" parent="." instance=ExtResource("1_ghqxh")]
+position = Vector2(19, 45)
