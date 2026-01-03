@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ca0wcj4feyhui" path="res://scenes/ui/hud.tscn" id="2_bl13t"]
 
+
 [sub_resource type="CSharpScript" id="CSharpScript_errlg"]
 script/source = "using Godot;
 

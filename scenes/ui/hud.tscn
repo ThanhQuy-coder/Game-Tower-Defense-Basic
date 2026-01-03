@@ -1,34 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://ca0wcj4feyhui"]
+[gd_scene load_steps=2 format=3 uid="uid://ca0wcj4feyhui"]
 
-[ext_resource type="Script" uid="uid://ctmroqls3ijcv" path="res://scenes/ui/hud.cs" id="1_0mwgc"]
-[ext_resource type="Script" uid="uid://dmj2p5mqv13o5" path="res://scenes/ui/HudContainer.cs" id="2_hqnrr"]
+[ext_resource type="Script" uid="uid://dcweq0fudyap2" path="res://scenes/ui/HUD.cs" id="1_0mwgc"]
 
-[node name="hud" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("_lblGold", "_lblHealth", "_lblWave")]
 script = ExtResource("1_0mwgc")
+_lblGold = NodePath("Control/TopBar/HBoxContainer/GoldLabel")
+_lblHealth = NodePath("Control/TopBar/HBoxContainer/HealthLabel")
+_lblWave = NodePath("Control/TopBar/HBoxContainer/WaveLabel")
 
-[node name="HUDContainer" type="Control" parent="."]
-custom_minimum_size = Vector2(0, 100)
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_bottom = 100.0
-script = ExtResource("2_hqnrr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="GoldLabel" type="Label" parent="HUDContainer"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 123.0
-offset_bottom = 54.0
-theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Tiền: 100"
+[node name="TopBar" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+mouse_filter = 2
 
-[node name="HealthLabel" type="Label" parent="HUDContainer"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 60.0
-offset_right = 83.0
-offset_bottom = 83.0
-theme_override_colors/font_color = Color(1, 0.26666668, 0.26666668, 1)
-theme_override_font_sizes/font_size = 24
-text = "Máu: 10"
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TopBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="HealthLabel" type="Label" parent="Control/TopBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.290196, 0.290196, 1)
+theme_override_font_sizes/font_size = 32
+text = "HP: 20"
+vertical_alignment = 1
+
+[node name="GoldLabel" type="Label" parent="Control/TopBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Gold: 100"
+vertical_alignment = 1
+
+[node name="WaveLabel" type="Label" parent="Control/TopBar/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Wave: 1"
+vertical_alignment = 1

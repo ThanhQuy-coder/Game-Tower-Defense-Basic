@@ -1,56 +1,65 @@
 using Godot;
+using System;
 
-public partial class hud : CanvasLayer
+// [Người 3]
+// Script quản lý giao diện HUD. Tách biệt hoàn toàn với logic game.
+// Chỉ cập nhật khi nhận được tín hiệu từ Global.
+#pragma warning disable CA1050 // Declare types in namespaces
+
+public partial class HUD : CanvasLayer
+#pragma warning restore CA1050 // Declare types in namespaces
+
 {
-	// KHÔNG tạo Label mới, chỉ lấy reference từ Scene Tree
-	private Label _goldLabel;
-	private Label _healthLabel;
-	
+	[Export] private Label _lblGold;
+	[Export] private Label _lblHealth;
+	[Export] private Label _lblWave;
+	[Export] private Button _btnPause;
+
 	public override void _Ready()
 	{
-		// TÌM Label CÓ SẴN trong Scene Tree của bạn
-		// Giả sử đường dẫn là: "HUDContainer/GoldLabel" và "HUDContainer/HealthLabel"
-		_goldLabel = GetNode<Label>("HUDContainer/GoldLabel");
-		_healthLabel = GetNode<Label>("HUDContainer/HealthLabel");
-		
-		// HOẶC nếu Label trực tiếp dưới CanvasLayer:
-		// _goldLabel = GetNode<Label>("GoldLabel");
-		
+		// Đăng ký lắng nghe sự kiện từ Global (nếu Global đã sẵn sàng)
 		if (Global.Instance != null)
 		{
-			Global.Instance.GoldChanged += OnGoldChanged;
-			Global.Instance.HealthChanged += OnHealthChanged;
+			Global.Instance.OnGoldChanged += UpdateGold;
+			Global.Instance.OnHealthChanged += UpdateHealth;
+			Global.Instance.OnWaveChanged += UpdateWave;
+			
+			// Khởi tạo giá trị ban đầu
+			UpdateGold(Global.Instance.Gold);
+			UpdateHealth(Global.Instance.Health);
+			UpdateWave(Global.Instance.Wave);
 		}
+	}
+
+	public override void _ExitTree()
+	{
+		// Hủy đăng ký để tránh memory leak
+		if (Global.Instance != null)
+		{
+			Global.Instance.OnGoldChanged -= UpdateGold;
+			Global.Instance.OnHealthChanged -= UpdateHealth;
+			Global.Instance.OnWaveChanged -= UpdateWave;
+		}
+	}
+
+	private void UpdateGold(int gold)
+	{
+		if (_lblGold != null) _lblGold.Text = $"Gold: {gold}";
+	}
+
+	private void UpdateHealth(int health)
+	{
+		if (_lblHealth != null) _lblHealth.Text = $"HP: {health}";
 		
-		UpdateUI();
+		// Hiệu ứng cảnh báo khi máu thấp
+		if (health <= 5 && _lblHealth != null)
+			_lblHealth.Modulate = Colors.Red;
+		else if (_lblHealth != null)
+			_lblHealth.Modulate = Colors.White;
 	}
-	
-	private void UpdateUI()
+
+	private void UpdateWave(int wave)
 	{
-		if (_goldLabel != null && Global.Instance != null)
-			_goldLabel.Text = "Tiền: " + Global.Instance.Gold;
-		if (_healthLabel != null && Global.Instance != null)
-			_healthLabel.Text = "Máu: " + Global.Instance.Health;
-	}
-	
-	private void OnGoldChanged(int newGold)
-	{
-		if (_goldLabel != null)
-			_goldLabel.Text = "Tiền: " + newGold;
-	}
-	
-	private void OnHealthChanged(int newHealth)
-	{
-		if (_healthLabel != null)
-			_healthLabel.Text = "Máu: " + newHealth;
-	}
-	
-	// Cập nhật mỗi frame để chắc chắn
-	public override void _Process(double delta)
-	{
-		if (_goldLabel != null && Global.Instance != null)
-			_goldLabel.Text = "Tiền: " + Global.Instance.Gold;
-		if (_healthLabel != null && Global.Instance != null)
-			_healthLabel.Text = "Máu: " + Global.Instance.Health;
+		if (_lblWave != null) _lblWave.Text = $"Wave: {wave}";
 	}
 }

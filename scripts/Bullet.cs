@@ -1,51 +1,76 @@
 using Godot;
 using System;
 
-// OOP: Bullet chỉ biết bay và gây sát thương. Nó không cần biết ai bắn nó.
+// [Người 1]
+// Bullet logic:
+// 1. Hỗ trợ Homing (đuổi theo mục tiêu) nếu target vẫn còn sống.
+// 2. Nếu target chết, tiếp tục bay thẳng hướng cuối cùng.
+// 3. Tự hủy khi ra khỏi màn hình.
 public partial class Bullet : Area2D
 {
-	[Export]
-	private int speed = 500;
-	
-	[Export]
-	private int damage = 2;
+	[Export] public int Damage = 5;
+	[Export] public float Speed = 600.0f;
+	[Export] public float Lifetime = 3.0f;
+	[Export] public bool IsHoming = true; // Đạn đuổi?
+	[Export] public float SteerForce = 5.0f; // Độ bẻ lái
+
+	private Enemy _target;
+	private Vector2 _velocity;
 
 	public override void _Ready()
 	{
-		// Design Pattern: Observer (lắng nghe sự kiện va chạm)
-		// Kết nối tín hiệu AreaEntered với hàm OnAreaEntered
-		AreaEntered += OnAreaEntered;
+		// Tự hủy sau thời gian Lifetime để tránh lag game
+		GetTree().CreateTimer(Lifetime).Timeout += () => QueueFree();
 		
-		// Kết nối tín hiệu rời màn hình để tự hủy (tránh rác bộ nhớ)
-		var notifier = GetNodeOrNull<VisibleOnScreenNotifier2D>("VisibleOnScreenNotifier2D");
-		if (notifier != null)
-		{
-			notifier.ScreenExited += () => QueueFree();
-		}
+		BodyEntered += OnBodyEntered;
+		AreaEntered += OnAreaEntered;
 	}
 
-	public override void _Process(double delta)
+	public void Setup(Enemy target, float rotation)
 	{
-		// Logic: Bay thẳng theo hướng bên phải (Transform.X) của viên đạn
-		// Người 1 thống nhất: Trục bắn là trục X.
-		Position += Transform.X * speed * (float)delta;
+		_target = target;
+		GlobalRotation = rotation;
+		_velocity = Vector2.Right.Rotated(rotation) * Speed;
 	}
 
-	// Hàm xử lý va chạm
+	public override void _PhysicsProcess(double delta)
+	{
+		if (IsHoming && _target != null && IsInstanceValid(_target))
+		{
+			// Logic tên lửa đuổi (Steering behavior)
+			Vector2 desiredVelocity = (_target.GlobalPosition - GlobalPosition).Normalized() * Speed;
+			Vector2 steering = (desiredVelocity - _velocity) * SteerForce * (float)delta;
+			_velocity += steering;
+			
+			// Giới hạn tốc độ và cập nhật góc quay
+			_velocity = _velocity.Normalized() * Speed;
+			GlobalRotation = _velocity.Angle();
+		}
+
+		GlobalPosition += _velocity * (float)delta;
+	}
+
 	private void OnAreaEntered(Area2D area)
 	{
-		// Kiểm tra xem vật va chạm có phải là kẻ thù không
-		if (area.IsInGroup("enemy"))
+		if (area is Enemy enemy)
 		{
-			// Kiểm tra xem object đó có script Enemy không để gọi hàm TakeDamage
-			// Đây là tính đa hình (Polymorphism) sơ khai: Tương tác với object qua interface/method public
-			if (area is Enemy enemy)
-			{
-				enemy.TakeDamage(damage);
-				
-				// Đạn trúng thì biến mất
-				QueueFree(); 
-			}
+			enemy.TakeDamage(Damage);
+			CreateImpactEffect();
+			QueueFree();
 		}
+	}
+	
+	// Dự phòng nếu Enemy dùng CharacterBody2D
+	private void OnBodyEntered(Node2D body)
+	{
+		if (body is Enemy enemy) // Cần sửa Enemy class để kế thừa đúng nếu dùng Body
+		{
+			// Logic tương tự
+		}
+	}
+
+	private void CreateImpactEffect()
+	{
+		// TODO: Instantiate particle effect
 	}
 }

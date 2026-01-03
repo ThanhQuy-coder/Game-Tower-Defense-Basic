@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc0ocomr0ymt6"]
+[gd_scene load_steps=5 format=3 uid="uid://cc0ocomr0ymt6"]
 
-[ext_resource type="Texture2D" uid="uid://dvjg3yi5w1kgi" path="res://assets/tilesets/world_tileset.png" id="1_vgsc7"]
+[ext_resource type="Script" uid="uid://cg0qj6i8uci3u" path="res://scripts/TowerSlot.cs" id="1_8e83s"]
+[ext_resource type="Texture2D" uid="uid://c8d3u4weuin20" path="res://assets/tilesets/world_tileset.png" id="1_vgsc7"]
+[ext_resource type="PackedScene" uid="uid://c6s5o3g5sj05q" path="res://scenes/actors/Tower.tscn" id="2_2e7s2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcbqt"]
 atlas = ExtResource("1_vgsc7")
 region = Rect2(128.86713, 49.62808, 14.141205, 14.751217)
 
 [node name="TowerSlot" type="Node2D"]
+script = ExtResource("1_8e83s")
+TowerScene = ExtResource("2_2e7s2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_xcbqt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 12.0
+flat = true

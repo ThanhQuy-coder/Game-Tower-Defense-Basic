@@ -1,101 +1,141 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-// Tower logic: Tìm mục tiêu -> Xoay nòng -> Bắn
+// [Người 1]
+// Tower Logic nâng cao:
+// 1. Sử dụng danh sách động để quản lý mục tiêu trong tầm bắn.
+// 2. Hỗ trợ các chế độ bắn: FIRST (đầu tiên), CLOSE (gần nhất), STRONG (máu nhiều nhất).
+// 3. Xoay nòng súng mượt mà (Lerp).
 public partial class Tower : Node2D
 {
-	[Export]
-	private PackedScene bulletScene; // Kéo file Bullet.tscn vào đây trên Inspector
+	public enum TargetMode { First, Close, Strong }
 
-	private List<Node2D> targetsInRange = new List<Node2D>(); // Danh sách quái trong tầm
-	private Node2D currentTarget;
-	private Marker2D muzzle;
-	private Timer reloadTimer;
+	[ExportCategory("Tower Config")]
+	[Export] public float Range = 250.0f;
+	[Export] public float FireRate = 1.0f; // Số viên đạn mỗi giây
+	[Export] public TargetMode CurrentTargetMode = TargetMode.First;
+	[Export] public PackedScene BulletScene;
+	[Export] public float RotationSpeed = 10.0f;
+
+	[ExportCategory("Setup")]
+	[Export] private Marker2D _muzzle; // Vị trí nòng súng
+	[Export] private Sprite2D _turretSprite; // Phần xoay được
+	[Export] private Area2D _rangeArea;
+	[Export] private CollisionShape2D _rangeShape;
+
+	private List<Enemy> _enemiesInRange = new List<Enemy>();
+	private Enemy _currentTarget;
+	private float _fireCooldown = 0.0f;
 
 	public override void _Ready()
 	{
-		muzzle = GetNode<Marker2D>("Muzzle");
-		reloadTimer = GetNode<Timer>("ReloadTimer");
-
-		// Setup Observer cho vùng tầm bắn (Range)
-		var rangeArea = GetNode<Area2D>("Range");
-		rangeArea.AreaEntered += OnEnemyEnterRange;
-		rangeArea.AreaExited += OnEnemyExitRange;
-		
-		// Setup Timer bắn súng
-		reloadTimer.Timeout += OnShootTimerTimeout;
-	}
-
-	public override void _Process(double delta)
-	{
-		UpdateTarget();
-
-		if (currentTarget != null && IsInstanceValid(currentTarget))
+		// Cập nhật bán kính vùng phát hiện địch
+		if (_rangeShape != null && _rangeShape.Shape is CircleShape2D circle)
 		{
-			// OOP: Tower điều khiển việc xoay của chính nó
-			LookAt(currentTarget.GlobalPosition);
+			circle.Radius = Range;
+		}
+
+		// Kết nối tín hiệu Area2D
+		if (_rangeArea != null)
+		{
+			_rangeArea.AreaEntered += OnAreaEntered;
+			_rangeArea.AreaExited += OnAreaExited;
 		}
 	}
 
-	private void OnEnemyEnterRange(Area2D area)
+	public override void _PhysicsProcess(double delta)
 	{
-		if (area.IsInGroup("enemy"))
+		UpdateCooldown((float)delta);
+		SelectTarget();
+
+		if (_currentTarget != null && IsInstanceValid(_currentTarget))
 		{
-			targetsInRange.Add(area);
+			RotateTurret((float)delta);
+			if (_fireCooldown <= 0)
+			{
+				Shoot();
+				_fireCooldown = 1.0f / FireRate;
+			}
 		}
 	}
 
-	private void OnEnemyExitRange(Area2D area)
+	private void UpdateCooldown(float delta)
 	{
-		if (targetsInRange.Contains(area))
+		if (_fireCooldown > 0) _fireCooldown -= delta;
+	}
+
+	// Logic chọn mục tiêu thông minh
+	private void SelectTarget()
+	{
+		// Loại bỏ các mục tiêu đã chết hoặc không hợp lệ khỏi danh sách
+		_enemiesInRange.RemoveAll(e => e == null || !IsInstanceValid(e));
+
+		if (_enemiesInRange.Count == 0)
 		{
-			targetsInRange.Remove(area);
+			_currentTarget = null;
+			return;
+		}
+
+		switch (CurrentTargetMode)
+		{
+			case TargetMode.First:
+				// Giả định con nào có GlobalPosition xa nhất trên đường đi (hoặc đơn giản là vào trước)
+				// Ở đây ta lấy phần tử đầu tiên (vào tầm trước)
+				_currentTarget = _enemiesInRange[0]; 
+				break;
+			
+			case TargetMode.Close:
+				_currentTarget = _enemiesInRange.OrderBy(e => e.GlobalPosition.DistanceSquaredTo(GlobalPosition)).FirstOrDefault();
+				break;
+				
+			case TargetMode.Strong:
+				// Cần thêm thuộc tính MaxHealth vào Enemy để sort, tạm thời lấy First
+				_currentTarget = _enemiesInRange[0];
+				break;
 		}
 	}
 
-	// Logic chọn mục tiêu (Strategy Pattern đơn giản: Chọn con đầu tiên vào list)
-	private void UpdateTarget()
+	private void RotateTurret(float delta)
 	{
-		// Làm sạch list nếu có quái đã chết (null)
-		targetsInRange.RemoveAll(x => x == null || !IsInstanceValid(x));
+		if (_turretSprite == null) return;
 
-		if (targetsInRange.Count > 0)
-		{
-			currentTarget = targetsInRange[0]; // Chọn con đầu tiên
-		}
-		else
-		{
-			currentTarget = null;
-		}
-	}
-
-	// Factory Method (sơ khai): Tạo ra instance của Bullet
-	private void OnShootTimerTimeout()
-	{
-		if (currentTarget != null && IsInstanceValid(currentTarget))
-		{
-			Shoot();
-		}
+		Vector2 direction = (_currentTarget.GlobalPosition - GlobalPosition).Normalized();
+		float targetAngle = direction.Angle();
+		// Xoay mượt mà (Interpolation)
+		float currentAngle = _turretSprite.GlobalRotation;
+		_turretSprite.GlobalRotation = (float)Mathf.LerpAngle(currentAngle, targetAngle, RotationSpeed * delta);
+		// Lưu ý: Sprite cần hướng sang phải (0 độ) mặc định
 	}
 
 	private void Shoot()
 	{
-		if (bulletScene == null)
-		{
-			GD.PrintErr("Chưa gắn Bullet Scene vào Tower!");
-			return;
-		}
+		if (BulletScene == null || _muzzle == null) return;
 
-		// Instantiate đạn
-		var bullet = bulletScene.Instantiate<Area2D>();
-		
-		// Đặt vị trí đạn tại nòng súng (Muzzle)
-		// Lưu ý: Phải thêm vào Root của Scene chính chứ không phải thêm vào Tower
-		// Nếu thêm vào Tower, đạn sẽ xoay theo Tower -> sai vật lý
-		GetTree().Root.AddChild(bullet);
-		
-		bullet.GlobalPosition = muzzle.GlobalPosition;
-		bullet.GlobalRotation = GlobalRotation; // Đạn bay theo hướng súng đang quay
+		var bullet = BulletScene.Instantiate<Bullet>();
+		// Sử dụng Global.Instance để spawn đạn vào root, tránh bị scale/rotate theo tháp
+		if (Global.Instance != null)
+		{
+			Global.Instance.SpawnActor(bullet, _muzzle.GlobalPosition);
+			bullet.Setup(_currentTarget, _turretSprite.GlobalRotation);
+		}
+	}
+
+	// Event Handlers
+	private void OnAreaEntered(Area2D area)
+	{
+		if (area is Enemy enemy)
+		{
+			_enemiesInRange.Add(enemy);
+		}
+	}
+
+	private void OnAreaExited(Area2D area)
+	{
+		if (area is Enemy enemy)
+		{
+			_enemiesInRange.Remove(enemy);
+		}
 	}
 }
