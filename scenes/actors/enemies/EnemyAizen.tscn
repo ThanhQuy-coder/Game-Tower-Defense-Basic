@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf713e66lc7d4"]
+
+[ext_resource type="Script" uid="uid://b1o1cxkmdvnfc" path="res://scripts/enemies/EnemyAizen.cs" id="1_0jmpl"]
+[ext_resource type="Texture2D" uid="uid://brmjg0w1do77y" path="res://assets/sprites/2/U_Death.png" id="2_0jmpl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o48mm"]
+radius = 34.928497
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0jmpl"]
+radius = 25.298222
+
+[node name="EnemyAizen" type="CharacterBody2D"]
+position = Vector2(462, 239)
+collision_layer = 2
+script = ExtResource("1_0jmpl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.875, 0.6352201)
+texture = ExtResource("2_0jmpl")
+hframes = 6
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_o48mm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_0jmpl")

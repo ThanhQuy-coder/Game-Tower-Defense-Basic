@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class HueContainer : Control
+public partial class HudContainer : Control
 {
 	private Label _goldLabel;
 	private Label _healthLabel;

@@ -1,46 +1,72 @@
-using Godot;
+	using Godot;
 
-public partial class main : Node2D
-{
-	public override void _Input(InputEvent @event)
+	public partial class main : Node2D
 	{
-		if (@event is InputEventMouseButton mouse)
+		[Export] public int StartingGold = 200;
+		public int CurrentGold;
+		
+		public override void _Ready()
 		{
-			if (mouse.ButtonIndex == MouseButton.Left && mouse.Pressed)
+			GD.Print("=== MAIN SCENE READY ===");
+			CurrentGold = StartingGold;
+			UpdateGoldDisplay();
+		}
+		
+		private void UpdateGoldDisplay()
+		{
+			// Tìm node hiển thị vàng trong HUD
+			var goldLabel = GetNodeOrNull<Label>("hud/GoldLabel");
+			if (goldLabel != null)
 			{
-				Vector2 mousePos = GetGlobalMousePosition();
-				
-				if (Global.Instance.Gold >= 50)
+				goldLabel.Text = $"Gold: {CurrentGold}";
+			}
+		}
+		
+		public override void _Input(InputEvent @event)
+		{
+			// Chỉ xử lý phím để test
+			if (@event is InputEventKey key && key.Pressed)
+			{
+				// PHÍM G: +100 VÀNG (TEST)
+				if (key.Keycode == Key.G)
 				{
-					// TRỪ VÀNG
-					Global.Instance.Gold -= 50;
-					
-					// Tạo tháp
-					CreateTower(mousePos);
+					CurrentGold += 100;
+					UpdateGoldDisplay();
+					GD.Print($"+100 vàng! Tổng: {CurrentGold}");
+				}
+				
+				// PHÍM T: TEST TẠO TOWER TRỰC TIẾP (bỏ qua TowerSpot)
+				if (key.Keycode == Key.T)
+				{
+					var towerScene = GD.Load<PackedScene>("res://scenes/actors/tower-backup.tscn");
+					if (towerScene != null)
+					{
+						var tower = towerScene.Instantiate<Node2D>();
+						tower.Position = GetGlobalMousePosition();
+						AddChild(tower);
+						GD.Print("✓ Đã tạo tower tại vị trí chuột");
+					}
 				}
 			}
 		}
-	}
-	
-	private void CreateTower(Vector2 position)
-	{
-		// Tạo tháp đơn giản (hoặc load từ scene)
-		Sprite2D tower = new Sprite2D();
-		tower.Texture = GD.Load<Texture2D>("res://icon.svg");
-		tower.Scale = new Vector2(0.4f, 0.4f);
-		tower.Modulate = Colors.Green;
-		tower.Position = position;
-		AddChild(tower);
-	}
-	
-	public override void _UnhandledInput(InputEvent @event)
-	{
-		if (@event is InputEventKey key && key.Pressed)
+		
+		public bool CanAffordTower(int cost)
 		{
-			if (key.Keycode == Key.G)
+			return CurrentGold >= cost;
+		}
+		
+		public void SpendGold(int amount)
+		{
+			if (amount <= CurrentGold)
 			{
-				Global.Instance.Gold += 100;
+				CurrentGold -= amount;
+				UpdateGoldDisplay();
 			}
 		}
+		
+		public void AddGold(int amount)
+		{
+			CurrentGold += amount;
+			UpdateGoldDisplay();
+		}
 	}
-}

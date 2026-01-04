@@ -1,19 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://damlkr6tbyr00"]
+[gd_scene load_steps=5 format=3 uid="uid://damlkr6tbyr00"]
 
-[ext_resource type="Texture2D" uid="uid://cbqn1q62ci4tg" path="res://icon.svg" id="1_ad7e6"]
+[ext_resource type="Script" uid="uid://1ycl3ho5mr4y" path="res://scenes/actors/TowerBackup.cs" id="2_jcnuc"]
+[ext_resource type="PackedScene" uid="uid://btv5dr20c26au" path="res://scenes/actors/Bullet.tscn" id="2_qenff"]
+[ext_resource type="Texture2D" uid="uid://cid2ar6gsn5cf" path="res://assets/sprites/2/S_Run.png" id="3_qenff"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6t4ya"]
-radius = 492.89395
+[sub_resource type="CircleShape2D" id="CircleShape2D_tnonf"]
 
-[node name="Sprite2D" type="Sprite2D"]
-modulate = Color(0, 1, 0, 1)
-position = Vector2(199, 131)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_ad7e6")
+[node name="tower-backup" type="Area2D"]
+script = ExtResource("2_jcnuc")
+bulletScene = ExtResource("2_qenff")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(83.33333, 56.666664)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 2)
+texture = ExtResource("3_qenff")
+hframes = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-73.33334, -46.666656)
-shape = SubResource("CircleShape2D_6t4ya")
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_tnonf")
+
+[node name="Timer" type="Timer" parent="."]
