@@ -1,16 +1,19 @@
-[gd_scene load_steps=22 format=4 uid="uid://dngd2p0167bie"]
+[gd_scene load_steps=25 format=4 uid="uid://dngd2p0167bie"]
 
 [ext_resource type="Texture2D" uid="uid://cnicj3jkgweya" path="res://assets/tilesets/tileset1.png" id="1_ksju7"]
-[ext_resource type="Texture2D" uid="uid://dqmlxslw5rc12" path="res://assets/tilesets/props.png" id="2_6iamk"]
+[ext_resource type="Texture2D" uid="uid://ci2l638pmf7jx" path="res://assets/tilesets/props.png" id="2_6iamk"]
 [ext_resource type="PackedScene" uid="uid://cc0ocomr0ymt6" path="res://scenes/actors/Towers/TowerSlot.tscn" id="2_x42e6"]
 [ext_resource type="PackedScene" uid="uid://2xj3bm8rkmf2" path="res://scenes/actors/Animals/Cow.tscn" id="4_x42e6"]
 [ext_resource type="PackedScene" uid="uid://kgokhq1sjo7f" path="res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn" id="5_6761a"]
-[ext_resource type="Texture2D" uid="uid://ch2a8q3jh751i" path="res://assets/tilesets/tilemap_packed.png" id="5_oc4kc"]
-[ext_resource type="Texture2D" uid="uid://chqdjfbllast7" path="res://assets/tilesets/Yellow_ruins1.png" id="5_s8va5"]
+[ext_resource type="Texture2D" uid="uid://cmojewfbkfn8f" path="res://assets/tilesets/tilemap_packed.png" id="5_oc4kc"]
+[ext_resource type="Texture2D" uid="uid://bjawxj58cmfap" path="res://assets/tilesets/Yellow_ruins1.png" id="5_s8va5"]
 [ext_resource type="PackedScene" uid="uid://bcm123damj1kh" path="res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn" id="6_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://ca0wcj4feyhui" path="res://scenes/ui/hud.tscn" id="9_dga24"]
-[ext_resource type="PackedScene" uid="uid://c1yagvio5jbg" path="res://scenes/actors/Enemy.tscn" id="10_qxy0u"]
-[ext_resource type="Script" uid="uid://bqkytng5y3bcd" path="res://scripts/WaveManager.cs" id="12_dnkej"]
+[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_dnkej"]
+[ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemy/fast_enemy.tscn" id="10_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemy/tank_enemy.tscn" id="11_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemy/soldier_enemy.tscn" id="12_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://lpdhcqfm2dc8" path="res://scenes/actors/Enemy/boss_mahoraga.tscn" id="13_iwr0g"]
+[ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/game_ui.tscn" id="13_wtwp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oc4kc"]
 texture = ExtResource("1_ksju7")
@@ -825,6 +828,7 @@ flip_h = true
 
 [node name="Cow4" parent="Animals" instance=ExtResource("4_x42e6")]
 position = Vector2(60, 117)
+MoveDistance = 30.0
 
 [node name="AnimatedSprite2D" parent="Animals/Cow4" index="0"]
 position = Vector2(-1, -3)
@@ -878,19 +882,14 @@ zoom = Vector2(2, 2)
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_dga24")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-48, -160)
-rotation = 2.0727463
-loop = false
-
-[node name="Enemy" parent="Path2D/PathFollow2D" instance=ExtResource("10_qxy0u")]
-
 [node name="WaveManager" type="Node" parent="." node_paths=PackedStringArray("EnemyPath")]
-script = ExtResource("12_dnkej")
-EnemyScene = ExtResource("10_qxy0u")
+script = ExtResource("9_dnkej")
 EnemyPath = NodePath("../Path2D")
+EnemyPrefabs = Array[PackedScene]([ExtResource("10_mm8aj"), ExtResource("11_mm8aj"), ExtResource("12_mm8aj"), ExtResource("13_iwr0g")])
 
-[node name="HUD" parent="." instance=ExtResource("9_dga24")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameUI" parent="CanvasLayer" instance=ExtResource("13_wtwp4")]
 
 [editable path="Animals/Cow2"]
 [editable path="Animals/Cow4"]

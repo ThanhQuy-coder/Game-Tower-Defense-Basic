@@ -1,13 +1,19 @@
-[gd_scene load_steps=21 format=4 uid="uid://yv0jhod6js5t"]
+[gd_scene load_steps=29 format=4 uid="uid://yv0jhod6js5t"]
 
-[ext_resource type="Texture2D" uid="uid://bxljkeu0s3kq3" path="res://assets/tilesets/tileset1.png" id="1_w6h2s"]
+[ext_resource type="Texture2D" uid="uid://cnicj3jkgweya" path="res://assets/tilesets/tileset1.png" id="1_w6h2s"]
 [ext_resource type="Texture2D" uid="uid://8q5ox2aycd41" path="res://assets/tilesets/tileset.png" id="2_vmkp1"]
 [ext_resource type="Texture2D" uid="uid://c5txtqjls6ky2" path="res://assets/tilesets/Cave_objects_source.png" id="3_5vn0v"]
 [ext_resource type="Texture2D" uid="uid://cmojewfbkfn8f" path="res://assets/tilesets/tilemap_packed.png" id="4_ts8eg"]
 [ext_resource type="Texture2D" uid="uid://dh8th1xkyp1lu" path="res://assets/tilesets/freelavatileset-Sheet.png" id="5_um320"]
 [ext_resource type="Texture2D" uid="uid://br3xk2iey7nqh" path="res://assets/tilesets/Objects_Cemetery.png" id="6_glw47"]
 [ext_resource type="Texture2D" uid="uid://ci2l638pmf7jx" path="res://assets/tilesets/props.png" id="7_4wsov"]
-[ext_resource type="PackedScene" uid="uid://c2ckjyof1bnbv" path="res://scenes/actors/Towers/TowerSlot2.tscn" id="8_ts8eg"]
+[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_fcb7b"]
+[ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemy/soldier_enemy.tscn" id="10_ov8fk"]
+[ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemy/tank_enemy.tscn" id="11_pmra4"]
+[ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemy/fast_enemy.tscn" id="12_1bx01"]
+[ext_resource type="PackedScene" uid="uid://lpdhcqfm2dc8" path="res://scenes/actors/Enemy/boss_mahoraga.tscn" id="13_vq5n0"]
+[ext_resource type="PackedScene" uid="uid://cc0ocomr0ymt6" path="res://scenes/actors/Towers/TowerSlot.tscn" id="14_fcb7b"]
+[ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/game_ui.tscn" id="14_xt2o7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rej77"]
 texture = ExtResource("1_w6h2s")
@@ -3363,6 +3369,18 @@ sources/6 = SubResource("TileSetAtlasSource_vq5n0")
 atlas = ExtResource("7_4wsov")
 region = Rect2(47.18991, 136.33481, 15.861992, 33.46768)
 
+[sub_resource type="Curve2D" id="Curve2D_ts8eg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -68, -122, 0, 0, 0, 0, -206, -125, 0, 0, 0, 0, -207, -36, 0, 0, 0, 0, 68, -27, 0, 0, 0, 0, 67, 60, 0, 0, 0, 0, -183, 60, 0, 0, 0, 0, -184, 158)
+}
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_um320"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, -120, 0, 0, 0, 0, 190, -119, 0, 0, 0, 0, 189, 56, 0, 0, 0, 0, -181, 59, 0, 0, 0, 0, -183, 157)
+}
+point_count = 5
+
 [node name="Level4" type="Node2D"]
 
 [node name="Ground" type="TileMapLayer" parent="."]
@@ -3389,37 +3407,53 @@ texture = SubResource("AtlasTexture_beuva")
 position = Vector2(-137, 139)
 texture = SubResource("AtlasTexture_beuva")
 
-[node name="TowerSlot2" type="Node" parent="."]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ts8eg")
 
-[node name="TowerSlot2" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-106, 101)
+[node name="Path2D2" type="Path2D" parent="."]
+curve = SubResource("Curve2D_um320")
 
-[node name="TowerSlot3" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-9, 102)
+[node name="WaveManager" type="Node" parent="." node_paths=PackedStringArray("EnemyPaths")]
+script = ExtResource("9_fcb7b")
+CurrentLevel = 4
+EnemyPaths = [NodePath("../Path2D"), NodePath("../Path2D2")]
+EnemyPrefabs = Array[PackedScene]([ExtResource("10_ov8fk"), ExtResource("11_pmra4"), ExtResource("12_1bx01"), ExtResource("13_vq5n0")])
 
-[node name="TowerSlot4" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(135, 103)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TowerSlot5" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(134, -8)
+[node name="GameUI" parent="CanvasLayer" instance=ExtResource("14_xt2o7")]
 
-[node name="TowerSlot6" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(135, -56)
+[node name="TowerSlots" type="Node" parent="."]
 
-[node name="TowerSlot7" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(247, -57)
+[node name="TowerSlot" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-265, -104)
 
-[node name="TowerSlot8" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-8, 6)
+[node name="TowerSlot2" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-153, -72)
 
-[node name="TowerSlot9" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-88, 6)
+[node name="TowerSlot3" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(134, -55)
 
-[node name="TowerSlot10" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-169, 5)
+[node name="TowerSlot4" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(247, -55)
 
-[node name="TowerSlot11" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-153, -74)
+[node name="TowerSlot5" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(136, -8)
 
-[node name="TowerSlot12" parent="TowerSlot2" instance=ExtResource("8_ts8eg")]
-position = Vector2(-265, -105)
+[node name="TowerSlot6" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(134, 104)
+
+[node name="TowerSlot7" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-9, 105)
+
+[node name="TowerSlot8" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-9, 8)
+
+[node name="TowerSlot9" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-89, 7)
+
+[node name="TowerSlot10" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-170, 7)
+
+[node name="TowerSlot11" parent="TowerSlots" instance=ExtResource("14_fcb7b")]
+position = Vector2(-106, 105)

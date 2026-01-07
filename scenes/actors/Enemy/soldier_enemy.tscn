@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwp8mgcd0q8sq"]
+
+[ext_resource type="Script" path="res://scripts/Enemy/SoldierEnemy.cs" id="1_logic"]
+[ext_resource type="Texture2D" uid="uid://26a5i4i11df0" path="res://assets/tilesets/S_Run.png" id="1_68jy3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_seafw"]
+radius = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.18, 0.18, 0.18, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fill"]
+bg_color = Color(0.91, 0.18, 0.18, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="SoldierEnemy" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_logic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_seafw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("1_68jy3")
+region_enabled = true
+region_rect = Rect2(23.5, 5, 64, 76)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -16.0
+offset_top = -28.0
+offset_right = 16.0
+offset_bottom = -24.0
+theme_override_styles/background = SubResource("StyleBoxFlat_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
+value = 50.0
+show_percentage = false

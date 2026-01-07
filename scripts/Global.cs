@@ -1,35 +1,26 @@
 using Godot;
 using System;
+using System.Threading.Tasks; // Cần thêm thư viện này để dùng Task.Delay
 
-// [Người 3]
-// Singleton quản lý trạng thái toàn cục của game.
-// Sử dụng C# Events để các thành phần khác (UI, Game Logic) đăng ký lắng nghe thay vì gọi trực tiếp.
 public partial class Global : Node
 {
-	// Thread-safe Singleton
-	private static Global _instance;
-	public static Global Instance => _instance;
+	public static Global Instance { get; private set; }
 
-	// Game Settings & State
-	private int _gold = 100;
-	private int _health = 20;
-	private int _wave = 1;
-	private bool _isGameOver = false;
+	[Signal] public delegate void StatsChangedEventHandler();
+	[Signal] public delegate void GameOverEventHandler();
+	[Signal] public delegate void VictoryEventHandler();
 
-	// Events - Observer Pattern
-	public event Action<int> OnGoldChanged;
-	public event Action<int> OnHealthChanged;
-	public event Action<int> OnWaveChanged;
-	public event Action OnGameOver;
+	private int _gold;
+	private int _health;
+	private int _wave;
+
+	[Export] public int InitialGold = 550;
+	[Export] public int InitialHealth = 20;
 
 	public int Gold
 	{
 		get => _gold;
-		set
-		{
-			_gold = value;
-			OnGoldChanged?.Invoke(_gold); // Bắn tín hiệu khi tiền thay đổi
-		}
+		set { _gold = value; EmitSignal(SignalName.StatsChanged); }
 	}
 
 	public int Health
@@ -38,46 +29,65 @@ public partial class Global : Node
 		set
 		{
 			_health = value;
-			OnHealthChanged?.Invoke(_health);
+			EmitSignal(SignalName.StatsChanged); // Cập nhật UI ngay lập tức
 			
-			if (_health <= 0 && !_isGameOver)
+			if (_health <= 0)
 			{
-				_health = 0;
-				_isGameOver = true;
-				OnGameOver?.Invoke();
-				GD.Print("GAME OVER");
-				// Có thể gọi GetTree().Paused = true; tại đây
+				// Gọi hàm xử lý thua với độ trễ
+				CallDeferred(nameof(TriggerGameOverDelayed));
 			}
 		}
 	}
 
+	// ... (Giữ nguyên Wave và _Ready) ...
 	public int Wave
 	{
 		get => _wave;
-		set
-		{
-			_wave = value;
-			OnWaveChanged?.Invoke(_wave);
-		}
+		set { _wave = value; EmitSignal(SignalName.StatsChanged); }
 	}
 
-	public override void _EnterTree()
+	public override void _Ready()
 	{
-		if (_instance != null)
-		{
-			QueueFree();
-			return;
-		}
-		_instance = this;
+		Instance = this;
+		ProcessMode = ProcessModeEnum.Always;
+		StartNewGame();
 	}
 
-	// Helper để spawn object tại root scene (tránh bị xoay theo cha)
-	public void SpawnActor(Node actor, Vector2 globalPosition)
+	public void StartNewGame()
 	{
-		GetTree().Root.AddChild(actor);
-		if (actor is Node2D node2d)
-		{
-			node2d.GlobalPosition = globalPosition;
-		}
+		GetTree().Paused = false; 
+		Gold = InitialGold;
+		Health = InitialHealth;
+		Wave = 1;
+	}
+
+	// Hàm xử lý Game Over có độ trễ
+	private async void TriggerGameOverDelayed()
+	{
+		// Chờ 1 khung hình hoặc 0.1s để UI kịp vẽ số 0
+		await ToSignal(GetTree().CreateTimer(0.1f), "timeout");
+
+		if (GetTree().Paused) return;
+		GD.Print("GAME OVER!");
+		EmitSignal(SignalName.GameOver);
+		GetTree().Paused = true; 
+	}
+
+	public async void TriggerVictory()
+	{
+		// Cũng thêm độ trễ cho chiến thắng để cảm giác mượt hơn
+		await ToSignal(GetTree().CreateTimer(0.2f), "timeout");
+
+		if (GetTree().Paused) return;
+		GD.Print("VICTORY!");
+		EmitSignal(SignalName.Victory);
+		GetTree().Paused = true;
+	}
+
+	public void RestartGame()
+	{
+		GetTree().Paused = false;
+		StartNewGame();
+		GetTree().ReloadCurrentScene();
 	}
 }

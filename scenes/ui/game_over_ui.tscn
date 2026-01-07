@@ -7,6 +7,7 @@ font_size = 64
 font_color = Color(1, 0.100000024, 0.100000024, 1)
 
 [node name="GameOverUI" type="Control"]
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,5 +44,5 @@ offset_right = 667.0
 offset_bottom = 398.0
 text = "Chơi lại"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="on_RestartButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

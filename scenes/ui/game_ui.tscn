@@ -1,0 +1,283 @@
+[gd_scene load_steps=6 format=3 uid="uid://diok8wj2aypk2"]
+
+[ext_resource type="Script" uid="uid://dri4iy48ed8si" path="res://scripts/UI/GameUI.cs" id="1_gwk6t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 0.784314)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_build"]
+bg_color = Color(0.09, 0.15, 0.25, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.6, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_action"]
+bg_color = Color(0.2, 0.1, 0.25, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.4, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_result"]
+bg_color = Color(0, 0, 0, 0.85)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameUI" type="Control" node_paths=PackedStringArray("BuildPanel", "ActionPanel", "ResultPanel", "ResultLabel", "GoldLabel", "LivesLabel", "WaveLabel", "WaveTimerLabel", "TowerInfoLabel", "CenterNotificationLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_gwk6t")
+BuildPanel = NodePath("BuildPanel")
+ActionPanel = NodePath("ActionPanel")
+ResultPanel = NodePath("ResultPanel")
+ResultLabel = NodePath("ResultPanel/VBoxContainer/ResultLabel")
+GoldLabel = NodePath("TopBar/MarginContainer/HBoxContainer/GoldLabel")
+LivesLabel = NodePath("TopBar/MarginContainer/HBoxContainer/LivesLabel")
+WaveLabel = NodePath("TopBar/MarginContainer/HBoxContainer/WaveLabel")
+WaveTimerLabel = NodePath("TopBar/MarginContainer/HBoxContainer/WaveTimerLabel")
+TowerInfoLabel = NodePath("ActionPanel/MarginContainer/VBoxContainer/InfoLabel")
+CenterNotificationLabel = NodePath("CenterNotification")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="GoldLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "💰 Gold: 0"
+
+[node name="LivesLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "❤️ Lives: 20"
+
+[node name="WaveLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "🌊 Wave: 1"
+
+[node name="WaveTimerLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "Next: 5s"
+
+[node name="CenterNotification" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "WAVE 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BuildPanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -55.0
+offset_right = 140.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_build")
+
+[node name="MarginContainer" type="MarginContainer" parent="BuildPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuildPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="BuildPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "🛠️ CHỌN THÁP"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="HBoxContainer" parent="BuildPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="BtnArcher" type="Button" parent="BuildPanel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "🏹
+Cung
+50G"
+
+[node name="BtnCannon" type="Button" parent="BuildPanel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "💣
+Pháo
+100G"
+
+[node name="BtnMagic" type="Button" parent="BuildPanel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+text = "✨
+Phép
+150G"
+
+[node name="BtnClose" type="Button" parent="BuildPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+text = "❌ Đóng"
+
+[node name="ActionPanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -80.0
+offset_right = 100.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_action")
+
+[node name="MarginContainer" type="MarginContainer" parent="ActionPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="InfoLabel" type="Label" parent="ActionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level: 1
+Upgrade: 100G
+Sell: 50G"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ActionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnUpgrade" type="Button" parent="ActionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 1, 0.4, 1)
+text = "Nâng Cấp"
+
+[node name="BtnSell" type="Button" parent="ActionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.4, 1)
+text = "Bán Tháp"
+
+[node name="BtnClose2" type="Button" parent="ActionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Đóng"
+
+[node name="ResultPanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_result")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ResultPanel"]
+process_mode = 3
+layout_mode = 2
+alignment = 1
+
+[node name="ResultLabel" type="Label" parent="ResultPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "VICTORY!"
+horizontal_alignment = 1
+
+[node name="BtnRestart" type="Button" parent="ResultPanel/VBoxContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "CHƠI LẠI"
+
+[connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnArcher" to="." method="OnBtnBuildArcherPressed"]
+[connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnCannon" to="." method="OnBtnBuildCannonPressed"]
+[connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnMagic" to="." method="OnBtnBuildMagicPressed"]
+[connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/BtnClose" to="." method="OnBtnClosePressed"]
+[connection signal="pressed" from="ActionPanel/MarginContainer/VBoxContainer/BtnUpgrade" to="." method="OnBtnUpgradePressed"]
+[connection signal="pressed" from="ActionPanel/MarginContainer/VBoxContainer/BtnSell" to="." method="OnBtnSellPressed"]
+[connection signal="pressed" from="ActionPanel/MarginContainer/VBoxContainer/BtnClose2" to="." method="OnBtnClosePressed"]
+[connection signal="pressed" from="ResultPanel/VBoxContainer/BtnRestart" to="." method="OnBtnRestartPressed"]

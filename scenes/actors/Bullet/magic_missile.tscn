@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://vuibojaepuam"]
+
+[ext_resource type="Script" uid="uid://sgstq1e6w88b" path="res://scripts/Bullet/MagicMissile.cs" id="1_3yhpj"]
+[ext_resource type="Texture2D" uid="uid://c7tskwehsy5ob" path="res://assets/tilesets/51.png" id="2_a40a0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fqvim"]
+
+[node name="MagicMissile" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_3yhpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fqvim")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.0000038, -1.0000076)
+scale = Vector2(0.17741935, 0.20229007)
+texture = ExtResource("2_a40a0")

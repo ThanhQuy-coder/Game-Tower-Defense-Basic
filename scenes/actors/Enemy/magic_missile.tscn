@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmk8dgqaljqqk"]
+
+[ext_resource type="Script" uid="uid://sgstq1e6w88b" path="res://scripts/Bullet/MagicMissile.cs" id="1_wps48"]
+[ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="2_lyb24"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x6l3r"]
+radius = 47.539455
+
+[node name="MagicMissile" type="Node2D"]
+script = ExtResource("1_wps48")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lyb24")
+region_enabled = true
+region_rect = Rect2(0, 99.99996, 27.999908, 25)
+
+[node name="TurretSprite" type="Sprite2D" parent="."]
+
+[node name="Muzzle" type="Marker2D" parent="."]
+
+[node name="RangeArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea"]
+shape = SubResource("CircleShape2D_x6l3r")
