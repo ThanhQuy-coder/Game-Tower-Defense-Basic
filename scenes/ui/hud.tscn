@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ca0wcj4feyhui"]
 
-[ext_resource type="Script" uid="uid://dcweq0fudyap2" path="res://scenes/ui/HUD.cs" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://dcweq0fudyap2" path="res://Scenes/UI/hud.cs" id="1_0mwgc"]
+
 
 [node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("_lblGold", "_lblHealth", "_lblWave")]
 script = ExtResource("1_0mwgc")

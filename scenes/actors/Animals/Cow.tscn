@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://2xj3bm8rkmf2"]
 
-[ext_resource type="Texture2D" uid="uid://bke7x0s2jvsyn" path="res://assets/charactor/Free Cow Sprites.png" id="1_buhpk"]
-[ext_resource type="Script" uid="uid://fn4khbghek7s" path="res://scripts/Cow.cs" id="2_b6yw7"]
+[ext_resource type="Texture2D" uid="uid://bke7x0s2jvsyn" path="res://assets/sprites/Animals/Free Cow Sprites.png" id="1_buhpk"]
+[ext_resource type="Script" uid="uid://fn4khbghek7s" path="res://Scripts/Cow.cs" id="2_b6yw7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hgm5"]
 atlas = ExtResource("1_buhpk")

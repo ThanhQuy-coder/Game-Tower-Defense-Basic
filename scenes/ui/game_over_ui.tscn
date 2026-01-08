@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dln217pnh46lm"]
 
-[ext_resource type="Script" uid="uid://cfm6r1hfkyylq" path="res://scripts/GameOverUI.cs" id="1_i5oy2"]
+[ext_resource type="Script" uid="uid://cfm6r1hfkyylq" path="res://Scripts/GameOverUI.cs" id="1_i5oy2"]
+
 
 [sub_resource type="LabelSettings" id="LabelSettings_u4odh"]
 font_size = 64

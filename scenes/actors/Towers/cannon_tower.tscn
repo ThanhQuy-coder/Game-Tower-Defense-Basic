@@ -1,9 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://obngocmdnf4n"]
 
-[ext_resource type="Script" uid="uid://bl63vun5x2xct" path="res://scripts/Tower/CannonTower.cs" id="1_11x6n"]
-[ext_resource type="PackedScene" uid="uid://bwn76ldt4qom7" path="res://scenes/actors/Bullet/cannon_ball.tscn" id="2_qs2r2"]
+[ext_resource type="Script" uid="uid://bl63vun5x2xct" path="res://Scripts/Tower/CannonTower.cs" id="1_11x6n"]
+[ext_resource type="PackedScene" uid="uid://bwn76ldt4qom7" path="res://Scenes/Actors/Bullet/cannon_ball.tscn" id="2_qs2r2"]
 [ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="3_a1jwr"]
-[ext_resource type="Texture2D" uid="uid://cpxx1m0lb4qxi" path="res://assets/tilesets/characters.png" id="4_char"]
+[ext_resource type="Texture2D" uid="uid://dxhfyfisq0ibo" path="res://assets/sprites/Characters/characters.png" id="4_char"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_Base1"]
 atlas = ExtResource("3_a1jwr")

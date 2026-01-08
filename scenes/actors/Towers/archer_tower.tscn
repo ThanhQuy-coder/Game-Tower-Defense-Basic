@@ -1,9 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dfmam147l76pg"]
 
-[ext_resource type="Script" uid="uid://bc3hx2vovvmy5" path="res://scripts/Tower/ArcherTower.cs" id="1_qu3x5"]
-[ext_resource type="PackedScene" uid="uid://boiogjq3y2f1q" path="res://scenes/actors/Bullet/arrow_bullet.tscn" id="2_035vb"]
+[ext_resource type="Script" uid="uid://bc3hx2vovvmy5" path="res://Scripts/Tower/ArcherTower.cs" id="1_qu3x5"]
+[ext_resource type="PackedScene" uid="uid://boiogjq3y2f1q" path="res://Scenes/Actors/Bullet/arrow_bullet.tscn" id="2_035vb"]
 [ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="3_wdyfy"]
-[ext_resource type="Texture2D" uid="uid://cpxx1m0lb4qxi" path="res://assets/tilesets/characters.png" id="4_035vb"]
+[ext_resource type="Texture2D" uid="uid://dxhfyfisq0ibo" path="res://assets/sprites/Characters/characters.png" id="4_035vb"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_Base1"]
 atlas = ExtResource("3_wdyfy")

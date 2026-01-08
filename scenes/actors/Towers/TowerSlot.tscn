@@ -1,10 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cc0ocomr0ymt6"]
 
-[ext_resource type="Texture2D" uid="uid://c8d3u4weuin20" path="res://assets/tilesets/world_tileset.png" id="1_vgsc7"]
-[ext_resource type="Script" uid="uid://dwqqmqjo6sgff" path="res://scripts/Tower/TowerSlot.cs" id="1_xcbqt"]
-[ext_resource type="PackedScene" uid="uid://dfmam147l76pg" path="res://scenes/actors/Towers/archer_tower.tscn" id="2_8e83s"]
-[ext_resource type="PackedScene" uid="uid://obngocmdnf4n" path="res://scenes/actors/Towers/cannon_tower.tscn" id="3_th3a4"]
-[ext_resource type="PackedScene" uid="uid://b5vabkfj0qfrq" path="res://scenes/actors/Towers/magic_tower.tscn" id="4_8p57t"]
+[ext_resource type="Texture2D" uid="uid://dvjg3yi5w1kgi" path="res://assets/tilesets/world_tileset.png" id="1_vgsc7"]
+[ext_resource type="Script" uid="uid://dwqqmqjo6sgff" path="res://Scripts/Tower/TowerSlot.cs" id="1_xcbqt"]
+[ext_resource type="PackedScene" uid="uid://dfmam147l76pg" path="res://Scenes/Actors/Towers/archer_tower.tscn" id="2_8e83s"]
+[ext_resource type="PackedScene" uid="uid://obngocmdnf4n" path="res://Scenes/Actors/Towers/cannon_tower.tscn" id="3_th3a4"]
+[ext_resource type="PackedScene" uid="uid://b5vabkfj0qfrq" path="res://Scenes/Actors/Towers/magic_tower.tscn" id="4_8p57t"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcbqt"]
 atlas = ExtResource("1_vgsc7")

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwp8mgcd0q8sq"]
+[gd_scene load_steps=7 format=3 uid="uid://bwp8mgcd0q8sq"]
 
-[ext_resource type="Script" path="res://scripts/Enemy/SoldierEnemy.cs" id="1_logic"]
-[ext_resource type="Texture2D" uid="uid://26a5i4i11df0" path="res://assets/tilesets/S_Run.png" id="1_68jy3"]
+[ext_resource type="Script" uid="uid://cvsaluennbwoj" path="res://Scripts/Enemy/SoldierEnemy.cs" id="1_logic"]
+[ext_resource type="Texture2D" uid="uid://ce5batgg7s3cf" path="res://assets/images/Kiet.png" id="2_46iyk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_seafw"]
 radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a7t3"]
+atlas = ExtResource("2_46iyk")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
 bg_color = Color(0.18, 0.18, 0.18, 1)
@@ -29,17 +32,17 @@ script = ExtResource("1_logic")
 shape = SubResource("CircleShape2D_seafw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 3)
-scale = Vector2(0.47, 0.47)
-texture = ExtResource("1_68jy3")
+position = Vector2(0, -1.1920929e-07)
+scale = Vector2(0.32874998, 0.3402632)
+texture = SubResource("AtlasTexture_6a7t3")
 region_enabled = true
 region_rect = Rect2(23.5, 5, 64, 76)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -16.0
-offset_top = -28.0
+offset_top = -20.0
 offset_right = 16.0
-offset_bottom = -24.0
+offset_bottom = -18.0
 theme_override_styles/background = SubResource("StyleBoxFlat_bg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
 value = 50.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcm123damj1kh"]
 
-[ext_resource type="PackedScene" uid="uid://b7w1kf61pucpp" path="res://scenes/actors/Trees/TreeGreen01.tscn" id="1_ghqxh"]
+[ext_resource type="PackedScene" uid="uid://b7w1kf61pucpp" path="res://Scenes/Actors/Trees/TreeGreen01.tscn" id="1_ghqxh"]
 
 [node name="Forest_Patch_Column" type="Node2D"]
 y_sort_enabled = true

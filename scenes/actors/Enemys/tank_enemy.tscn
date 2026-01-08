@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://jnnlbn3tqpjq"]
 
-[ext_resource type="Script" uid="uid://c4jj4s3so7arf" path="res://scripts/Enemy/TankEnemy.cs" id="1_mn1g3"]
-[ext_resource type="Texture2D" uid="uid://cwejhn56ebdkt" path="res://assets/tilesets/S_Attack.png" id="2_kocw6"]
+[ext_resource type="Script" uid="uid://c4jj4s3so7arf" path="res://Scripts/Enemy/TankEnemy.cs" id="1_mn1g3"]
+[ext_resource type="Texture2D" uid="uid://ce5batgg7s3cf" path="res://assets/images/Kiet.png" id="2_b0fe3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7csab"]
 radius = 20.0
@@ -22,7 +22,7 @@ shape = SubResource("CircleShape2D_7csab")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_kocw6")
+texture = ExtResource("2_b0fe3")
 region_enabled = true
 region_rect = Rect2(0, 0, 95.5, 96)
 
