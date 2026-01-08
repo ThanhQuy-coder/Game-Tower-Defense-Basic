@@ -15,7 +15,7 @@ public partial class WaveManager : Node
 	[ExportGroup("Setup")]
 	[Export] public Path2D[] EnemyPaths; // Các đường đi của kẻ thù
 	[Export] public float TimeBetweenWaves = 5.0f; // Thời gian giữa các wave
-	[Export] public float InitialWaitTime = 10.0f; // Thời gian chờ ban đầu
+	[Export] public float InitialWaitTime = 2.0f; // Thời gian chờ ban đầu
 
 	[ExportGroup("Enemy Types")]
 	[Export] public PackedScene[] EnemyPrefabs; // Kẻ thù đã được tạo sẵn

@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dri4iy48ed8si" path="res://Scripts/UI/GameUI.cs" id="1_gwk6t"]
 
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.784314)
 corner_radius_bottom_right = 10
