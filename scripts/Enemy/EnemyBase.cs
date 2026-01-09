@@ -18,6 +18,7 @@ public abstract partial class EnemyBase : Area2D
 
 	private float _slowTimer = 0.0f;
 	private bool _isSlowed = false;
+	private bool _isDead = false;
 	private AnimatedSprite2D _animatedSprite;
 
 	public override void _Ready()
@@ -62,6 +63,7 @@ public abstract partial class EnemyBase : Area2D
 	/// <param name="delta">Thời gian giữa 2 frame</param>
 	protected virtual void Move(float delta)
 	{
+		if (_isDead) return;
 		if (PathFollow == null) return;
 
 		PathFollow.Progress += CurrentSpeed * delta;
@@ -77,6 +79,8 @@ public abstract partial class EnemyBase : Area2D
 	/// </summary>
 	protected void UpdateAnimation()
 	{
+		PathFollow.SetPhysicsProcess(true); // Bật lại nếu đã tắt ở Die()
+
 		// Lấy góc quay hiện tại theo độ (0 đến 360 hoặc -180 đến 180)
 		float angle = Mathf.RadToDeg(PathFollow.Rotation);
 
@@ -84,25 +88,25 @@ public abstract partial class EnemyBase : Area2D
 
 		// Xác định dựa trên góc
 		// 0 hoặc 360 là hướng Đông (phải), 90 là Nam (xuống), 180 là Tây (trái), 270 là Bắc (lên)
-		if (angle > 45 && angle <= 135)
+		if (angle > 60 && angle <= 135) // Xuống
 		{
 			_animatedSprite.Rotation = AnimationRotationOffset;
-			_animatedSprite.Play("RunY");
-			_animatedSprite.FlipH = false; // Xuống
+			_animatedSprite.Play("RunDown");
+			_animatedSprite.FlipH = false;
 		}
-		else if (angle > 225 && angle <= 315)
+		else if (angle > 225 && angle <= 315) // Lên
 		{
 			_animatedSprite.Rotation = AnimationRotationOffset + 180;
-			_animatedSprite.Play("RunY");
-			_animatedSprite.FlipH = false; // Lên
+			_animatedSprite.Play("RunUp");
+			_animatedSprite.FlipH = false;
 		}
-		else if ((angle > 0 && angle <= 45) || (angle > 315 && angle <= 360))
+		else if ((angle > 0 && angle <= 60) || (angle > 315 && angle <= 360)) // phải
 		{
 			_animatedSprite.Rotation = AnimationRotationOffset + 90;
 			_animatedSprite.Play("RunX");
 			_animatedSprite.FlipH = true;
 		}
-		else // Các hướng còn lại là đi ngang (trái hoặc phải)
+		else // trái
 		{
 			_animatedSprite.Rotation = AnimationRotationOffset + 90;
 			_animatedSprite.Play("RunX");
@@ -190,6 +194,9 @@ public abstract partial class EnemyBase : Area2D
 	/// <remarks>
 	/// 	<list type="number">
 	/// 		<item>
+	/// 			<term>Hiển thị animation die</term>
+	/// 		</item>
+	/// 		<item>
 	/// 			<term>Xử lý việc cộng tiền cho người chơi</term>
 	/// 		</item>
 	/// 		<item>
@@ -197,9 +204,38 @@ public abstract partial class EnemyBase : Area2D
 	/// 		</item>
 	/// 	</list>
 	/// </remarks>
-	protected virtual void Die()
+	protected virtual async void Die()
 	{
+		_isDead = true;
+
+		if (PathFollow != null)
+		{
+			PathFollow.SetProcess(false);
+			PathFollow.SetPhysicsProcess(false);
+		}
+
+		// Hiển thị animation die
+		// Dựa theo hướng quái để hiển thị đúng animation die
+		if (_animatedSprite.Rotation == -90)
+		{
+			_animatedSprite.Play("DeathDown");
+		}
+		else if (_animatedSprite.Rotation == 90)
+		{
+			_animatedSprite.Play("DeathUp");
+		}
+		else
+		{
+			_animatedSprite.Play("DeathX");
+		}
+
+		// Chờ animation chạy xong
+		await ToSignal(_animatedSprite, "animation_finished");
+
+		// Cộng tiền người chơi
 		if (Global.Instance != null) Global.Instance.Gold += GoldReward;
+
+		// Giải phóng tài nguyên quái
 		if (GetParent() is PathFollow2D) GetParent().QueueFree();
 		else QueueFree();
 	}

@@ -9,7 +9,6 @@ public partial class TankEnemy : EnemyBase
 		MaxHealth = 50;    // Máu trâu
 		GoldReward = 20;
 		DamageToPlayer = 2; // Đấm đau hơn
-		Scale = new Vector2(1.2f, 1.2f); // To xác hơn
 		base._Ready();
 	}
 }

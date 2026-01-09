@@ -3,7 +3,6 @@ using Godot;
 /// <summary>
 /// Gắn con quái vào đúng đường đi, không quan tâm khi nào cần spawn.
 /// </summary>
-/// 
 public class PathSpawner
 {
 	private readonly Path2D[] _paths;
