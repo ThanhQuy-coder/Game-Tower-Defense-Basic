@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cc0ocomr0ymt6" path="res://Scenes/Actors/Towers/TowerSlot.tscn" id="14_fcb7b"]
 [ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://Scenes/UI/game_ui.tscn" id="14_xt2o7"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rej77"]
 texture = ExtResource("1_w6h2s")
 0:0/0 = 0

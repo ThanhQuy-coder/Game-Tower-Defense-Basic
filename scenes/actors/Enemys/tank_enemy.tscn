@@ -318,10 +318,11 @@ animation = &"RunDown"
 autoplay = "RunDown"
 
 [node name="HealthBar" type="ProgressBar" parent="."]
+top_level = true
 offset_left = -20.0
-offset_top = -35.0
+offset_top = -24.0
 offset_right = 20.0
-offset_bottom = -30.0
+offset_bottom = -21.0
 theme_override_styles/background = SubResource("StyleBoxFlat_bg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fill")
 value = 50.0

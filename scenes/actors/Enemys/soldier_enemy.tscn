@@ -326,6 +326,7 @@ animation = &"RunDown"
 autoplay = "RunDown"
 
 [node name="HealthBar" type="ProgressBar" parent="."]
+top_level = true
 offset_left = -16.0
 offset_top = -20.0
 offset_right = 16.0

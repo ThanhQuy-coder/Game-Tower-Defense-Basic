@@ -14,12 +14,12 @@ public abstract partial class EnemyBase : Area2D
 	protected int CurrentHealth;
 	protected PathFollow2D PathFollow;
 	protected ProgressBar HealthBar;
-	protected float AnimationRotationOffset = -90;
 
 	private float _slowTimer = 0.0f;
 	private bool _isSlowed = false;
 	private bool _isDead = false;
 	private AnimatedSprite2D _animatedSprite;
+	private Tween _fadeTween;
 
 	public override void _Ready()
 	{
@@ -41,8 +41,8 @@ public abstract partial class EnemyBase : Area2D
 			HealthBar.MaxValue = MaxHealth;
 			HealthBar.Value = CurrentHealth;
 
-			// [THAY ĐỔI Ở ĐÂY] Luôn hiển thị thanh máu
-			HealthBar.Visible = true;
+			// Tắt thanh máu ngay ban đầu chỉ khi mất máu mới hiện
+			HealthBar.Visible = false;
 
 			// Tắt xử lý chuột cho thanh máu để không chắn đạn
 			HealthBar.MouseFilter = Control.MouseFilterEnum.Ignore;
@@ -55,6 +55,14 @@ public abstract partial class EnemyBase : Area2D
 	{
 		HandleStatusEffects((float)delta);
 		Move((float)delta);
+
+		// Cập nhật vị trí thanh máu để luôn ở trên đầu quái
+		if (HealthBar != null && HealthBar.Visible)
+		{
+			// Vector2(0, -50) là khoảng cách phía trên đầu, có thể chỉnh lại
+			HealthBar.GlobalPosition = GlobalPosition + new Vector2(-HealthBar.Size.X / 2, -20);
+			HealthBar.Rotation = 0; // Đảm bảo luôn nằm ngang
+		}
 	}
 
 	/// <summary>
@@ -81,6 +89,9 @@ public abstract partial class EnemyBase : Area2D
 	{
 		PathFollow.SetPhysicsProcess(true); // Bật lại nếu đã tắt ở Die()
 
+		_animatedSprite.FlipH = false;
+		_animatedSprite.FlipV = false;
+
 		// Lấy góc quay hiện tại theo độ (0 đến 360 hoặc -180 đến 180)
 		float angle = Mathf.RadToDeg(PathFollow.Rotation);
 
@@ -90,27 +101,26 @@ public abstract partial class EnemyBase : Area2D
 		// 0 hoặc 360 là hướng Đông (phải), 90 là Nam (xuống), 180 là Tây (trái), 270 là Bắc (lên)
 		if (angle > 60 && angle <= 135) // Xuống
 		{
-			_animatedSprite.Rotation = AnimationRotationOffset;
+			_animatedSprite.Rotation = -90;
 			_animatedSprite.Play("RunDown");
-			_animatedSprite.FlipH = false;
 		}
 		else if (angle > 225 && angle <= 315) // Lên
 		{
-			_animatedSprite.Rotation = AnimationRotationOffset + 180;
+			_animatedSprite.Rotation = 90;
 			_animatedSprite.Play("RunUp");
-			_animatedSprite.FlipH = false;
 		}
 		else if ((angle > 0 && angle <= 60) || (angle > 315 && angle <= 360)) // phải
 		{
-			_animatedSprite.Rotation = AnimationRotationOffset + 90;
+			_animatedSprite.Rotation = 0;
 			_animatedSprite.Play("RunX");
 			_animatedSprite.FlipH = true;
 		}
 		else // trái
 		{
-			_animatedSprite.Rotation = AnimationRotationOffset + 90;
+			_animatedSprite.Rotation = 0;
 			_animatedSprite.Play("RunX");
-			_animatedSprite.FlipH = false;
+			_animatedSprite.FlipH = true;
+			_animatedSprite.FlipV = true;
 		}
 	}
 
@@ -149,6 +159,18 @@ public abstract partial class EnemyBase : Area2D
 		if (HealthBar != null)
 		{
 			HealthBar.Value = CurrentHealth;
+
+			HealthBar.Modulate = new Color(1, 1, 1, 1); // Hiện rõ (Alpha = 1)
+			HealthBar.Visible = true;
+
+			// Nếu đang có một hiệu ứng mờ dần cũ, hãy hủy nó đi
+			if (_fadeTween != null) _fadeTween.Kill();
+
+			_fadeTween = CreateTween();
+			// Đợi 1.5 giây rồi bắt đầu mờ dần trong 0.5 giây
+			_fadeTween.TweenInterval(1.5f);
+			_fadeTween.TweenProperty(HealthBar, "modulate:a", 0.0f, 0.5f);
+			_fadeTween.Finished += () => HealthBar.Visible = false;
 		}
 	}
 

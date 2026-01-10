@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dngd2p0167bie"]
+[gd_scene load_steps=27 format=4 uid="uid://dngd2p0167bie"]
 
 [ext_resource type="Texture2D" uid="uid://bxljkeu0s3kq3" path="res://assets/tilesets/tileset1.png" id="1_ksju7"]
 [ext_resource type="Texture2D" uid="uid://ci2l638pmf7jx" path="res://assets/tilesets/props.png" id="2_6iamk"]
@@ -770,9 +770,21 @@ sources/0 = SubResource("TileSetAtlasSource_dga24")
 
 [sub_resource type="Curve2D" id="Curve2D_dga24"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -39, -174, 0, 0, 0, 0, -166, 55, 0, 0, 0, 0, -140, 94, 0, 0, 0, 0, -77, 79, 0, 0, 0, 0, -3, 48, 0, 0, 0, 0, 308, 90)
+"points": PackedVector2Array(0, 0, 0, 0, -39, -174, 0, 0, 0, 0, -161, 39, 0, 0, 0, 0, -154, 81, 0, 0, 0, 0, -77, 79, 0, 0, 0, 0, -3, 48, 0, 0, 0, 0, 308, 90)
 }
 point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_k2mw1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -61, -168, 0, 0, 0, 0, -102, -105, 0, 0, 0, 0, -188, 41, 0, 0, 0, 0, -167, 95, 0, 0, 0, 0, -81.21295, 94.93674, 0, 0, 0, 0, 4, 56, 0, 0, 0, 0, 140, 74, 0, 0, 0, 0, 305, 107)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_tjl6l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -16, -176, 0, 0, 0, 0, -88.97543, -57.9655, 0, 0, 0, 0, -147, 43, 0, 0, 0, 0, -147, 76, 0, 0, 0, 0, -82, 79, 0, 0, 0, 0, -9, 35, 0, 0, 0, 0, 107, 37, 0, 0, 0, 0, 191, 59, 0, 0, 0, 0, 311, 67)
+}
+point_count = 9
 
 [node name="Level1" type="Node2D"]
 
@@ -879,16 +891,32 @@ position = Vector2(-268, 86)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="PathContainer" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="PathContainer"]
 curve = SubResource("Curve2D_dga24")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="PathContainer/Path2D"]
 position = Vector2(-39, -174)
-rotation = 2.077153
+rotation = 2.090953
+
+[node name="Path2D2" type="Path2D" parent="PathContainer"]
+curve = SubResource("Curve2D_k2mw1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathContainer/Path2D2"]
+position = Vector2(-61, -168)
+rotation = 2.1477292
+
+[node name="Path2D3" type="Path2D" parent="PathContainer"]
+curve = SubResource("Curve2D_tjl6l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="PathContainer/Path2D3"]
+position = Vector2(-16, -176)
+rotation = 2.1245308
 
 [node name="WaveManager" type="Node" parent="." node_paths=PackedStringArray("EnemyPaths")]
 script = ExtResource("9_dnkej")
-EnemyPaths = [NodePath("../Path2D")]
+EnemyPaths = [NodePath("../PathContainer/Path2D"), NodePath("../PathContainer/Path2D2"), NodePath("../PathContainer/Path2D3")]
 EnemyPrefabs = Array[PackedScene]([ExtResource("10_mm8aj"), ExtResource("11_mm8aj"), ExtResource("12_mm8aj"), ExtResource("13_iwr0g")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

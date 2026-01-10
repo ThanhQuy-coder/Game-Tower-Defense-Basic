@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlk4wylukw76k"]
+
+[ext_resource type="Texture2D" uid="uid://dafnur86yapjr" path="res://assets/ui/Buttons/Buttons.png" id="1_vmkyq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbvpu"]
+atlas = ExtResource("1_vmkyq")
+region = Rect2(108.803986, 60.21135, 23.180832, 23.790863)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xclu6"]
+atlas = ExtResource("1_vmkyq")
+region = Rect2(157.00426, 60.78842, 22.854828, 22.854828)
+
+[node name="MiniButton" type="TextureButton"]
+offset_right = 54.0
+offset_bottom = 53.0
+texture_normal = SubResource("AtlasTexture_dbvpu")
+texture_pressed = SubResource("AtlasTexture_xclu6")
+stretch_mode = 0
