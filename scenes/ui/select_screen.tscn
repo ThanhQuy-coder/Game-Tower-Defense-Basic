@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbitcxxmefp01"]
+[gd_scene load_steps=15 format=3 uid="uid://cbitcxxmefp01"]
 
 [ext_resource type="Texture2D" uid="uid://svgl06qho0fk" path="res://assets/ui/Backgrounds/1.png" id="1_cvlyw"]
 [ext_resource type="Shader" uid="uid://d1sdal462g7s8" path="res://Scenes/UI/Shaders/title_screen.gdshader" id="2_6av6r"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cktvuoi0555dq" path="res://assets/images/Level4.png" id="8_mrod5"]
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://Scenes/UI/Components/MiniButton.tscn" id="9_mrod5"]
 [ext_resource type="Texture2D" uid="uid://dafnur86yapjr" path="res://assets/ui/Buttons/Buttons.png" id="10_5ohrm"]
+[ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://Scripts/UI/SceneButton.cs" id="10_mc72k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_al4o2"]
 shader = ExtResource("2_6av6r")
@@ -63,16 +64,19 @@ texture = ExtResource("4_26xhw")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="Level1" type="TextureRect" parent="."]
+[node name="Level1" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 177.0
 offset_top = 85.0
 offset_right = 513.0
 offset_bottom = 294.0
-texture = ExtResource("5_6av6r")
-expand_mode = 1
+texture_normal = ExtResource("5_6av6r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_mc72k")
+TargetScenePath = "uid://dngd2p0167bie"
 
-[node name="Level2" type="TextureRect" parent="."]
+[node name="Level2" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -82,10 +86,13 @@ offset_top = 86.0
 offset_right = -192.0
 offset_bottom = 295.0
 grow_horizontal = 0
-texture = ExtResource("6_al4o2")
-expand_mode = 1
+texture_normal = ExtResource("6_al4o2")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_mc72k")
+TargetScenePath = "uid://c1ubd0v340q1i"
 
-[node name="Level3" type="TextureRect" parent="."]
+[node name="Level3" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -95,10 +102,13 @@ offset_top = -288.0
 offset_right = 514.0
 offset_bottom = -79.0
 grow_vertical = 0
-texture = ExtResource("7_3l75d")
-expand_mode = 1
+texture_normal = ExtResource("7_3l75d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_mc72k")
+TargetScenePath = "uid://c4i1qajscxjfy"
 
-[node name="Level4" type="TextureRect" parent="."]
+[node name="Level4" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -111,22 +121,11 @@ offset_right = -191.0
 offset_bottom = -81.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("8_mrod5")
-expand_mode = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 650.0
-
-[node name="MapName" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Difficult" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="LockStatus" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
+texture_normal = ExtResource("8_mrod5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_mc72k")
+TargetScenePath = "uid://yv0jhod6js5t"
 
 [node name="MiniButtonBack" parent="." instance=ExtResource("9_mrod5")]
 layout_mode = 0
@@ -134,6 +133,8 @@ offset_left = 37.0
 offset_top = 17.0
 offset_right = 91.0
 offset_bottom = 70.0
+script = ExtResource("10_mc72k")
+TargetScenePath = "uid://bl7fukjm08jfr"
 
 [node name="TextureRect" type="TextureRect" parent="MiniButtonBack"]
 layout_mode = 0
