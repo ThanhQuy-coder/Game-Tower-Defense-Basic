@@ -10,14 +10,30 @@ config_version=5
 
 [application]
 
-config/name="Tower Defense Basic"
+config/name="Tower_Defense_Basic"
+run/main_scene="uid://bl7fukjm08jfr"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/Global.cs"
+Global="*res://Scripts/Global.cs"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
 project/assembly_name="Tower Defense Basic"
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Tower"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=3
