@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc0ocomr0ymt6"]
+
+[ext_resource type="Texture2D" uid="uid://dvjg3yi5w1kgi" path="res://assets/tilesets/world_tileset.png" id="1_vgsc7"]
+[ext_resource type="Script" uid="uid://dwqqmqjo6sgff" path="res://Scripts/Tower/TowerSlot.cs" id="1_xcbqt"]
+[ext_resource type="PackedScene" uid="uid://dfmam147l76pg" path="res://Scenes/Actors/Towers/archer_tower.tscn" id="2_8e83s"]
+[ext_resource type="PackedScene" uid="uid://obngocmdnf4n" path="res://Scenes/Actors/Towers/cannon_tower.tscn" id="3_th3a4"]
+[ext_resource type="PackedScene" uid="uid://b5vabkfj0qfrq" path="res://Scenes/Actors/Towers/magic_tower.tscn" id="4_8p57t"]
+
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcbqt"]
+atlas = ExtResource("1_vgsc7")
+region = Rect2(128.86713, 49.62808, 14.141205, 14.751217)
+
+[node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("_slotButton")]
+script = ExtResource("1_xcbqt")
+TowerScenes = Array[PackedScene]([ExtResource("2_8e83s"), ExtResource("3_th3a4"), ExtResource("4_8p57t")])
+_slotButton = NodePath("Button")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_xcbqt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 12.0
+flat = true

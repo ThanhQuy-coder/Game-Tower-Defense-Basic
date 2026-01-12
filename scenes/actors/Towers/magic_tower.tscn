@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5vabkfj0qfrq"]
+
+[ext_resource type="Script" uid="uid://b51topyau31gx" path="res://Scripts/Tower/MagicTower.cs" id="1_wl1gj"]
+[ext_resource type="PackedScene" uid="uid://vuibojaepuam" path="res://Scenes/Actors/Bullet/magic_missile.tscn" id="2_8mqrq"]
+[ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="2_wl1gj"]
+[ext_resource type="Texture2D" uid="uid://dxhfyfisq0ibo" path="res://assets/sprites/Characters/characters.png" id="4_char"]
+
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_Base1"]
+atlas = ExtResource("2_wl1gj")
+region = Rect2(0, 99, 29, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_Base2"]
+atlas = ExtResource("2_wl1gj")
+region = Rect2(43, 99, 35, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_Base3"]
+atlas = ExtResource("2_wl1gj")
+region = Rect2(95, 80, 28, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_TurretDefault"]
+atlas = ExtResource("4_char")
+region = Rect2(62.57213, 0, 14.368423, 17.750328)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mqrq"]
+radius = 200.0
+
+[node name="MagicTower" type="Node2D" node_paths=PackedStringArray("Muzzle", "RangeArea", "RangeShape", "BaseSprite", "TurretSprite")]
+script = ExtResource("1_wl1gj")
+BaseTextures = Array[Texture2D]([SubResource("AtlasTexture_Base1"), SubResource("AtlasTexture_Base2"), SubResource("AtlasTexture_Base3")])
+TurretTextures = Array[Texture2D]([])
+TurretPositions = Array[Vector2]([Vector2(0, -12), Vector2(0, -18), Vector2(0, -22)])
+BulletScene = ExtResource("2_8mqrq")
+Muzzle = NodePath("TurretSprite/Muzzle")
+RangeArea = NodePath("RangeArea")
+RangeShape = NodePath("RangeArea/CollisionShape2D")
+BaseSprite = NodePath("BaseSprite")
+TurretSprite = NodePath("TurretSprite")
+
+[node name="BaseSprite" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_Base1")
+
+[node name="TurretSprite" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -12)
+texture = SubResource("AtlasTexture_TurretDefault")
+
+[node name="Muzzle" type="Marker2D" parent="TurretSprite"]
+position = Vector2(15, 0)
+
+[node name="RangeArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea"]
+shape = SubResource("CircleShape2D_8mqrq")

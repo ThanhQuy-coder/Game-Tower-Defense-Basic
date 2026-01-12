@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dln217pnh46lm"]
+
+[ext_resource type="Script" uid="uid://cfm6r1hfkyylq" path="res://Scripts/GameOverUI.cs" id="1_i5oy2"]
+
+
+[sub_resource type="LabelSettings" id="LabelSettings_u4odh"]
+font_size = 64
+font_color = Color(1, 0.100000024, 0.100000024, 1)
+
+[node name="GameOverUI" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_i5oy2")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.02, 0.02, 0.02, 0.5882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 257.0
+offset_right = 774.0
+offset_bottom = 345.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_u4odh")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 363.0
+offset_right = 667.0
+offset_bottom = 398.0
+text = "Chơi lại"
+
+[connection signal="pressed" from="Button" to="." method="on_RestartButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
