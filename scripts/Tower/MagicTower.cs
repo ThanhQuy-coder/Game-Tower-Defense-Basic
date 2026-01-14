@@ -5,9 +5,9 @@ public partial class MagicTower : TowerBase
 {
 	public override void _Ready()
 	{
-		Range = 200.0f;
+		Range = 120.0f;
 		FireRate = 1.0f;
-		BaseCost = 150;
+		BaseCost = 200;
 		base._Ready();
 	}
 }

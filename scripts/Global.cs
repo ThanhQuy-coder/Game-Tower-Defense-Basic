@@ -17,6 +17,9 @@ public partial class Global : Node
 	[Export] public int InitialGold = 550;
 	[Export] public int InitialHealth = 20;
 
+	// [MỚI] Biến lưu level cao nhất đã mở khóa. Mặc định là 1.
+	[Export] public int UnlockedLevel = 1; 
+
 	public int Gold
 	{
 		get => _gold;
@@ -50,15 +53,38 @@ public partial class Global : Node
 	{
 		Instance = this;
 		ProcessMode = ProcessModeEnum.Always;
+		
+		// [LƯU Ý] Nếu sau này bạn làm tính năng Load Game từ file save, 
+		// bạn sẽ cập nhật UnlockedLevel ở đây.
+		
 		StartNewGame();
 	}
 
 	public void StartNewGame()
 	{
 		GetTree().Paused = false; 
+		
+		// [ĐÃ SỬA] Đảm bảo gán lại giá trị gốc khi bắt đầu game/màn mới
 		Gold = InitialGold;
 		Health = InitialHealth;
 		Wave = 1;
+		
+		// Lưu ý: Không reset UnlockedLevel ở đây để giữ tiến độ chơi
+		// Cập nhật UI ngay lập tức
+		EmitSignal(SignalName.StatsChanged);
+	}
+
+	// [MỚI] Hàm mở khóa level tiếp theo
+	public void UnlockLevel(int levelToUnlock)
+	{
+		// Chỉ mở khóa nếu level mới cao hơn level hiện tại
+		if (levelToUnlock > UnlockedLevel)
+		{
+			UnlockedLevel = levelToUnlock;
+			GD.Print($"Global: New Level Unlocked -> {UnlockedLevel}");
+			
+			// Nếu có hệ thống Save Game, hãy gọi hàm Save() tại đây
+		}
 	}
 
 	// Hàm xử lý Game Over có độ trễ

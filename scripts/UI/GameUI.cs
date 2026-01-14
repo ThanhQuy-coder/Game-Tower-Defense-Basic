@@ -23,6 +23,10 @@ public partial class GameUI : Control
 
 	// Nút bấm
 	[Export] public Button UpgradeButton;
+	
+	// [MỚI] Thêm reference tới 2 nút mới
+	[Export] public Button BtnNextLevel; 
+	[Export] public Button BtnMenu;
 
 	private TowerSlot _selectedSlot;
 
@@ -112,6 +116,9 @@ public partial class GameUI : Control
 		ResultPanel.Visible = true;
 		ResultLabel.Text = "☠️ GAME OVER";
 		ResultLabel.AddThemeColorOverride("font_color", Colors.Red);
+
+		// [MỚI] Ẩn nút Next Level khi thua
+		if (BtnNextLevel != null) BtnNextLevel.Visible = false;
 	}
 
 	private void ShowVictory()
@@ -120,11 +127,29 @@ public partial class GameUI : Control
 		ResultPanel.Visible = true;
 		ResultLabel.Text = "🏆 VICTORY!";
 		ResultLabel.AddThemeColorOverride("font_color", Colors.Gold);
+
+		// [MỚI] Hiện nút Next Level khi thắng
+		if (BtnNextLevel != null) BtnNextLevel.Visible = true;
 	}
 
 	public void OnBtnRestartPressed()
 	{
 		if (Global.Instance != null) Global.Instance.RestartGame();
+	}
+
+	// [MỚI] Xử lý nút Màn kế tiếp
+	public void OnBtnNextLevelPressed()
+	{
+		GetTree().Paused = false; 
+		// Quay về màn chọn level (nơi level mới đã được unlock)
+		GetTree().ChangeSceneToFile("res://scenes/ui/select_screen.tscn");
+	}
+
+	// [MỚI] Xử lý nút Về Menu
+	public void OnBtnMenuPressed()
+	{
+		GetTree().Paused = false;
+		GetTree().ChangeSceneToFile("res://scenes/ui/select_screen.tscn");
 	}
 
 	/// <summary>
@@ -236,6 +261,12 @@ public partial class GameUI : Control
 		BuildPanel.Visible = false;
 		ActionPanel.Visible = false;
 		_selectedSlot = null;
+
+		// [MỚI] Đồng bộ: Nếu có tháp nào đang được chọn, hãy bỏ chọn nó (ẩn tầm bắn)
+		if (TowerBase.SelectedTower != null)
+		{
+			TowerBase.SelectedTower.Deselect();
+		}
 	}
 
 	public void OnBtnBuildArcherPressed() => RequestBuild(0);

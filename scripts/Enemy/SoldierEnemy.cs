@@ -6,8 +6,8 @@ public partial class SoldierEnemy : EnemyBase
 {
 	public override void _Ready()
 	{
-		BaseSpeed = 80.0f;   // Tốc độ trung bình
-		MaxHealth = 30;      // Máu khá
+		BaseSpeed = 80.0f;   // Tốc độ nhanh
+		MaxHealth = 80;      // Máu khá
 		GoldReward = 12;
 		
 		// Có thể chỉnh scale nhỏ hơn Tank nhưng to hơn Fast

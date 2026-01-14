@@ -1,10 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://b5vabkfj0qfrq"]
 
-[ext_resource type="Script" uid="uid://b51topyau31gx" path="res://Scripts/Tower/MagicTower.cs" id="1_wl1gj"]
-[ext_resource type="PackedScene" uid="uid://vuibojaepuam" path="res://Scenes/Actors/Bullet/magic_missile.tscn" id="2_8mqrq"]
+[ext_resource type="Script" uid="uid://b51topyau31gx" path="res://scripts/Tower/MagicTower.cs" id="1_wl1gj"]
+[ext_resource type="PackedScene" uid="uid://vuibojaepuam" path="res://scenes/actors/Bullet/magic_missile.tscn" id="2_8mqrq"]
 [ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="2_wl1gj"]
-[ext_resource type="Texture2D" uid="uid://dxhfyfisq0ibo" path="res://assets/sprites/Characters/characters.png" id="4_char"]
-
+[ext_resource type="Texture2D" uid="uid://miavx8a53c65" path="res://assets/sprites/Characters/characters.png" id="4_char"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_Base1"]
 atlas = ExtResource("2_wl1gj")
@@ -27,6 +26,8 @@ radius = 200.0
 
 [node name="MagicTower" type="Node2D" node_paths=PackedStringArray("Muzzle", "RangeArea", "RangeShape", "BaseSprite", "TurretSprite")]
 script = ExtResource("1_wl1gj")
+Range = 120.0
+BaseCost = 150
 BaseTextures = Array[Texture2D]([SubResource("AtlasTexture_Base1"), SubResource("AtlasTexture_Base2"), SubResource("AtlasTexture_Base3")])
 TurretTextures = Array[Texture2D]([])
 TurretPositions = Array[Vector2]([Vector2(0, -12), Vector2(0, -18), Vector2(0, -22)])

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://diok8wj2aypk2"]
 
-[ext_resource type="Script" uid="uid://dri4iy48ed8si" path="res://Scripts/UI/GameUI.cs" id="1_gwk6t"]
+[ext_resource type="Script" uid="uid://dri4iy48ed8si" path="res://scripts/UI/GameUI.cs" id="1_gwk6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
 bg_color = Color(0.133333, 0.133333, 0.133333, 0.784314)
@@ -228,9 +228,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -100.0
+offset_top = -125.0
 offset_right = 150.0
-offset_bottom = 100.0
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_result")
@@ -253,6 +253,14 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "CHƠI LẠI"
 
+[node name="BtnMenu" type="Button" parent="ResultPanel/VBoxContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "MENU"
+
 [connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnArcher" to="." method="OnBtnBuildArcherPressed"]
 [connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnCannon" to="." method="OnBtnBuildCannonPressed"]
 [connection signal="pressed" from="BuildPanel/MarginContainer/VBoxContainer/GridContainer/BtnMagic" to="." method="OnBtnBuildMagicPressed"]
@@ -261,3 +269,4 @@ text = "CHƠI LẠI"
 [connection signal="pressed" from="ActionPanel/MarginContainer/VBoxContainer/BtnSell" to="." method="OnBtnSellPressed"]
 [connection signal="pressed" from="ActionPanel/MarginContainer/VBoxContainer/BtnClose2" to="." method="OnBtnClosePressed"]
 [connection signal="pressed" from="ResultPanel/VBoxContainer/BtnRestart" to="." method="OnBtnRestartPressed"]
+[connection signal="pressed" from="ResultPanel/VBoxContainer/BtnMenu" to="." method="OnBtnMenuPressed"]

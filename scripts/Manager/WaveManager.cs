@@ -2,7 +2,7 @@ using Godot;
 using System.Collections.Generic;
 
 /// <summary>
-/// Quản lý wave
+/// Quản lý wave - [ĐÃ CHỈNH SỬA: Logic Boss Level 3 & 4 + Override Số lượng quái]
 /// </summary>
 public partial class WaveManager : Node
 {
@@ -15,10 +15,13 @@ public partial class WaveManager : Node
 	[ExportGroup("Setup")]
 	[Export] public Path2D[] EnemyPaths; // Các đường đi của kẻ thù
 	[Export] public float TimeBetweenWaves = 5.0f; // Thời gian giữa các wave
-	[Export] public float InitialWaitTime = 2.0f; // Thời gian chờ ban đầu
+	
+	// [ĐÃ SỬA] Tăng thời gian chờ ban đầu từ 2s lên 10s để người chơi kịp chuẩn bị
+	[Export] public float InitialWaitTime = 10.0f; 
 
 	[ExportGroup("Enemy Types")]
-	[Export] public PackedScene[] EnemyPrefabs; // Kẻ thù đã được tạo sẵn
+	// [LƯU Ý QUAN TRỌNG] Hãy sắp xếp mảng này theo độ khó: [0] Yếu nhất -> [Cuối] Boss/Mạnh nhất
+	[Export] public PackedScene[] EnemyPrefabs; 
 
 	// Thuộc tính
 	private List<WaveData> _wavesConfig; // cấu hình waves
@@ -35,8 +38,22 @@ public partial class WaveManager : Node
 	{
 		Instance = this;
 
+		// [ĐÃ SỬA] Reset lại chỉ số Global (Vàng, Máu) khi bắt đầu màn chơi mới.
+		if (Global.Instance != null)
+		{
+			Global.Instance.StartNewGame();
+		}
+
 		// Khởi tạo các Component
 		_wavesConfig = LevelFactory.GetLevelConfig(CurrentLevel);
+
+		// [MỚI] Xử lý cứng cho Level 3: Chỉ lấy 4 wave đầu tiên nếu config dư thừa (để loại bỏ wave 5 thừa)
+		if (CurrentLevel == 3 && _wavesConfig.Count > 4)
+		{
+			_wavesConfig = _wavesConfig.GetRange(0, 4);
+			GD.Print("WaveManager: Đã giới hạn Level 3 xuống còn 4 Wave.");
+		}
+
 		_spawner = new PathSpawner(EnemyPaths, EnemyPrefabs);
 
 		SetupTimer();
@@ -94,9 +111,25 @@ public partial class WaveManager : Node
 		/// Dữ liệu wave
 		/// </summary>
 		var waveData = _wavesConfig[_state.CurrentWaveIndex];
+		
+		// [LOGIC MỚI] Xác định số lượng quái cần spawn
+		int countToSpawn = waveData.Count;
 
-		// Cập nhật trạng thái cho wave mới
-		_state.EnemiesToSpawnLeft = waveData.Count; // Số lượng kẻ thù cần spawn trong wave này
+		// [FIX LEVEL 4] Wave cuối: Cần đảm bảo đủ số lượng để sinh quái thường + 2 Boss
+		// Nếu config mặc định quá ít (ví dụ 1), nó sẽ chỉ ra 1 Boss. Ta override lên 15.
+		bool isLastWave = _state.CurrentWaveIndex == _wavesConfig.Count - 1;
+		if (CurrentLevel == 4 && isLastWave)
+		{
+			// Nếu số lượng cấu hình nhỏ hơn 10, tăng lên 15 để đảm bảo có "Tất cả quái thường" rồi mới tới Boss
+			if (countToSpawn < 10) 
+			{
+				countToSpawn = 15;
+				GD.Print($"WaveManager: Đã tăng số lượng quái Wave cuối Level 4 lên {countToSpawn} để đảm bảo logic Boss.");
+			}
+		}
+
+		// Cập nhật trạng thái cho wave mới với số lượng đã tính toán
+		_state.EnemiesToSpawnLeft = countToSpawn; 
 		_state.TotalSpawnedInCurrentWave = 0; // reset về 0 vì wave mới
 		_state.IsWaveActive = true; // wave hiện tại đang chạy
 
@@ -109,7 +142,7 @@ public partial class WaveManager : Node
 	}
 
 	/// <summary>
-	/// Sinh quái khi hết giờ
+	/// Sinh quái khi hết giờ - [ĐÃ SỬA: Logic Boss]
 	/// </summary>
 	private void OnSpawnTimerTimeout()
 	{
@@ -119,14 +152,61 @@ public partial class WaveManager : Node
 			return;
 		}
 
-		// Ra lệnh cho Spawner thực hiện việc tạo quái
-		var currentWaveData = _wavesConfig[_state.CurrentWaveIndex];
+		int enemyIndexToSpawn = 0;
+		int bossIndex = EnemyPrefabs.Length - 1; // Mặc định Boss là con cuối cùng trong mảng
+		bool isLastWave = _state.CurrentWaveIndex == _wavesConfig.Count - 1;
 
-		// ? DEBUG: kiểm tra loại quái
-		// GD.Print("EnemyTypeIndex: ", currentWaveData.EnemyTypeIndex);
-		// ?
+		// --- XỬ LÝ LOGIC BOSS ---
+		
+		// [ĐÃ CHỈNH SỬA] LEVEL 3 - Wave cuối (Wave 4): Chỉ duy nhất 1 con Boss Mahoraga
+		if (CurrentLevel == 3 && isLastWave)
+		{
+			enemyIndexToSpawn = bossIndex;
+			
+			// [FIX LỖI] Dù config wave có set số lượng bao nhiêu, ta ép buộc hệ thống 
+			// chỉ spawn đúng 1 con rồi dừng lại ngay.
+			_state.EnemiesToSpawnLeft = 1;
+		}
+		// [ĐÃ CHỈNH SỬA] LEVEL 4 - Wave cuối: Quái thường ra trước, 2 Boss ra sau cùng
+		else if (CurrentLevel == 4 && isLastWave)
+		{
+			// Nếu chỉ còn lại 1 hoặc 2 lượt spawn cuối cùng -> Ra Boss (Tổng cộng 2 con)
+			// Việc spawn liên tiếp này thường sẽ khiến Spawner phân phối vào 2 đường khác nhau (nếu cơ chế Spawner xoay vòng Path)
+			if (_state.EnemiesToSpawnLeft <= 2)
+			{
+				enemyIndexToSpawn = bossIndex;
+			}
+			else
+			{
+				// Các lượt đầu ra tất cả loại quái thường (Random từ đầu đến sát Boss)
+				if (bossIndex > 0)
+				{
+					enemyIndexToSpawn = GD.RandRange(0, bossIndex - 1);
+				}
+				else
+				{
+					enemyIndexToSpawn = 0; // Fallback an toàn
+				}
+			}
+		}
+		// CÁC TRƯỜNG HỢP KHÁC (Logic cũ)
+		else
+		{
+			int maxAllowed = 0;
 
-		_spawner.Execute(currentWaveData.EnemyTypeIndex, _state.TotalSpawnedInCurrentWave);
+			if (CurrentLevel == 1) maxAllowed = 0; // Chỉ quái yếu
+			else if (CurrentLevel == 2) maxAllowed = 1; // Quái tb
+			else if (CurrentLevel == 3) maxAllowed = Mathf.Min(2, bossIndex - 1); // Lv3 các wave đầu
+			else maxAllowed = bossIndex - 1; // Lv4 các wave đầu (trừ Boss)
+
+			// An toàn mảng
+			if (maxAllowed >= EnemyPrefabs.Length) maxAllowed = EnemyPrefabs.Length - 1;
+			
+			enemyIndexToSpawn = GD.RandRange(0, maxAllowed);
+		}
+
+		// Spawn
+		_spawner.Execute(enemyIndexToSpawn, _state.TotalSpawnedInCurrentWave);
 
 		_state.EnemiesToSpawnLeft--;
 		_state.TotalSpawnedInCurrentWave++;
@@ -184,11 +264,20 @@ public partial class WaveManager : Node
 	}
 
 	/// <summary>
-	/// Kết thúc màn chơi
+	/// Kết thúc màn chơi - [ĐÃ SỬA: Mở khóa Level]
 	/// </summary>
 	private void FinishGame()
 	{
 		_state.IsGameFinished = true;
-		if (Global.Instance?.Health > 0) Global.Instance.TriggerVictory();
+		if (Global.Instance?.Health > 0) 
+		{
+			Global.Instance.TriggerVictory();
+			
+			// [MỚI] Mở khóa level tiếp theo trong Global
+			if (Global.Instance != null)
+			{
+				Global.Instance.UnlockLevel(CurrentLevel + 1);
+			}
+		}
 	}
 }

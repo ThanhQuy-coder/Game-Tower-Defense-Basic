@@ -1,7 +1,8 @@
 using Godot;
 using System.Collections.Generic;
+using System.Linq; // Cần dùng để sắp xếp List
 
-// [TOWER BASE FINAL - FIX POSITION & VISUAL]
+// [TOWER BASE FINAL - SYNC UI & RANGE]
 public abstract partial class TowerBase : Node2D
 {
 	[ExportCategory("Config")]
@@ -13,13 +14,9 @@ public abstract partial class TowerBase : Node2D
 	[Export] public int BaseCost = 100;
 
 	[ExportCategory("Visuals")]
-	[Export] public Texture2D[] BaseTextures;   // Ảnh đế tháp (Bắt buộc thay đổi)
-
-	[Export] public Texture2D[] TurretTextures; // Ảnh lính (Tùy chọn: Để trống nếu không muốn đổi)
-
-	// [MỚI] Mảng lưu vị trí đứng của lính theo từng Level
-	// Ví dụ: Element 0: (0, -10), Element 1: (0, -25)...
-	[Export] public Vector2[] TurretPositions;
+	[Export] public Texture2D[] BaseTextures;   // Ảnh đế tháp
+	[Export] public Texture2D[] TurretTextures; // Ảnh lính
+	[Export] public Vector2[] TurretPositions;  // Vị trí lính
 
 	[ExportCategory("Setup")]
 	[Export] public PackedScene BulletScene;
@@ -32,6 +29,10 @@ public abstract partial class TowerBase : Node2D
 	protected List<EnemyBase> EnemiesInRange = new List<EnemyBase>();
 	protected EnemyBase CurrentTarget;
 	protected float FireCooldown = 0.0f;
+
+	// [MỚI] Biến static để lưu tháp đang được chọn duy nhất trên toàn bản đồ
+	public static TowerBase SelectedTower { get; private set; }
+	private bool _isSelected = false; 
 
 	public int Level { get; private set; } = 1;
 	public int maxLevel { get; private set; } = 3;
@@ -52,10 +53,85 @@ public abstract partial class TowerBase : Node2D
 		UpdateTowerVisual();
 	}
 
+	/// <summary>
+	/// [ĐÃ SỬA] Dùng _Input để bắt sự kiện chọn tháp (Ưu tiên cao nhất)
+	/// </summary>
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
+		{
+			// Nếu click đúng vào vị trí tháp (khoảng cách < 40)
+			if (GetGlobalMousePosition().DistanceTo(GlobalPosition) < 40)
+			{
+				// 1. Nếu đang có tháp khác được chọn -> Bỏ chọn nó trước
+				if (SelectedTower != null && SelectedTower != this)
+				{
+					SelectedTower.Deselect();
+				}
+
+				// 2. Chọn tháp này (Hiện tầm bắn)
+				if (!_isSelected)
+				{
+					_isSelected = true;
+					SelectedTower = this; // Gán static
+					QueueRedraw();
+				}
+
+				// LƯU Ý: Không dùng SetInputAsHandled() ở đây để sự kiện click vẫn truyền
+				// xuống được TowerSlot (hoặc Button) bên dưới để mở UI Nâng Cấp.
+			}
+		}
+	}
+
+	/// <summary>
+	/// [ĐÃ SỬA] Dùng _UnhandledInput để xử lý khi click vào VÙNG TRỐNG
+	/// </summary>
+	public override void _UnhandledInput(InputEvent @event)
+	{
+		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
+		{
+			// Sự kiện chạy vào đây nghĩa là không click vào UI hay Button nào (Click đất trống)
+			
+			// Nếu tháp này đang được chọn -> Bỏ chọn và đóng luôn UI
+			if (_isSelected)
+			{
+				Deselect(); // Tắt tầm bắn
+				GameUI.Instance?.HideAllPanels(); // Tắt bảng nâng cấp
+			}
+		}
+	}
+
+	/// <summary>
+	/// Hàm tắt chọn tháp (Ẩn tầm bắn).
+	/// </summary>
+	public void Deselect()
+	{
+		if (_isSelected)
+		{
+			_isSelected = false;
+			// Nếu mình đang là tháp được chọn static thì xóa đi
+			if (SelectedTower == this) SelectedTower = null;
+			QueueRedraw(); // Vẽ lại để ẩn vòng tròn
+		}
+	}
+
+	/// <summary>
+	/// Vẽ vòng tròn tầm bắn
+	/// </summary>
+	public override void _Draw()
+	{
+		if (_isSelected)
+		{
+			// Vẽ vòng tròn màu đỏ nhạt, bán kính bằng Range
+			DrawCircle(Vector2.Zero, Range, new Color(1, 0, 0, 0.2f));
+			DrawArc(Vector2.Zero, Range, 0, Mathf.Tau, 64, new Color(1, 0, 0, 0.5f), 2.0f);
+		}
+	}
+
 	public override void _PhysicsProcess(double delta)
 	{
 		UpdateCooldown((float)delta);
-		FindTarget();
+		FindTarget(); 
 
 		if (CurrentTarget != null && IsInstanceValid(CurrentTarget))
 		{
@@ -73,7 +149,16 @@ public abstract partial class TowerBase : Node2D
 	private void FindTarget()
 	{
 		EnemiesInRange.RemoveAll(e => e == null || !IsInstanceValid(e));
-		CurrentTarget = EnemiesInRange.Count > 0 ? EnemiesInRange[0] : null;
+
+		if (EnemiesInRange.Count == 0)
+		{
+			CurrentTarget = null;
+			return;
+		}
+
+		CurrentTarget = EnemiesInRange
+			.OrderBy(e => e.GlobalPosition.DistanceSquaredTo(GlobalPosition))
+			.FirstOrDefault();
 	}
 
 	private void RotateTurret(float delta)
@@ -84,7 +169,6 @@ public abstract partial class TowerBase : Node2D
 
 			if (IsSideView)
 			{
-				// Lật trái/phải
 				if (direction.X < 0) TurretSprite.Scale = new Vector2(-1, 1);
 				else TurretSprite.Scale = new Vector2(1, 1);
 				TurretSprite.Rotation = 0;
@@ -108,13 +192,12 @@ public abstract partial class TowerBase : Node2D
 		else
 			bulletRotation = (TurretSprite != null) ? TurretSprite.GlobalRotation : 0f;
 
-		bullet.Setup(Muzzle.GlobalPosition, bulletRotation);
+		bullet.Setup(Muzzle.GlobalPosition, bulletRotation, CurrentTarget);
 		bullet.Damage += (Level - 1) * 5;
 	}
 
 	public void Upgrade()
 	{
-		// Kiểm tra max cấp
 		maxLevel = (BaseTextures != null) ? BaseTextures.Length : 3;
 
 		if (Level >= maxLevel) return;
@@ -128,6 +211,8 @@ public abstract partial class TowerBase : Node2D
 			Range *= 1.1f;
 			if (RangeShape.Shape is CircleShape2D circle) circle.Radius = Range;
 
+			if (_isSelected) QueueRedraw();
+
 			UpdateTowerVisual();
 			GD.Print($"Upgraded to Level {Level}");
 		}
@@ -137,20 +222,16 @@ public abstract partial class TowerBase : Node2D
 	{
 		int index = Level - 1;
 
-		// 1. Cập nhật ĐẾ THÁP (Base)
 		if (BaseSprite != null && BaseTextures != null && index < BaseTextures.Length && BaseTextures[index] != null)
 		{
 			BaseSprite.Texture = BaseTextures[index];
 		}
 
-		// 2. Cập nhật LÍNH (Turret) - CHỈ CẬP NHẬT NẾU CÓ ẢNH TRONG MẢNG
-		// Nếu bạn để trống mảng TurretTextures, lính sẽ giữ nguyên ảnh gốc
 		if (TurretSprite != null && TurretTextures != null && index < TurretTextures.Length && TurretTextures[index] != null)
 		{
 			TurretSprite.Texture = TurretTextures[index];
 		}
 
-		// 3. [MỚI] Cập nhật VỊ TRÍ ĐỨNG (Để không bị tháp che)
 		if (TurretSprite != null && TurretPositions != null && index < TurretPositions.Length)
 		{
 			TurretSprite.Position = TurretPositions[index];

@@ -1,9 +1,5 @@
 using Godot;
 
-// [BOSS MAHORAGA NERF]
-// - Giảm Máu tối đa (1000 -> 500)
-// - Giảm sát thương vào nhà (10 -> 5)
-// - Bỏ hiệu ứng phóng to (Scale)
 public partial class BossMahoraga : EnemyBase
 {
 	[Export] public int AdaptationThreshold = 50; // Mất 50 máu sẽ thích nghi
@@ -12,15 +8,36 @@ public partial class BossMahoraga : EnemyBase
 
 	public override void _Ready()
 	{
-		BaseSpeed = 50.0f;  // Đi chậm lại một chút
-		MaxHealth = 500;   
+		BaseSpeed = 20.0f;  // Đi chậm lại một chút
+		MaxHealth = 1000;    
 		GoldReward = 500;
-		DamageToPlayer = 10;
+		DamageToPlayer = 5; // [ĐÃ SỬA] Giảm xuống 5 theo yêu cầu Nerf
 		
 		// Scale ban đầu to gấp đôi quái thường (giữ nguyên, nhưng không to thêm nữa)
 		Scale = new Vector2(2.0f, 2.0f);
 		
 		base._Ready();
+	}
+
+	// [FIX LỖI NULL REFERENCE - UpdateAnimation]
+	// Ngăn code base gọi animation di chuyển bị thiếu
+	protected override void UpdateAnimation()
+	{
+		// Để trống: Boss tạm thời không có animation di chuyển
+	}
+
+	// [FIX LỖI CS0507 - Access Modifier]
+	// Đã đổi từ 'public' sang 'protected' để khớp với EnemyBase.Die()
+	protected override void Die()
+	{
+		// Tự xử lý cộng tiền (Logic lấy từ EnemyBase nhưng bỏ phần Animation)
+		if (Global.Instance != null)
+		{
+			Global.Instance.Gold += GoldReward;
+		}
+
+		// Hủy Boss ngay lập tức thay vì chờ Animation
+		QueueFree();
 	}
 
 	public override void TakeDamage(int amount)

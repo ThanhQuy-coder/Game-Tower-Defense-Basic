@@ -1,19 +1,20 @@
 [gd_scene load_steps=31 format=4 uid="uid://c4i1qajscxjfy"]
 
-[ext_resource type="Texture2D" uid="uid://bxljkeu0s3kq3" path="res://assets/tilesets/tileset1.png" id="1_0ljxa"]
+[ext_resource type="Texture2D" uid="uid://cnicj3jkgweya" path="res://assets/tilesets/tileset1.png" id="1_0ljxa"]
 [ext_resource type="Texture2D" uid="uid://dh8th1xkyp1lu" path="res://assets/tilesets/freelavatileset-Sheet.png" id="2_0ljxa"]
 [ext_resource type="Texture2D" uid="uid://cmojewfbkfn8f" path="res://assets/tilesets/tilemap_packed.png" id="4_pimnq"]
 [ext_resource type="Texture2D" uid="uid://c5txtqjls6ky2" path="res://assets/tilesets/Cave_objects_source.png" id="4_ugcn1"]
 [ext_resource type="Texture2D" uid="uid://8q5ox2aycd41" path="res://assets/tilesets/tileset.png" id="6_pimnq"]
 [ext_resource type="Texture2D" uid="uid://br3xk2iey7nqh" path="res://assets/tilesets/Objects_Cemetery.png" id="7_2bnyt"]
-[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://Scripts/Manager/WaveManager.cs" id="9_pimnq"]
+[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_pimnq"]
 [ext_resource type="Texture2D" uid="uid://ci2l638pmf7jx" path="res://assets/tilesets/props.png" id="9_t4txi"]
-[ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://Scenes/Actors/Enemys/fast_enemy.tscn" id="10_f6egh"]
-[ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://Scenes/Actors/Enemys/tank_enemy.tscn" id="11_t4txi"]
-[ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://Scenes/Actors/Enemys/soldier_enemy.tscn" id="12_apo5x"]
-[ext_resource type="PackedScene" uid="uid://lpdhcqfm2dc8" path="res://Scenes/Actors/Enemys/boss_mahoraga.tscn" id="13_josfm"]
-[ext_resource type="PackedScene" uid="uid://cc0ocomr0ymt6" path="res://Scenes/Actors/Towers/TowerSlot.tscn" id="14_apo5x"]
-[ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://Scenes/UI/game_ui.tscn" id="14_t4txi"]
+[ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemys/rat_enemy.tscn" id="10_f6egh"]
+[ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemys/tank_enemy.tscn" id="11_t4txi"]
+[ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemys/soldier_enemy.tscn" id="12_apo5x"]
+[ext_resource type="PackedScene" uid="uid://lpdhcqfm2dc8" path="res://scenes/actors/Enemys/boss_mahoraga.tscn" id="13_josfm"]
+[ext_resource type="PackedScene" uid="uid://cc0ocomr0ymt6" path="res://scenes/actors/Towers/TowerSlot.tscn" id="14_apo5x"]
+[ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/game_ui.tscn" id="14_t4txi"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftfob"]
 texture = ExtResource("1_0ljxa")

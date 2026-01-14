@@ -85,7 +85,7 @@ public abstract partial class EnemyBase : Area2D
 	/// <summary>
 	/// Phương thức xử lý animation
 	/// </summary>
-	protected void UpdateAnimation()
+	protected virtual void UpdateAnimation()
 	{
 		PathFollow.SetPhysicsProcess(true); // Bật lại nếu đã tắt ở Die()
 
