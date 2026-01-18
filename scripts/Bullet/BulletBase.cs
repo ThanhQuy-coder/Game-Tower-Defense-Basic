@@ -1,35 +1,40 @@
 using Godot;
 using System;
 
-// [BASE CLASS - MODIFIED FOR HOMING & INSTANT FAIL]
-// Chịu trách nhiệm: Bay tìm mục tiêu, tự hủy nếu mất mục tiêu.
+/// <summary>
+/// Lớp cơ sở cho các loại đạn trong Game.
+/// Xử lý: Di chuyển hướng mục tiêu (Homing), tự hủy khi mất mục tiêu hoặc hết thời gian.
+/// </summary>
 public abstract partial class BulletBase : Area2D
 {
-	[Export] public float Speed = 600.0f;
-	[Export] public int Damage = 10;
-	[Export] public float Lifetime = 3.0f;
+	// --- Các thuộc tính cấu hình ---
+	[Export] public float Speed = 200.0f;     // Tốc độ bay
+	[Export] public int Damage = 10;          // Sát thương cơ bản
+	[Export] public float Lifetime = 3.0f;    // Thời gian tồn tại tối đa
 
-	protected Vector2 Direction;
-	protected bool IsInitialized = false;
-	
-	// [MỚI] Biến lưu trữ mục tiêu để khóa
-	protected EnemyBase TargetEnemy;
+	protected Vector2 Direction;              // Hướng di chuyển hiện tại
+	protected bool IsInitialized = false;     // Đảm bảo đạn đã được Setup trước khi chạy
+	protected EnemyBase TargetEnemy;          // Mục tiêu mà đạn đang khóa (Homing)
 
 	public override void _Ready()
 	{
-		// Tự hủy sau thời gian quy định (phòng hờ)
+		// Thiết lập bộ đếm tự hủy để tránh rác bộ nhớ
 		GetTree().CreateTimer(Lifetime).Timeout += () => QueueFree();
+
+		// Kết nối tín hiệu va chạm
 		AreaEntered += OnHit;
 	}
 
-	// [ĐÃ SỬA] Thêm tham số target vào Setup
+	/// <summary>
+	/// Khởi tạo các thông số ban đầu khi đạn được bắn ra.
+	/// </summary>
 	public void Setup(Vector2 position, float rotation, EnemyBase target = null)
 	{
 		GlobalPosition = position;
 		GlobalRotation = rotation;
-		TargetEnemy = target; // Lưu mục tiêu
+		TargetEnemy = target;
 
-		// Tính hướng bay ban đầu
+		// Tính toán hướng ban đầu dựa trên góc xoay
 		Direction = Vector2.Right.Rotated(rotation);
 		IsInitialized = true;
 	}
@@ -38,52 +43,59 @@ public abstract partial class BulletBase : Area2D
 	{
 		if (!IsInitialized) return;
 
-		// [LOGIC MỚI] Khóa mục tiêu và biến mất nếu trượt
+		// Xử lý logic đuổi mục tiêu (Homing Missile)
 		if (TargetEnemy != null)
 		{
-			// Kiểm tra xem mục tiêu còn tồn tại không (chưa chết, chưa bị queueFree)
+			// Nếu mục tiêu biến mất hoặc chết, đạn tự hủy ngay để tránh bay lạc
 			if (!IsInstanceValid(TargetEnemy))
 			{
-				// Mục tiêu đã chết hoặc biến mất -> Đạn biến mất ngay lập tức (không bay lung tung)
 				QueueFree();
 				return;
 			}
 
-			// Cập nhật hướng bay về phía mục tiêu (Homing Missile)
+			// Cập nhật hướng bay liên tục về phía mục tiêu
 			Vector2 targetDir = (TargetEnemy.GlobalPosition - GlobalPosition).Normalized();
-			
-			// Có thể dùng Lerp để xoay từ từ cho đẹp, nhưng ở đây gán thẳng để khóa cứng "Hard Lock"
-			Direction = targetDir;
-			
-			// Xoay hình ảnh đạn theo hướng bay
+			Direction = targetDir; // Hard Lock: Khóa mục tiêu tuyệt đối
+
+			// Đồng bộ góc xoay của hình ảnh đạn theo hướng bay
 			GlobalRotation = Direction.Angle();
 		}
 
-		// Di chuyển
+		// Thực hiện di chuyển vật lý
 		GlobalPosition += Direction * Speed * (float)delta;
 	}
 
-	// Template Method: Xử lý chung rồi gọi hàm riêng
+	/// <summary>
+	/// Xử lý va chạm chung.
+	/// </summary>
 	private void OnHit(Area2D area)
 	{
-		// Chỉ xử lý nếu trúng Enemy
 		if (area is EnemyBase enemy)
 		{
-			// Nếu có TargetEnemy, chỉ cho phép trúng đúng con Target đó (tránh việc đạn xuyên qua con khác)
-			// Hoặc nếu muốn đạn chắn được thì bỏ dòng check bên dưới.
-			if (TargetEnemy != null && enemy != TargetEnemy) return; 
+			// Kiểm tra: Đảm bảo đạn chỉ trúng mục tiêu đã được khóa
+			if (TargetEnemy != null && enemy != TargetEnemy) return;
 
+			// Thực thi các hiệu ứng cụ thể của từng loại đạn
 			ApplyEffect(enemy);
 			CreateImpactEffect();
-			QueueFree(); // Hủy đạn sau khi trúng
+
+			// Xóa đạn sau khi hoàn thành nhiệm vụ
+			QueueFree();
 		}
 	}
 
-	// Các class con sẽ định nghĩa hiệu ứng cụ thể (Sát thương đơn, nổ lan, làm chậm...)
+	// --- Các phương thức trừu tượng/ảo để các lớp con kế thừa ---
+
+	/// <summary>
+	/// Định nghĩa hiệu ứng cụ thể khi trúng mục tiêu (Sát thương, làm chậm, nổ lan...)
+	/// </summary>
 	protected abstract void ApplyEffect(EnemyBase enemy);
 
+	/// <summary>
+	/// Tạo hiệu ứng hình ảnh (VFX) khi va chạm.
+	/// </summary>
 	protected virtual void CreateImpactEffect()
 	{
-		// TODO: Spawn hiệu ứng nổ/bụi tại GlobalPosition
+		// Sẽ được ghi đè ở lớp con để thêm hiệu ứng nổ/bụi
 	}
 }

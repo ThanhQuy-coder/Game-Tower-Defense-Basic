@@ -9,6 +9,12 @@ public partial class SfxManager : Node
 	private int _currentIndex = 0;
 	private bool _isSfxEnabled = true;
 
+	// Lưu trữ thời gian cuối cùng một âm thanh cụ thể được phát
+	private Dictionary<AudioStream, ulong> _lastPlayedTime = new();
+
+	// Khoảng cách tối thiểu giữa 2 lần phát cùng 1 loại âm thanh (miligiây)
+	[Export] public ulong MinIntervalMs = 50;
+
 	public override void _Ready()
 	{
 		// Khởi tạo Pool để dùng lại các Node, tránh khởi tạo/xóa liên tục (Tối ưu hiệu năng)
@@ -27,6 +33,17 @@ public partial class SfxManager : Node
 	public void PlaySfx(AudioStream stream, float pitchScale = 1.0f)
 	{
 		if (!_isSfxEnabled || stream == null) return;
+
+		// --- KỸ THUẬT 1: SOUND LIMITING ---
+		ulong currentTime = Time.GetTicksMsec();
+		if (_lastPlayedTime.ContainsKey(stream))
+		{
+			if (currentTime - _lastPlayedTime[stream] < MinIntervalMs)
+				return; // Bỏ qua nếu quá nhanh
+		}
+		_lastPlayedTime[stream] = currentTime;
+
+		// --- PHÁT ÂM THANH ---
 
 		var player = _soundPool[_currentIndex];
 		player.Stream = stream;

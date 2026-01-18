@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://vuibojaepuam"]
+[gd_scene load_steps=6 format=3 uid="uid://vuibojaepuam"]
 
 [ext_resource type="Script" uid="uid://sgstq1e6w88b" path="res://scripts/Bullet/MagicMissile.cs" id="1_3yhpj"]
 [ext_resource type="Texture2D" uid="uid://dosloil0r2suy" path="res://assets/tilesets/51.png" id="2_a40a0"]
+[ext_resource type="Script" uid="uid://cf2gf5loj2688" path="res://scripts/Audio/BulletSfxComponent.cs" id="3_fqvim"]
+[ext_resource type="AudioStream" uid="uid://cc08wlkialb3n" path="res://assets/audios/effects/spell.wav" id="4_fqvim"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqvim"]
 
@@ -17,3 +19,7 @@ shape = SubResource("CircleShape2D_fqvim")
 position = Vector2(-4.7683716e-07, 2.3841858e-07)
 scale = Vector2(0.11451615, 0.13931291)
 texture = ExtResource("2_a40a0")
+
+[node name="BulletSfxComponent" type="Node" parent="."]
+script = ExtResource("3_fqvim")
+ShootSfx = ExtResource("4_fqvim")

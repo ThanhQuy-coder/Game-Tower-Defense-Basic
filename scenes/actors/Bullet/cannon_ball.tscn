@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwn76ldt4qom7"]
+[gd_scene load_steps=6 format=3 uid="uid://bwn76ldt4qom7"]
 
 [ext_resource type="Script" uid="uid://d3grh4uuqphof" path="res://scripts/Bullet/CannonBall.cs" id="1_hp8hw"]
 [ext_resource type="Texture2D" uid="uid://dv3m145s4cro6" path="res://assets/tilesets/49.png" id="2_18cvv"]
+[ext_resource type="Script" uid="uid://cf2gf5loj2688" path="res://scripts/Audio/BulletSfxComponent.cs" id="3_gmxa2"]
+[ext_resource type="AudioStream" uid="uid://banuwpkfv1d56" path="res://assets/audios/effects/cannon-shot-326182.wav" id="4_nnlfs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmxa2"]
 radius = 6.0
@@ -18,3 +20,7 @@ shape = SubResource("CircleShape2D_gmxa2")
 position = Vector2(0, 1.1920929e-07)
 scale = Vector2(0.09062501, 0.09628379)
 texture = ExtResource("2_18cvv")
+
+[node name="BulletSfxComponent" type="Node" parent="."]
+script = ExtResource("3_gmxa2")
+ShootSfx = ExtResource("4_nnlfs")

@@ -6,17 +6,17 @@ public partial class SoldierEnemy : EnemyBase
 {
 	public override void _Ready()
 	{
-		BaseSpeed = 80.0f;   // Tốc độ nhanh
+		BaseSpeed = 30.0f;   // Tốc độ nhanh
 		MaxHealth = 80;      // Máu khá
 		GoldReward = 12;
-		
+
 		// Có thể chỉnh scale nhỏ hơn Tank nhưng to hơn Fast
-		Scale = new Vector2(1.1f, 1.1f); 
-		
+		Scale = new Vector2(1.1f, 1.1f);
+
 		// Gọi base._Ready() để thiết lập di chuyển
 		base._Ready();
-		
+
 		// Đổi màu để nhận diện (Ví dụ: Màu xám thép)
-		Modulate = new Color(0.6f, 0.7f, 0.8f); 
+		Modulate = new Color(0.6f, 0.7f, 0.8f);
 	}
 }

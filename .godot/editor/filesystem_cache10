@@ -1,11 +1,15 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768721596
+::res://::1768744235
+default_bus_layout.tres::AudioBusLayout::1179406173047607452::1768744235::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1768487328::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::2505412951711285447::1768487249::1768487369::1::::<><><>0<>0<>30ccb2323abf8d4d3c178dec1376855a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1768487249::0::1::::<><><>0<>0<><>::
 ::res://assets/::1768647703
 ::res://assets/audios/::1768647711
-::res://assets/audios/effects/::1768663055
+::res://assets/audios/effects/::1768726810
+Arrow Impact 09.wav::AudioStreamWAV::3827012548586770634::1768724373::1768724374::1::::<><><>0<>0<>12b25551ded39955e1c723027a80620d<>res://.godot/imported/Arrow Impact 09.wav-6b61e1c757ffdd824d64cdbcf560d34e.sample::
+cannon-shot-326182.wav::AudioStreamWAV::2414512025371678055::1768724639::1768724640::1::::<><><>0<>0<>8d98da659c4cfb9ffe15a817434d3d7f<>res://.godot/imported/cannon-shot-326182.wav-7e105fa715c07fe6a723f7e0b3490350.sample::
+spell.wav::AudioStreamWAV::4966872040309775905::1768726810::1768726810::1::::<><><>0<>0<>84ae9712857ebfd7e3abb46c2cc9dc4c<>res://.godot/imported/spell.wav-a108f57358c903a9f5a710c9cee30a8d.sample::
 UIClick_UI 01_Eric Berzins_SFUI.wav::AudioStreamWAV::8557168724648754055::1768663054::1768663055::1::::<><><>0<>0<>7dcb15a28e5f47501f2c1d9ff9cf4869<>res://.godot/imported/UIClick_UI 01_Eric Berzins_SFUI.wav-2ccf1c159bb9436380b01dfc76488e2d.sample::
 UIClick_UI 02_Eric Berzins_SFUI.wav::AudioStreamWAV::182855936736020502::1768663054::1768663055::1::::<><><>0<>0<>a64f8c6fb8f4df9d5759bb68c6ae4778<>res://.godot/imported/UIClick_UI 02_Eric Berzins_SFUI.wav-e93fee6cd65ee2c7f93ce69642f13a14.sample::
 UIClick_UI 03_Eric Berzins_SFUI.wav::AudioStreamWAV::5848219150408388586::1768663054::1768663055::1::::<><><>0<>0<>393e0a765fb507cc1b3b9202b526c120<>res://.godot/imported/UIClick_UI 03_Eric Berzins_SFUI.wav-037a47898db486d43e967d78b6ae36f8.sample::
@@ -16,10 +20,12 @@ UIClick_UI 07_Eric Berzins_SFUI.wav::AudioStreamWAV::2771519634619254182::176866
 UIClick_UI 08_Eric Berzins_SFUI.wav::AudioStreamWAV::2473385210131533878::1768663054::1768663055::1::::<><><>0<>0<>df7df36bdc7547922645a0619eda8716<>res://.godot/imported/UIClick_UI 08_Eric Berzins_SFUI.wav-adb971ea10fc9cc9b7aca49e6adbc6c9.sample::
 UIClick_UI 09_Eric Berzins_SFUI.wav::AudioStreamWAV::5416190627991526212::1768663054::1768663055::1::::<><><>0<>0<>dd3d4ca8c12f4ce36f0d2a085668fb1c<>res://.godot/imported/UIClick_UI 09_Eric Berzins_SFUI.wav-b38422f5a5db7ee52debcc7b78af8e17.sample::
 UIClick_UI 10_Eric Berzins_SFUI.wav::AudioStreamWAV::5199482338333612934::1768663054::1768663055::1::::<><><>0<>0<>11e14a5ab8d255019060f4110b95fb41<>res://.godot/imported/UIClick_UI 10_Eric Berzins_SFUI.wav-de1b3623deea1704e11f1f56a677fdd4.sample::
-::res://assets/audios/musics/::1768647737
+::res://assets/audios/musics/::1768752906
 Pixel 2.ogg::AudioStreamOggVorbis::4560887851737643631::1768647737::1768647737::1::::<><><>0<>0<>7fc9c86311aba409dcdf2ddd6350fb45<>res://.godot/imported/Pixel 2.ogg-830be7107f0e804d07f27a45233b64b8.oggvorbisstr::
+Pixel 3.ogg::AudioStreamOggVorbis::1279923369964578855::1768752906::1768752907::1::::<><><>0<>0<>4eeb141fbf44e765ecfbd20c8b77ceff<>res://.godot/imported/Pixel 3.ogg-242b6b1e48ddf4bd554d7f7a2487f15b.oggvorbisstr::
 Pixel 4.ogg::AudioStreamOggVorbis::3859154377462834046::1768487328::1768647704::1::::<><><>0<>0<>a987720e7c16a3422d63f61795b9ed15<>res://.godot/imported/Pixel 4.ogg-80413b5518253a12a84429321b062a25.oggvorbisstr::
-::res://assets/images/::1768487369
+Pixel 8.ogg::AudioStreamOggVorbis::9155063565392827830::1768752891::1768752892::1::::<><><>0<>0<>2d9aa781f211f095c105cf56cb246a48<>res://.godot/imported/Pixel 8.ogg-bc7dfd78d2bb96b3e7b9df7ff04b3aae.oggvorbisstr::
+::res://assets/images/::1768727418
 b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png::CompressedTexture2D::3256951189849480598::1768487328::1768487369::1::::<><><>0<>0<>433f8f3c54e0191ae1c6ef8b94f67de8<>res://.godot/imported/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png-48c6dc1dfc203cb5442df99c0141218e.ctex::
 level1.png::CompressedTexture2D::7937432998567228046::1768487328::1768487369::1::::<><><>0<>0<>eff7ff1f9bf6e829e94d4779a6fd24be<>res://.godot/imported/level1.png-05275938a553e712e3c0d7be71ab75e6.ctex::
 Level2.png::CompressedTexture2D::266115899596464723::1768487328::1768487369::1::::<><><>0<>0<>fc72d2e0c8ab9369f534c4e5e3dd23a1<>res://.godot/imported/Level2.png-ee99bcbc00681fd8b0d0f8d2796feccf.ctex::
@@ -71,7 +77,7 @@ U_Special.png::CompressedTexture2D::961936795053705427::1768487328::1768487368::
 ::res://assets/sprites/Enemys/Others/::1768487369
 mahoraga_by_saxcreed_dggesg8-fullview.jpg::CompressedTexture2D::648586531315141590::1768487328::1768487369::1::::<><><>0<>0<>468a8812ccf28b59c91e773040474804<>res://.godot/imported/mahoraga_by_saxcreed_dggesg8-fullview.jpg-7784e75e40e7d3c16051c3eeb2ac9fec.ctex::
 unnamed.jpg::CompressedTexture2D::8013554055563363842::1768487328::1768487369::1::::<><><>0<>0<>3d11b618d7f7ae0b517e5f29fabea6df<>res://.godot/imported/unnamed.jpg-76e81a2f93c0d8ee4191451d0183aba5.ctex::
-::res://assets/tilesets/::1768487369
+::res://assets/tilesets/::1768727511
 49.png::CompressedTexture2D::8691806949524358623::1768487328::1768487368::1::::<><><>0<>0<>55018a5341410e6208b3467856fc0adf<>res://.godot/imported/49.png-ec8b9d90a6e8fb359c4b9949f811b242.ctex::
 51.png::CompressedTexture2D::8179757987959267920::1768487328::1768487368::1::::<><><>0<>0<>9ae841654107ef27df6fd6d6d944fa02<>res://.godot/imported/51.png-15dd9413b5f046b41b11af9ec52893e1.ctex::
 Blue-gray_ruins3.png::CompressedTexture2D::2687385471442149061::1768487328::1768487368::1::::<><><>0<>0<>453446e936f1b9218659ee1bd8b6460f<>res://.godot/imported/Blue-gray_ruins3.png-7b25e9c76e81a071544b7cc9a0c14ffd.ctex::
@@ -91,6 +97,7 @@ tileset1.png::CompressedTexture2D::3347089521351500760::1768487328::1768487369::
 tileset.png::CompressedTexture2D::5768328817427804192::1768487328::1768487369::1::::<><><>0<>0<>cdd5248146bf0602f136cd37aa337b62<>res://.godot/imported/tileset.png-07d912f8b4c07111b880b883656d8231.ctex::
 Tilled_Dirt.png::CompressedTexture2D::5972901707851159822::1768487328::1768487369::1::::<><><>0<>0<>d94f546a214c2324cbf0181fc47d82f1<>res://.godot/imported/Tilled_Dirt.png-050e8e7620d9c6649eaa3330fc5db053.ctex::
 towers.png::CompressedTexture2D::396166455133717403::1768487328::1768487369::1::::<><><>0<>0<>5d6602df17ea4a31747359ccdf6197aa<>res://.godot/imported/towers.png-6b9fd2d2a2fd88a38f6def5c86aaa12b.ctex::
+unnamed__1_-removebg-preview.png::CompressedTexture2D::6738628167365995319::1768727510::1768727511::1::::<><><>0<>0<>d733e13ec54cf27202dbd467309de118<>res://.godot/imported/unnamed__1_-removebg-preview.png-1015a5b1e927f418e5ff83bdd112a701.ctex::
 Water.png::CompressedTexture2D::2163579626870421361::1768487328::1768487369::1::::<><><>0<>0<>a69de6b400a36ddd0211feda218653e8<>res://.godot/imported/Water.png-27d957a399157eada5b7797d22cb3803.ctex::
 White_ruins2.png::CompressedTexture2D::5821373994214212067::1768487328::1768487369::1::::<><><>0<>0<>37b29e2371a8778077204f25f600ec33<>res://.godot/imported/White_ruins2.png-a8060c2b03b2060e9a8b77084f72c0a8.ctex::
 White_ruins4.png::CompressedTexture2D::4817957253025502800::1768487328::1768487369::1::::<><><>0<>0<>dea173ef6f4ae927c0d1967916a42e8c<>res://.godot/imported/White_ruins4.png-9f14d7b62b10068afc215bfd4d3b16a9.ctex::
@@ -119,13 +126,13 @@ Text2.png::CompressedTexture2D::3215696795269851029::1768487328::1768487368::1::
 ::res://scenes/actors/::1768487328
 ::res://scenes/actors/Animals/::1768487473
 Cow.tscn::PackedScene::1943175994317981429::1768487473::0::1::::<><><>0<>0<><>::uid://c1gku8qnrtall::::res://assets/sprites/Animals/Free Cow Sprites.png<>uid://fn4khbghek7s::::res://scripts/Cow.cs
-::res://scenes/actors/Bullet/::1768487423
-arrow_bullet.tscn::PackedScene::3386440768052546288::1768487421::0::1::::<><><>0<>0<><>::uid://c7gean2qxrxds::::res://scripts/Bullet/ArrowBullet.cs<>uid://bmppycwfs6rm6::::res://assets/tilesets/cungtinhyeu.jpg
-cannon_ball.tscn::PackedScene::3959411041206106336::1768487422::0::1::::<><><>0<>0<><>::uid://d3grh4uuqphof::::res://scripts/Bullet/CannonBall.cs<>uid://dv3m145s4cro6::::res://assets/tilesets/49.png
-magic_missile.tscn::PackedScene::1515741542452011988::1768487423::0::1::::<><><>0<>0<><>::uid://sgstq1e6w88b::::res://scripts/Bullet/MagicMissile.cs<>uid://dosloil0r2suy::::res://assets/tilesets/51.png
-::res://scenes/actors/Bushes/::1768487328
-Bush_Green.tscn::PackedScene::1109670555196192534::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
-Bush_Green_Berries.tscn::PackedScene::4194271571942628757::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
+::res://scenes/actors/Bullet/::1768744323
+arrow_bullet.tscn::PackedScene::3386440768052546288::1768744323::0::1::::<><><>0<>0<><>::uid://c7gean2qxrxds::::res://scripts/Bullet/ArrowBullet.cs<>uid://c3aihr6si0rql::::res://assets/tilesets/unnamed__1_-removebg-preview.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://bur3lqg0d7in7::::res://assets/audios/effects/Arrow Impact 09.wav
+cannon_ball.tscn::PackedScene::3959411041206106336::1768726233::0::1::::<><><>0<>0<><>::uid://d3grh4uuqphof::::res://scripts/Bullet/CannonBall.cs<>uid://dv3m145s4cro6::::res://assets/tilesets/49.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://banuwpkfv1d56::::res://assets/audios/effects/cannon-shot-326182.wav
+magic_missile.tscn::PackedScene::1515741542452011988::1768726820::0::1::::<><><>0<>0<><>::uid://sgstq1e6w88b::::res://scripts/Bullet/MagicMissile.cs<>uid://dosloil0r2suy::::res://assets/tilesets/51.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://cc08wlkialb3n::::res://assets/audios/effects/spell.wav
+::res://scenes/actors/Bushes/::1768721675
+Bush_Green.tscn::PackedScene::1109670555196192534::1768721674::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+Bush_Green_Berries.tscn::PackedScene::4194271571942628757::1768721675::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
 ::res://scenes/actors/Enemys/::1768487427
 boss_mahoraga.tscn::PackedScene::803237727872735401::1768487424::0::1::::<><><>0<>0<><>::uid://2ejvexw4o482::::res://scripts/Enemy/BossMahoraga.cs<>uid://jigei8flxwm5::::res://assets/sprites/Enemys/Others/mahoraga_by_saxcreed_dggesg8-fullview.jpg
 magic_missile.tscn::PackedScene::8024181310291341538::1768487425::0::1::::<><><>0<>0<><>::uid://sgstq1e6w88b::::res://scripts/Bullet/MagicMissile.cs<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png
@@ -135,51 +142,55 @@ tank_enemy.tscn::PackedScene::659345542088022766::1768487427::0::1::::<><><>0<>0
 ::res://scenes/actors/ForestPatches/::1768487328
 Forest_Patch_Column.tscn::PackedScene::2553199237569880843::1768487328::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn
 Forest_Patch_Row.tscn::PackedScene::715142992328529701::1768487328::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn<>uid://cl4qo0iv2rv7m::::res://Scenes/Actors/Grass/GrassGreen01.tscn<>uid://ddwjrempthau6::::res://Scenes/Actors/Grass/GrassGreen02.tscn
-::res://scenes/actors/Grass/::1768487328
-GrassGreen01.tscn::PackedScene::5605783401704331256::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
-GrassGreen02.tscn::PackedScene::7415821933352247951::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
-GrassGreen03.tscn::PackedScene::4982116327823689117::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
+::res://scenes/actors/Grass/::1768721652
+GrassGreen01.tscn::PackedScene::5605783401704331256::1768721652::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+GrassGreen02.tscn::PackedScene::7415821933352247951::1768721651::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+GrassGreen03.tscn::PackedScene::4982116327823689117::1768721650::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
 ::res://scenes/actors/Towers/::1768487433
 archer_tower.tscn::PackedScene::7535001643721400304::1768487429::0::1::::<><><>0<>0<><>::uid://bc3hx2vovvmy5::::res://scripts/Tower/ArcherTower.cs<>uid://boiogjq3y2f1q::::res://scenes/actors/Bullet/arrow_bullet.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
 cannon_tower.tscn::PackedScene::985508963322169235::1768487430::0::1::::<><><>0<>0<><>::uid://bl63vun5x2xct::::res://scripts/Tower/CannonTower.cs<>uid://bwn76ldt4qom7::::res://scenes/actors/Bullet/cannon_ball.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
 magic_tower.tscn::PackedScene::4535440244863718742::1768487431::0::1::::<><><>0<>0<><>::uid://b51topyau31gx::::res://scripts/Tower/MagicTower.cs<>uid://vuibojaepuam::::res://scenes/actors/Bullet/magic_missile.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
 TowerSlot2.tscn::PackedScene::6672693425643646259::1768487432::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png
 TowerSlot.tscn::PackedScene::4965682862671625029::1768487433::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png<>uid://dwqqmqjo6sgff::::res://scripts/Tower/TowerSlot.cs<>uid://dfmam147l76pg::::res://scenes/actors/Towers/archer_tower.tscn<>uid://obngocmdnf4n::::res://scenes/actors/Towers/cannon_tower.tscn<>uid://b5vabkfj0qfrq::::res://scenes/actors/Towers/magic_tower.tscn
-::res://scenes/actors/Trees/::1768487328
-TreeGreen01.tscn::PackedScene::4679476802158272037::1768487328::0::1::::<><><>0<>0<><>::uid://ci2l638pmf7jx::::res://assets/tilesets/props.png
+::res://scenes/actors/Trees/::1768721635
+TreeGreen01.tscn::PackedScene::4679476802158272037::1768721635::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
 ::res://scenes/levels/::1768706437
 level_1.tscn::PackedScene::8084334480006183560::1768706437::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://dyfijkflyc1kc::::res://scripts/UI/Levels/Level1.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://b58lfk8ugwd5x::::res://assets/audios/musics/Pixel 2.ogg<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://chqdjfbllast7::::res://assets/tilesets/Yellow_ruins1.png<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/boss_mahoraga.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/game_ui.tscn
 level_2.tscn::PackedScene::6639106278267314708::1768664327::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b4ncegbmvuh5k::::res://scripts/UI/Levels/Level2.cs<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://53b3tpgd85jp::::res://assets/tilesets/Water.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://crdk23fnspaxi::::res://assets/tilesets/Tilled_Dirt.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://p2sd2m4vt7xa::::res://scenes/actors/Bushes/Bush_Green.tscn<>uid://b000bmiekktcv::::res://scenes/actors/Bushes/Bush_Green_Berries.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://ucjt00xxpyih::::res://assets/tilesets/Wood Bridge.png<>uid://bhwegubd0gujb::::res://assets/tilesets/Brown-gray_ruins2.png<>uid://hu52la314kjk::::res://assets/tilesets/Brown-gray_ruins4.png<>uid://bej131co2f0jx::::res://assets/tilesets/Blue-gray_ruins3.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/boss_mahoraga.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/game_ui.tscn
 level_3.tscn::PackedScene::6826440084160690494::1768664326::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b5u362tvdo3u3::::res://scripts/UI/Levels/Level3.cs<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/boss_mahoraga.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/game_ui.tscn
 level_4.tscn::PackedScene::1729418566581159279::1768664325::0::1::::<><><>0<>0<><>::uid://dtcl17ywc3onc::::res://scripts/UI/Levels/Level4.cs<>uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/boss_mahoraga.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/game_ui.tscn
-::res://scenes/ui/::1768709281
+::res://scenes/ui/::1768724891
 game_over_ui.tscn::PackedScene::7959863735867120054::1768487328::0::1::::<><><>0<>0<><>::uid://cfm6r1hfkyylq::::res://Scripts/GameOverUI.cs
 game_ui.tscn::PackedScene::7750341360511585675::1768487328::0::1::::<><><>0<>0<><>::uid://dri4iy48ed8si::::res://scripts/UI/GameUI.cs
 select_screen.tscn::PackedScene::4860703671625425360::1768662868::0::1::::<><><>0<>0<><>::uid://r76al0epb34k::::res://scripts/Manager/LevelSelectManager.cs<>uid://l6of28682b4h::::res://assets/ui/Backgrounds/1.png<>uid://d1sdal462g7s8::::res://scenes/ui/Shaders/title_screen.gdshader<>uid://c7wxxw8grqbp7::::res://assets/ui/Backgrounds/2.png<>uid://5rbxuktc3vtv::::res://assets/ui/Backgrounds/4.png<>uid://dlc7mkixv1xm1::::res://assets/images/level1.png<>uid://d155i3a1plxb::::res://assets/images/Level2.png<>uid://bj2qhyw2tebt8::::res://assets/images/Level3.png<>uid://c4tiysgegg4e6::::res://assets/images/Level4.png<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs
-title_screen.tscn::PackedScene::3224897892399982647::1768709281::0::1::::<><><>0<>0<><>::uid://l6of28682b4h::::res://assets/ui/Backgrounds/1.png<>uid://km276afe2vvy::::res://scenes/ui/Components/Button.tscn<>uid://bn0ge2wfu0uu7::::res://scripts/UI/TitleScreen.cs<>uid://d1sdal462g7s8::::res://scenes/ui/Shaders/title_screen.gdshader<>uid://bl2yb6gx5rwk8::::res://assets/ui/Texts/Text2.png<>uid://c7wxxw8grqbp7::::res://assets/ui/Backgrounds/2.png<>uid://5rbxuktc3vtv::::res://assets/ui/Backgrounds/4.png<>uid://bmnxrl343t5qg::::res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bu8nydlni5buc::::res://assets/audios/musics/Pixel 4.ogg<>uid://byt1bucr6vrnq::::res://scripts/UI/SfxToggleButton.cs<>uid://bbywtxeui3tg::::res://scripts/UI/MusicToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
-::res://scenes/ui/Components/::1768663168
-Button.tscn::PackedScene::728359102096155502::1768663120::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/UI/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
-MiniButton.tscn::PackedScene::7953784467370618936::1768663168::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/UI/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
+title_screen.tscn::PackedScene::3224897892399982647::1768724891::0::1::::<><><>0<>0<><>::uid://l6of28682b4h::::res://assets/ui/Backgrounds/1.png<>uid://km276afe2vvy::::res://scenes/ui/Components/Button.tscn<>uid://bn0ge2wfu0uu7::::res://scripts/UI/TitleScreen.cs<>uid://d1sdal462g7s8::::res://scenes/ui/Shaders/title_screen.gdshader<>uid://bl2yb6gx5rwk8::::res://assets/ui/Texts/Text2.png<>uid://c7wxxw8grqbp7::::res://assets/ui/Backgrounds/2.png<>uid://5rbxuktc3vtv::::res://assets/ui/Backgrounds/4.png<>uid://bmnxrl343t5qg::::res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bu8nydlni5buc::::res://assets/audios/musics/Pixel 4.ogg<>uid://byt1bucr6vrnq::::res://scripts/Audio/SfxToggleButton.cs<>uid://bbywtxeui3tg::::res://scripts/Audio/MusicToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
+::res://scenes/ui/Components/::1768724891
+Button.tscn::PackedScene::728359102096155502::1768724891::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audio/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
+MiniButton.tscn::PackedScene::7953784467370618936::1768724891::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audio/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
 ::res://scenes/ui/Shaders/::1768487328
 title_screen.gdshader::Shader::9021513560220552837::1768487328::0::1::::<><><>0<>0<><>::
 ::res://scripts/::1768654330
 Cow.cs::CSharpScript::379560149212607626::1768487328::0::1::::<>Node2D<><>0<>0<><>::
 GameOverUI.cs::CSharpScript::5150472080559471526::1768654330::0::1::::<><><>0<>0<><>::
 Global.cs::CSharpScript::-1::1768487328::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/Audio/::1768662758
+::res://scripts/Audio/::1768724944
+BulletSfxComponent.cs::CSharpScript::5179898609204675303::1768725466::0::1::::<>Node<><>0<>0<><>::
+ButtonSfxComponent.cs::CSharpScript::4869496098021901694::1768721491::0::1::::<>Node<><>0<>0<><>::
 MusicManager.cs::CSharpScript::1929326540926008587::1768706549::0::1::::<>Node<><>0<>0<><>::
-SfxManager.cs::CSharpScript::3354384795607161912::1768708365::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/Bullet/::1768487328
-ArrowBullet.cs::CSharpScript::7031514223570331404::1768487328::0::1::::<>Area2D<><>0<>0<><>::
-BulletBase.cs::CSharpScript::16472694489586522::1768487328::0::1::::<>Area2D<><>1<>0<><>::
-CannonBall.cs::CSharpScript::9137982183906863221::1768487328::0::1::::<>Area2D<><>0<>0<><>::
-MagicMissile.cs::CSharpScript::1276913168725520135::1768487328::0::1::::<>Area2D<><>0<>0<><>::
+MusicToggleButton.cs::CSharpScript::73750750367365180::1768707888::0::1::::<>TextureButton<><>0<>0<><>::
+SfxManager.cs::CSharpScript::3354384795607161912::1768725405::0::1::::<>Node<><>0<>0<><>::
+SfxToggleButton.cs::CSharpScript::4111757590310132806::1768709199::0::1::::<>TextureButton<><>0<>0<><>::
+::res://scripts/Bullet/::1768724898
+ArrowBullet.cs::CSharpScript::7031514223570331404::1768725210::0::1::::<>Area2D<><>0<>0<><>::
+BulletBase.cs::CSharpScript::16472694489586522::1768725202::0::1::::<>Area2D<><>1<>0<><>::
+CannonBall.cs::CSharpScript::9137982183906863221::1768724898::0::1::::<>Area2D<><>0<>0<><>::
+MagicMissile.cs::CSharpScript::1276913168725520135::1768723567::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scripts/Enemy/::1768487328
 BossMahoraga.cs::CSharpScript::1903940490512834609::1768487328::0::1::::<>Area2D<><>0<>0<><>::
-EnemyBase.cs::CSharpScript::2131157713118821451::1768487328::0::1::::<>Area2D<><>1<>0<><>::
-RatEnemy.cs::CSharpScript::7856930810698396743::1768487328::0::1::::<>Area2D<><>0<>0<><>::
-SoldierEnemy.cs::CSharpScript::6283986584345230645::1768487328::0::1::::<>Area2D<><>0<>0<><>::
-TankEnemy.cs::CSharpScript::6827496463146450279::1768487328::0::1::::<>Area2D<><>0<>0<><>::
+EnemyBase.cs::CSharpScript::2131157713118821451::1768723307::0::1::::<>Area2D<><>1<>0<><>::
+RatEnemy.cs::CSharpScript::7856930810698396743::1768723539::0::1::::<>Area2D<><>0<>0<><>::
+SoldierEnemy.cs::CSharpScript::6283986584345230645::1768723547::0::1::::<>Area2D<><>0<>0<><>::
+TankEnemy.cs::CSharpScript::6827496463146450279::1768723533::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scripts/Manager/::1768655317
 LevelFactory.cs::CSharpScript::85138923701397969::1768487328::0::1::::<><><>0<>0<><>::
 LevelSelectManager.cs::CSharpScript::1261153273331045132::1768487328::0::1::::<>Control<><>0<>0<><>::
@@ -194,12 +205,9 @@ CannonTower.cs::CSharpScript::3224232323501120763::1768487328::0::1::::<>Node2D<
 MagicTower.cs::CSharpScript::4546939263370273771::1768487328::0::1::::<>Node2D<><>0<>0<><>::
 TowerBase.cs::CSharpScript::5318092902925544103::1768487328::0::1::::<>Node2D<><>1<>0<><>::
 TowerSlot.cs::CSharpScript::8737440411547173191::1768487328::0::1::::<>Node2D<><>0<>0<><>::
-::res://scripts/UI/::1768709199
-ButtonSfxComponent.cs::CSharpScript::4869496098021901694::1768721491::0::1::::<>Node<><>0<>0<><>::
+::res://scripts/UI/::1768724891
 GameUI.cs::CSharpScript::8370763800964401064::1768487328::0::1::::<>Control<><>0<>0<><>::
-MusicToggleButton.cs::CSharpScript::73750750367365180::1768707888::0::1::::<>TextureButton<><>0<>0<><>::
 SceneButton.cs::CSharpScript::1717400563837899456::1768708170::0::1::::<>TextureButton<><>0<>0<><>::
-SfxToggleButton.cs::CSharpScript::4111757590310132806::1768709199::0::1::::<>TextureButton<><>0<>0<><>::
 TitleScreen.cs::CSharpScript::3350857992342296128::1768654650::0::1::::<>Control<><>0<>0<><>::
 ::res://scripts/UI/Levels/::1768664272
 Level1.cs::CSharpScript::8854618528739149294::1768664561::0::1::::<>Node2D<><>0<>0<><>::
