@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://lpdhcqfm2dc8"]
 
 [ext_resource type="Script" uid="uid://2ejvexw4o482" path="res://scripts/Enemy/BossMahoraga.cs" id="1_lf78k"]
-[ext_resource type="Texture2D" uid="uid://dwf05aueu1pup" path="res://assets/sprites/Enemys/Others/mahoraga_by_saxcreed_dggesg8-fullview.jpg" id="2_g2265"]
+[ext_resource type="Texture2D" uid="uid://jigei8flxwm5" path="res://assets/sprites/Enemys/Others/mahoraga_by_saxcreed_dggesg8-fullview.jpg" id="2_g2265"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sndrm"]
 radius = 45.0

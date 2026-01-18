@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b51topyau31gx" path="res://scripts/Tower/MagicTower.cs" id="1_wl1gj"]
 [ext_resource type="PackedScene" uid="uid://vuibojaepuam" path="res://scenes/actors/Bullet/magic_missile.tscn" id="2_8mqrq"]
-[ext_resource type="Texture2D" uid="uid://7s5a0e0volwq" path="res://assets/tilesets/towers.png" id="2_wl1gj"]
-[ext_resource type="Texture2D" uid="uid://miavx8a53c65" path="res://assets/sprites/Characters/characters.png" id="4_char"]
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/tilesets/towers.png" id="2_wl1gj"]
+[ext_resource type="Texture2D" uid="uid://c7yfc1l3ow6we" path="res://assets/sprites/Characters/characters.png" id="4_char"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_Base1"]
 atlas = ExtResource("2_wl1gj")

@@ -7,7 +7,7 @@
 //     public override void _Ready()
 //     {
 //         Visible = false; // Ẩn lúc đầu
-        
+		
 //         if (Global.Instance != null)
 //         {
 //             Global.Instance.OnGameOver += ShowGameOver;
@@ -23,7 +23,7 @@
 //     public void _on_RestartButton_pressed()
 //     {
 //         GetTree().Paused = false;
-        
+		
 //         // Reset chỉ số Global
 //         if (Global.Instance != null)
 //         {

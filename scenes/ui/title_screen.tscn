@@ -1,15 +1,22 @@
-[gd_scene load_steps=26 format=3 uid="uid://bl7fukjm08jfr"]
+[gd_scene load_steps=29 format=3 uid="uid://bl7fukjm08jfr"]
 
-[ext_resource type="Texture2D" uid="uid://svgl06qho0fk" path="res://assets/ui/Backgrounds/1.png" id="1_2br5b"]
-[ext_resource type="PackedScene" uid="uid://km276afe2vvy" path="res://Scenes/UI/Components/Button.tscn" id="1_dnytt"]
-[ext_resource type="Shader" uid="uid://d1sdal462g7s8" path="res://Scenes/UI/Shaders/title_screen.gdshader" id="2_dsf7a"]
-[ext_resource type="Texture2D" uid="uid://bcnfjgkwxkr3j" path="res://assets/ui/Texts/Text2.png" id="2_kyvdy"]
-[ext_resource type="Texture2D" uid="uid://cyi32in1sqiri" path="res://assets/ui/Backgrounds/2.png" id="2_wv540"]
-[ext_resource type="Texture2D" uid="uid://knww14q0kl5p" path="res://assets/ui/Backgrounds/4.png" id="3_dsf7a"]
-[ext_resource type="Texture2D" uid="uid://dursideyetgsp" path="res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png" id="5_dsf7a"]
-[ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://Scripts/UI/SceneButton.cs" id="7_uv4ns"]
-[ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://Scenes/UI/Components/MiniButton.tscn" id="8_tjte5"]
-[ext_resource type="Texture2D" uid="uid://dafnur86yapjr" path="res://assets/ui/Buttons/Buttons.png" id="9_uv4ns"]
+[ext_resource type="Texture2D" uid="uid://l6of28682b4h" path="res://assets/ui/Backgrounds/1.png" id="1_2br5b"]
+[ext_resource type="PackedScene" uid="uid://km276afe2vvy" path="res://scenes/ui/Components/Button.tscn" id="1_dnytt"]
+[ext_resource type="Script" uid="uid://bn0ge2wfu0uu7" path="res://scripts/UI/TitleScreen.cs" id="1_lddph"]
+[ext_resource type="Shader" uid="uid://d1sdal462g7s8" path="res://scenes/ui/Shaders/title_screen.gdshader" id="2_dsf7a"]
+[ext_resource type="Texture2D" uid="uid://bl2yb6gx5rwk8" path="res://assets/ui/Texts/Text2.png" id="2_kyvdy"]
+[ext_resource type="Texture2D" uid="uid://c7wxxw8grqbp7" path="res://assets/ui/Backgrounds/2.png" id="2_wv540"]
+[ext_resource type="Texture2D" uid="uid://5rbxuktc3vtv" path="res://assets/ui/Backgrounds/4.png" id="3_dsf7a"]
+[ext_resource type="Texture2D" uid="uid://bmnxrl343t5qg" path="res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png" id="5_dsf7a"]
+[ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="7_uv4ns"]
+[ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="8_tjte5"]
+[ext_resource type="AudioStream" uid="uid://bu8nydlni5buc" path="res://assets/audios/musics/Pixel 4.ogg" id="12_1oiph"]
+[ext_resource type="Script" uid="uid://byt1bucr6vrnq" path="res://scripts/UI/SfxToggleButton.cs" id="12_to824"]
+[ext_resource type="Script" uid="uid://bbywtxeui3tg" path="res://scripts/UI/MusicToggleButton.cs" id="13_1oiph"]
+[ext_resource type="Texture2D" uid="uid://cxtenff7bgjvm" path="res://assets/ui/Buttons/SoundEffectOn.tres" id="14_tqags"]
+[ext_resource type="Texture2D" uid="uid://6uspuqjekwrp" path="res://assets/ui/Buttons/SoundEffectOff.tres" id="15_to824"]
+[ext_resource type="Texture2D" uid="uid://boogty18fbavc" path="res://assets/ui/Buttons/MusicOn.tres" id="16_y77df"]
+[ext_resource type="Texture2D" uid="uid://comlnntlak34b" path="res://assets/ui/Buttons/MusicOff.tres" id="17_jqmgk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_824g0"]
 shader = ExtResource("2_dsf7a")
@@ -57,22 +64,6 @@ region = Rect2(40.417908, 0.28281635, 4.2709045, 6.25597)
 atlas = ExtResource("2_kyvdy")
 region = Rect2(45.17004, 6.4183927, 5.5942802, 6.4965835)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nd20k"]
-atlas = ExtResource("9_uv4ns")
-region = Rect2(367.44128, 450.94342, 14.027344, 12.499603)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3txao"]
-atlas = ExtResource("9_uv4ns")
-region = Rect2(383.60898, 451.28152, 14.118011, 12.281525)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28uqs"]
-atlas = ExtResource("9_uv4ns")
-region = Rect2(368.19913, 465.8018, 13.27597, 13.780121)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvwvd"]
-atlas = ExtResource("9_uv4ns")
-region = Rect2(383.84583, 466.85287, 13.383423, 12.373352)
-
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -80,6 +71,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lddph")
+BackgroundMusic = ExtResource("12_1oiph")
 
 [node name="SkyBG" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -253,7 +246,7 @@ size_flags_horizontal = 3
 mouse_filter = 2
 texture = SubResource("AtlasTexture_tjte5")
 
-[node name="ButtonMusic" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
+[node name="ButtonSoundEffect" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -262,25 +255,26 @@ offset_top = 23.0
 offset_right = -35.0
 offset_bottom = 76.0
 grow_horizontal = 0
+toggle_mode = true
+script = ExtResource("12_to824")
+OnTexture = ExtResource("14_tqags")
+OffTexture = ExtResource("15_to824")
 
-[node name="On" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonMusic"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 46.0
-offset_bottom = 45.0
-texture = SubResource("AtlasTexture_nd20k")
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonSoundEffect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -22.5
+offset_right = 21.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Off" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonMusic"]
-visible = false
-layout_mode = 0
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 46.0
-offset_bottom = 45.0
-texture = SubResource("AtlasTexture_3txao")
-
-[node name="ButtonSoundEffect" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
+[node name="ButtonMusic" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -289,23 +283,22 @@ offset_top = 23.0
 offset_right = -101.0
 offset_bottom = 76.0
 grow_horizontal = 0
+toggle_mode = true
+script = ExtResource("13_1oiph")
+OnTexture = ExtResource("16_y77df")
+OffTexture = ExtResource("17_jqmgk")
 
-[node name="On" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonSoundEffect"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 46.0
-offset_bottom = 45.0
-texture = SubResource("AtlasTexture_28uqs")
-
-[node name="Off" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonSoundEffect"]
-visible = false
-layout_mode = 0
-offset_left = 6.0
-offset_top = 5.0
-offset_right = 46.0
-offset_bottom = 45.0
-texture = SubResource("AtlasTexture_bvwvd")
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonMusic"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [editable path="MarginContainer/VBoxContainer/ButtonContainer/ButtonStart"]
 [editable path="MarginContainer/VBoxContainer/ButtonContainer/ButtonQuit"]

@@ -11,12 +11,6 @@ public partial class SceneButton : TextureButton
 
 	public override void _Ready()
 	{
-		if (this is TextureButton btn)
-		{
-			GD.Print("Đây là TextureButton: " + Name);
-			btn.Pressed += () => GD.Print("Signal Pressed hoạt động!");
-		}
-
 		// Kết sự kiện pressed của chính nó với hàm xử lý
 		this.Pressed += OnButtonPressed;
 
