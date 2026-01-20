@@ -32,7 +32,7 @@ public abstract partial class TowerBase : Node2D
 
 	// [MỚI] Biến static để lưu tháp đang được chọn duy nhất trên toàn bản đồ
 	public static TowerBase SelectedTower { get; private set; }
-	private bool _isSelected = false; 
+	private bool _isSelected = false;
 
 	public int Level { get; private set; } = 1;
 	public int maxLevel { get; private set; } = 3;
@@ -91,7 +91,7 @@ public abstract partial class TowerBase : Node2D
 		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
 		{
 			// Sự kiện chạy vào đây nghĩa là không click vào UI hay Button nào (Click đất trống)
-			
+
 			// Nếu tháp này đang được chọn -> Bỏ chọn và đóng luôn UI
 			if (_isSelected)
 			{
@@ -131,7 +131,7 @@ public abstract partial class TowerBase : Node2D
 	public override void _PhysicsProcess(double delta)
 	{
 		UpdateCooldown((float)delta);
-		FindTarget(); 
+		FindTarget();
 
 		if (CurrentTarget != null && IsInstanceValid(CurrentTarget))
 		{
@@ -215,6 +215,17 @@ public abstract partial class TowerBase : Node2D
 
 			UpdateTowerVisual();
 			GD.Print($"Upgraded to Level {Level}");
+		}
+		else
+		{
+			// GỌI THÔNG BÁO TẠI ĐÂY
+			var textManager = GetNode<FloatingTextManager>("/root/FloatingTextManager");
+
+			// "this.GlobalPosition" chính là vị trí của trụ hiện tại
+			textManager.ShowMessage("Không đủ vàng!", GlobalPosition, Colors.Red);
+
+			// Có thể kết hợp phát âm thanh "Error" đã làm ở bước trước
+			// SfxManager.Instance.PlaySfx(ErrorSfx);
 		}
 	}
 

@@ -23,9 +23,9 @@ public partial class GameUI : Control
 
 	// Nút bấm
 	[Export] public Button UpgradeButton;
-	
+
 	// [MỚI] Thêm reference tới 2 nút mới
-	[Export] public Button BtnNextLevel; 
+	[Export] public Button BtnNextLevel;
 	[Export] public Button BtnMenu;
 
 	private TowerSlot _selectedSlot;
@@ -140,7 +140,7 @@ public partial class GameUI : Control
 	// [MỚI] Xử lý nút Màn kế tiếp
 	public void OnBtnNextLevelPressed()
 	{
-		GetTree().Paused = false; 
+		GetTree().Paused = false;
 		// Quay về màn chọn level (nơi level mới đã được unlock)
 		GetTree().ChangeSceneToFile("res://scenes/ui/select_screen.tscn");
 	}
@@ -277,8 +277,14 @@ public partial class GameUI : Control
 	{
 		if (_selectedSlot != null)
 		{
+			// 1. Thực hiện logic nâng cấp
 			_selectedSlot.UpgradeTower();
+
+			// 2. Cập nhật thông tin (Dòng này có thể giữ hoặc bỏ vì menu sắp đóng)
 			UpdateActionInfo();
+
+			// 3. THÊM DÒNG NÀY: Tắt toàn bộ menu ngay lập tức
+			HideAllPanels();
 		}
 	}
 

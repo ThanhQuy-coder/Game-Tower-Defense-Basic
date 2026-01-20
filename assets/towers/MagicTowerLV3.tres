@@ -1,0 +1,16 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://dlhw41wxcaeds"]
+
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_52c16"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_c35kh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c35kh"]
+atlas = ExtResource("1_52c16")
+region = Rect2(94.05626, 83.05177, 29.431435, 45.94574)
+
+[resource]
+atlas = ExtResource("1_52c16")
+region = Rect2(93.86798, 84.21974, 29.44522, 44.04814)
+script = ExtResource("2_c35kh")
+Name = "Tháp phép III"
+Icon = SubResource("AtlasTexture_c35kh")
+Description = "Tháp phép III kế thừa và tiếp tục cải tiến thêm về nguồn sức mạnh phép thuật và tăng nhẹ tầm bắn, tăng thêm hiệu ứng làm chậm."

@@ -1,0 +1,16 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://dvsynsirxtvcf"]
+
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_q5c8w"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_ixbrs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixbrs"]
+atlas = ExtResource("1_q5c8w")
+region = Rect2(46.376728, 97.10715, 29.998974, 31.35028)
+
+[resource]
+atlas = ExtResource("1_q5c8w")
+region = Rect2(46.98438, 96.40506, 27.796352, 32.107025)
+script = ExtResource("2_ixbrs")
+Name = "Tháp phép II"
+Icon = SubResource("AtlasTexture_ixbrs")
+Description = "Tháp phép II kế thừa và tiếp tục cải tiến thêm về nguồn sức mạnh phép thuật và tầm bắn."

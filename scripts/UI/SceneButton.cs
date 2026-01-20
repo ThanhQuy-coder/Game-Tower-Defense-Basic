@@ -1,10 +1,13 @@
 using Godot;
 using System;
 
+/// <summary>
+/// Lớp phụ trách việc chuyển các scene
+/// </summary>
 public partial class SceneButton : TextureButton
 {
 	// Tạo một danh sách các lựa chọn
-	public enum ButtonAction { ChangeScene, QuitGame }
+	public enum ButtonAction { ChangeScene, QuitGame, Back }
 
 	[Export] public ButtonAction ActionType = ButtonAction.ChangeScene;
 	[Export(PropertyHint.File, "*.tscn")] public string TargetScenePath;
@@ -28,6 +31,10 @@ public partial class SceneButton : TextureButton
 			case ButtonAction.ChangeScene:
 				if (!string.IsNullOrEmpty(TargetScenePath))
 				{
+					// Lưu scene hiện tại lại
+					var current = GetTree().CurrentScene.SceneFilePath;
+					SceneHistory.Instance.LastScenePath = current;
+
 					GetTree().ChangeSceneToFile(TargetScenePath);
 				}
 				else
@@ -35,9 +42,22 @@ public partial class SceneButton : TextureButton
 					GD.PrintErr("Chưa gán đường dẫn Scene cho nút: " + Name);
 				}
 				break;
+
 			case ButtonAction.QuitGame:
 				GetTree().Quit();
 				break;
+
+			case ButtonAction.Back:
+				if (!string.IsNullOrEmpty(SceneHistory.Instance.LastScenePath))
+				{
+					GetTree().ChangeSceneToFile(SceneHistory.Instance.LastScenePath);
+				}
+				else
+				{
+					GD.PrintErr("Không có scene trước đó để quay lại!");
+				}
+				break;
 		}
 	}
+
 }

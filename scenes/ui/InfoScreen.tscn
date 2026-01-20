@@ -1,0 +1,246 @@
+[gd_scene load_steps=25 format=3 uid="uid://ct65da0t3qpy"]
+
+[ext_resource type="Script" uid="uid://o8wodhpxgfh6" path="res://scripts/UI/Encyclopedia/InfoScreen.cs" id="1_4lsrl"]
+[ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="1_12rx6"]
+[ext_resource type="Texture2D" uid="uid://d1jtfmmsg38sa" path="res://assets/sprites/Enemys/Mouse/Mouse.tres" id="2_3poyh"]
+[ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="2_5aivy"]
+[ext_resource type="Texture2D" uid="uid://bjc76yg7ija8y" path="res://assets/images/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png" id="3_blwqs"]
+[ext_resource type="Texture2D" uid="uid://bidcy5kareyb5" path="res://assets/sprites/Enemys/Horse/Hourse.tres" id="3_ds3tn"]
+[ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="4_blwqs"]
+[ext_resource type="Texture2D" uid="uid://cbtn5jdyfpaav" path="res://assets/sprites/Enemys/Goblin/Goblin.tres" id="4_s2fr3"]
+[ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="5_0udoy"]
+[ext_resource type="Texture2D" uid="uid://cmiwl5yq6wctm" path="res://assets/towers/ArcherTowerLV1.tres" id="5_8x3s7"]
+[ext_resource type="Texture2D" uid="uid://kotms3mq4m8" path="res://assets/towers/ArcherTowerLV2.tres" id="6_pq7s7"]
+[ext_resource type="Texture2D" uid="uid://cwo38656642vc" path="res://assets/icons/cthulhu.png" id="6_xkgmb"]
+[ext_resource type="Texture2D" uid="uid://ds1jgik1w2nw7" path="res://assets/icons/castle-tower.png" id="7_4lsrl"]
+[ext_resource type="Texture2D" uid="uid://cbc0j68v7akdu" path="res://assets/towers/ArcherTowerLV3.tres" id="7_q7s4b"]
+[ext_resource type="Texture2D" uid="uid://cnaili3vl57nl" path="res://assets/towers/CannonTowerLV1.tres" id="8_bbvqk"]
+[ext_resource type="Texture2D" uid="uid://nqtv8uhoomrq" path="res://assets/towers/CannonTowerLV2.tres" id="9_4o1j8"]
+[ext_resource type="Texture2D" uid="uid://c1oxo7qimfjqb" path="res://assets/towers/CannonTowerLV3.tres" id="10_d0t8c"]
+[ext_resource type="Texture2D" uid="uid://bfvdcvcsdkmsf" path="res://assets/towers/MagicTowerLV1.tres" id="11_ttoj7"]
+[ext_resource type="Texture2D" uid="uid://dvsynsirxtvcf" path="res://assets/towers/MagicTowerLV2.tres" id="12_k5bb5"]
+[ext_resource type="Texture2D" uid="uid://dlhw41wxcaeds" path="res://assets/towers/MagicTowerLV3.tres" id="13_p4lmg"]
+[ext_resource type="PackedScene" uid="uid://c4dsfhnyyduwx" path="res://scenes/ui/InfoListEntry.tscn" id="14_pq7s7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkgmb"]
+atlas = ExtResource("5_0udoy")
+region = Rect2(366.81622, 288.84656, 15.582825, 15.277283)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq7s7"]
+atlas = ExtResource("5_0udoy")
+region = Rect2(367.01215, 289.48236, 15.127319, 14.61969)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7s4b"]
+atlas = ExtResource("5_0udoy")
+region = Rect2(383.26044, 290.66544, 14.315094, 13.198334)
+
+[node name="InfoScreen" type="Control" node_paths=PackedStringArray("_categoryPanel", "_contentPanel", "_listContainer", "_iconRect", "_nameLabel", "_descLabel", "_statsLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4lsrl")
+EnemyList = Array[Resource]([ExtResource("2_3poyh"), ExtResource("3_ds3tn"), ExtResource("4_s2fr3")])
+TowerList = Array[Resource]([ExtResource("5_8x3s7"), ExtResource("6_pq7s7"), ExtResource("7_q7s4b"), ExtResource("8_bbvqk"), ExtResource("9_4o1j8"), ExtResource("10_d0t8c"), ExtResource("11_ttoj7"), ExtResource("12_k5bb5"), ExtResource("13_p4lmg")])
+_categoryPanel = NodePath("CategoryPanel")
+_contentPanel = NodePath("ContentPanel")
+_listContainer = NodePath("ContentPanel/LeftPage/ListContainer")
+_iconRect = NodePath("ContentPanel/RightPage/IconRect")
+_nameLabel = NodePath("ContentPanel/RightPage/IconRect/NameLabel")
+_descLabel = NodePath("ContentPanel/RightPage/IconRect/DescLabel")
+_statsLabel = NodePath("ContentPanel/RightPage/IconRect/StatsLabel")
+_entryPrefab = ExtResource("14_pq7s7")
+
+[node name="BackgroundCloud" parent="." instance=ExtResource("1_12rx6")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("3_blwqs")
+
+[node name="MiniButtonBack" parent="." instance=ExtResource("2_5aivy")]
+z_index = 5
+layout_mode = 0
+offset_left = 37.0
+offset_top = 17.0
+offset_right = 91.0
+offset_bottom = 70.0
+script = ExtResource("4_blwqs")
+ActionType = 2
+
+[node name="TextureRect" type="TextureRect" parent="MiniButtonBack"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 4.0
+offset_right = 87.0
+offset_bottom = 44.0
+rotation = 1.5707964
+texture = SubResource("AtlasTexture_xkgmb")
+expand_mode = 1
+flip_v = true
+
+[node name="CategoryPanel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 89.0
+offset_top = 71.0
+offset_right = -129.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnSelectEnemy" type="Button" parent="CategoryPanel"]
+layout_mode = 1
+offset_left = 166.0
+offset_top = 102.0
+offset_right = 686.0
+offset_bottom = 622.0
+scale = Vector2(0.5, 0.5)
+theme_override_icons/icon = ExtResource("6_xkgmb")
+flat = true
+
+[node name="BtnSelectTower" type="Button" parent="CategoryPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -377.0
+offset_top = 105.0
+offset_right = 143.0
+offset_bottom = 625.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_4lsrl")
+flat = true
+
+[node name="ContentPanel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 194.0
+offset_top = 56.0
+offset_right = -184.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackCategoryPanel" type="TextureButton" parent="ContentPanel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 55.696983
+offset_right = 74.69698
+offset_bottom = 103.06298
+rotation = -1.5707964
+texture_normal = SubResource("AtlasTexture_pq7s7")
+texture_pressed = SubResource("AtlasTexture_q7s4b")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftPage" type="ScrollContainer" parent="ContentPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -177.0
+offset_right = -25.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ListContainer" type="VBoxContainer" parent="ContentPanel/LeftPage"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightPage" type="Control" parent="ContentPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -222.0
+offset_right = 374.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IconRect" type="TextureRect" parent="ContentPanel/RightPage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 95.0
+offset_top = 5.0
+offset_right = -95.0
+offset_bottom = -254.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="ContentPanel/RightPage/IconRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = 117.5
+offset_right = 163.5
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+
+[node name="DescLabel" type="Label" parent="ContentPanel/RightPage/IconRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 168.5
+offset_right = 160.0
+offset_bottom = 258.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+autowrap_mode = 3
+
+[node name="StatsLabel" type="Label" parent="ContentPanel/RightPage/IconRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.5
+offset_top = 287.5
+offset_right = 158.5
+offset_bottom = 344.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_colors/font_outline_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+
+[connection signal="pressed" from="CategoryPanel/BtnSelectEnemy" to="." method="OnBtnEnemyPressed"]
+[connection signal="pressed" from="CategoryPanel/BtnSelectTower" to="." method="OnBtnTowerPressed"]
+[connection signal="pressed" from="ContentPanel/BackCategoryPanel" to="." method="OnBtnBackPressed"]

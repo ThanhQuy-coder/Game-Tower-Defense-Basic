@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7caf58h6nd2r"]
+
+[ext_resource type="Script" uid="uid://c1esijxcdtpcf" path="res://scripts/UI/NotificationText/FloatingText.cs" id="1_r0iim"]
+
+[node name="FloatingText" type="Marker2D"]
+script = ExtResource("1_r0iim")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

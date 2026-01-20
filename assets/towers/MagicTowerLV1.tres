@@ -1,0 +1,16 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://bfvdcvcsdkmsf"]
+
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_f4r5q"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_p845n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p845n"]
+atlas = ExtResource("1_f4r5q")
+region = Rect2(0.7826271, 102.480804, 25.06057, 25.429108)
+
+[resource]
+atlas = ExtResource("1_f4r5q")
+region = Rect2(2.3579597, 101.95274, 21.866577, 26.289032)
+script = ExtResource("2_p845n")
+Name = "Tháp phép I"
+Icon = SubResource("AtlasTexture_p845n")
+Description = "Tháp phép được dựng nên bởi các pháp sư tài năng, Họ có khả năng làm chậm kẻ địch và nguồn sát thương ổn định bù lại số tiền bỏ ra cho họ lại rất đắt."

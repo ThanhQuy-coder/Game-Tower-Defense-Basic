@@ -1,0 +1,16 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://cbc0j68v7akdu"]
+
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_2ocef"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_7dttj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dttj"]
+atlas = ExtResource("1_2ocef")
+region = Rect2(94.76575, 36.84225, 28.131721, 44.715916)
+
+[resource]
+atlas = ExtResource("1_2ocef")
+region = Rect2(94.53685, 36.350502, 28.24826, 45.00569)
+script = ExtResource("2_7dttj")
+Name = "Tháp cung tên III"
+Icon = SubResource("AtlasTexture_7dttj")
+Description = "Tháp cung cải tiến III tiếp tục duy trì, kế thừa và phát huy từ phiên bản tiền nhiệm II."

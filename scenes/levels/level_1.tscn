@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dngd2p0167bie"]
+[gd_scene load_steps=31 format=4 uid="uid://dngd2p0167bie"]
 
 [ext_resource type="Texture2D" uid="uid://bnxmctfs0rgqi" path="res://assets/tilesets/tileset1.png" id="1_ksju7"]
 [ext_resource type="Script" uid="uid://dyfijkflyc1kc" path="res://scripts/UI/Levels/Level1.cs" id="1_wtwp4"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemys/soldier_enemy.tscn" id="12_mm8aj"]
 [ext_resource type="PackedScene" uid="uid://lpdhcqfm2dc8" path="res://scenes/actors/Enemys/boss_mahoraga.tscn" id="13_iwr0g"]
 [ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/game_ui.tscn" id="13_wtwp4"]
+[ext_resource type="Script" uid="uid://cqsturm6pltkv" path="res://scripts/UI/NotificationText/FloatingTextManager.cs" id="17_bahl2"]
+[ext_resource type="PackedScene" uid="uid://c7caf58h6nd2r" path="res://scenes/ui/FloatingText.tscn" id="18_np2pn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oc4kc"]
 texture = ExtResource("1_ksju7")
@@ -926,6 +928,10 @@ EnemyPrefabs = Array[PackedScene]([ExtResource("10_mm8aj"), ExtResource("11_mm8a
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameUI" parent="CanvasLayer" instance=ExtResource("13_wtwp4")]
+
+[node name="FloatingTextManager" type="Node" parent="CanvasLayer"]
+script = ExtResource("17_bahl2")
+FloatingTextScene = ExtResource("18_np2pn")
 
 [editable path="Animals/Cow2"]
 [editable path="Animals/Cow4"]

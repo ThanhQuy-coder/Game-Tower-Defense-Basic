@@ -1,10 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cbitcxxmefp01"]
+[gd_scene load_steps=11 format=3 uid="uid://cbitcxxmefp01"]
 
 [ext_resource type="Script" uid="uid://r76al0epb34k" path="res://scripts/Manager/LevelSelectManager.cs" id="1_4r381"]
-[ext_resource type="Texture2D" uid="uid://l6of28682b4h" path="res://assets/ui/Backgrounds/1.png" id="1_cvlyw"]
-[ext_resource type="Shader" uid="uid://d1sdal462g7s8" path="res://scenes/ui/Shaders/title_screen.gdshader" id="2_6av6r"]
-[ext_resource type="Texture2D" uid="uid://c7wxxw8grqbp7" path="res://assets/ui/Backgrounds/2.png" id="3_o4pmu"]
-[ext_resource type="Texture2D" uid="uid://5rbxuktc3vtv" path="res://assets/ui/Backgrounds/4.png" id="4_26xhw"]
+[ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="2_gh3it"]
 [ext_resource type="Texture2D" uid="uid://dlc7mkixv1xm1" path="res://assets/images/level1.png" id="5_6av6r"]
 [ext_resource type="Texture2D" uid="uid://d155i3a1plxb" path="res://assets/images/Level2.png" id="6_al4o2"]
 [ext_resource type="Texture2D" uid="uid://bj2qhyw2tebt8" path="res://assets/images/Level3.png" id="7_3l75d"]
@@ -12,16 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="9_mrod5"]
 [ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="10_5ohrm"]
 [ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="10_mc72k"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_al4o2"]
-shader = ExtResource("2_6av6r")
-shader_parameter/motion = Vector2(0.1, 0)
-shader_parameter/speed = 0.1
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3l75d"]
-shader = ExtResource("2_6av6r")
-shader_parameter/motion = Vector2(0.3, 0)
-shader_parameter/speed = 0.1
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mc72k"]
 atlas = ExtResource("10_5ohrm")
@@ -36,35 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4r381")
 
-[node name="SkyBG" type="TextureRect" parent="."]
-texture_repeat = 2
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 650.0
-texture = ExtResource("1_cvlyw")
-expand_mode = 1
-
-[node name="CloudFar" type="TextureRect" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_al4o2")
-layout_mode = 0
-offset_right = 575.5
-offset_bottom = 324.5
-scale = Vector2(2, 2)
-texture = ExtResource("3_o4pmu")
-expand_mode = 1
-stretch_mode = 1
-
-[node name="CloudNear" type="TextureRect" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_3l75d")
-layout_mode = 0
-offset_right = 575.0
-offset_bottom = 325.0
-scale = Vector2(2, 2)
-texture = ExtResource("4_26xhw")
-expand_mode = 1
-stretch_mode = 1
+[node name="BackgroundCloud" parent="." instance=ExtResource("2_gh3it")]
+layout_mode = 1
 
 [node name="Level1" type="TextureButton" parent="."]
 layout_mode = 0

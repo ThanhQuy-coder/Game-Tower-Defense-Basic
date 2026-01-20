@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4dsfhnyyduwx"]
+
+[ext_resource type="Script" uid="uid://b7ubn40x1sace" path="res://scripts/UI/Encyclopedia/InfoListEntry.cs" id="1_wd7xk"]
+[ext_resource type="Script" uid="uid://cbm25ia0dkra1" path="res://scripts/Audio/ButtonSfxComponent.cs" id="2_o4ejj"]
+[ext_resource type="AudioStream" uid="uid://bt20nvawofyys" path="res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav" id="3_jvnkl"]
+[ext_resource type="AudioStream" uid="uid://dt6fk3njrff4b" path="res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav" id="4_uyllq"]
+
+[node name="InfoListEntry" type="Button"]
+size_flags_horizontal = 3
+script = ExtResource("1_wd7xk")
+
+[node name="ButtonSfxComponent" type="Node" parent="."]
+script = ExtResource("2_o4ejj")
+ClickSfx = ExtResource("3_jvnkl")
+HoverSfx = ExtResource("4_uyllq")

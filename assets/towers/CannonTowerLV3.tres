@@ -1,0 +1,16 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://c1oxo7qimfjqb"]
+
+[ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_siipe"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_1tl5j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tl5j"]
+atlas = ExtResource("1_siipe")
+region = Rect2(97.04851, 0.3504684, 24.467659, 32.183605)
+
+[resource]
+atlas = ExtResource("1_siipe")
+region = Rect2(96.74987, -0.3487215, 25.126274, 33.435738)
+script = ExtResource("2_1tl5j")
+Name = "Tháp pháo III"
+Icon = SubResource("AtlasTexture_1tl5j")
+Description = "Tháp pháo III cải thiện tầm bắn, sức tấn công, sức tấn công tầm bắn lan."

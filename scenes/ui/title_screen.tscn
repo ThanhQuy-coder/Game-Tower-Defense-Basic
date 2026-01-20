@@ -1,13 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://bl7fukjm08jfr"]
+[gd_scene load_steps=25 format=3 uid="uid://bl7fukjm08jfr"]
 
-[ext_resource type="Texture2D" uid="uid://l6of28682b4h" path="res://assets/ui/Backgrounds/1.png" id="1_2br5b"]
 [ext_resource type="PackedScene" uid="uid://km276afe2vvy" path="res://scenes/ui/Components/Button.tscn" id="1_dnytt"]
 [ext_resource type="Script" uid="uid://bn0ge2wfu0uu7" path="res://scripts/UI/TitleScreen.cs" id="1_lddph"]
-[ext_resource type="Shader" uid="uid://d1sdal462g7s8" path="res://scenes/ui/Shaders/title_screen.gdshader" id="2_dsf7a"]
 [ext_resource type="Texture2D" uid="uid://bl2yb6gx5rwk8" path="res://assets/ui/Texts/Text2.png" id="2_kyvdy"]
-[ext_resource type="Texture2D" uid="uid://c7wxxw8grqbp7" path="res://assets/ui/Backgrounds/2.png" id="2_wv540"]
-[ext_resource type="Texture2D" uid="uid://5rbxuktc3vtv" path="res://assets/ui/Backgrounds/4.png" id="3_dsf7a"]
-[ext_resource type="Texture2D" uid="uid://bmnxrl343t5qg" path="res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9.png" id="5_dsf7a"]
+[ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="3_5p4sa"]
+[ext_resource type="Texture2D" uid="uid://chgqbuu42rf5r" path="res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png" id="4_5p4sa"]
 [ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="7_uv4ns"]
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="8_tjte5"]
 [ext_resource type="AudioStream" uid="uid://bu8nydlni5buc" path="res://assets/audios/musics/Pixel 4.ogg" id="12_1oiph"]
@@ -15,22 +12,9 @@
 [ext_resource type="Script" uid="uid://bbywtxeui3tg" path="res://scripts/Audio/MusicToggleButton.cs" id="13_1oiph"]
 [ext_resource type="Texture2D" uid="uid://cxtenff7bgjvm" path="res://assets/ui/Buttons/SoundEffectOn.tres" id="14_tqags"]
 [ext_resource type="Texture2D" uid="uid://6uspuqjekwrp" path="res://assets/ui/Buttons/SoundEffectOff.tres" id="15_to824"]
+[ext_resource type="Texture2D" uid="uid://kfsgsa0wjidx" path="res://assets/icons/Icons.png" id="15_tqags"]
 [ext_resource type="Texture2D" uid="uid://boogty18fbavc" path="res://assets/ui/Buttons/MusicOn.tres" id="16_y77df"]
 [ext_resource type="Texture2D" uid="uid://comlnntlak34b" path="res://assets/ui/Buttons/MusicOff.tres" id="17_jqmgk"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_824g0"]
-shader = ExtResource("2_dsf7a")
-shader_parameter/motion = Vector2(0.1, 0)
-shader_parameter/speed = 0.1
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wv540"]
-shader = ExtResource("2_dsf7a")
-shader_parameter/motion = Vector2(0.3, 0)
-shader_parameter/speed = 0.1
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uv4ns"]
-atlas = ExtResource("5_dsf7a")
-region = Rect2(171.92104, 232.23865, 684.3055, 511.76135)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnytt"]
 atlas = ExtResource("2_kyvdy")
@@ -64,6 +48,10 @@ region = Rect2(40.417908, 0.28281635, 4.2709045, 6.25597)
 atlas = ExtResource("2_kyvdy")
 region = Rect2(45.17004, 6.4183927, 5.5942802, 6.4965835)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_to824"]
+atlas = ExtResource("15_tqags")
+region = Rect2(18.200607, 64.641335, 11.534348, 15.451675)
+
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -74,43 +62,16 @@ grow_vertical = 2
 script = ExtResource("1_lddph")
 BackgroundMusic = ExtResource("12_1oiph")
 
-[node name="SkyBG" type="TextureRect" parent="."]
-texture_repeat = 2
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 650.0
-texture = ExtResource("1_2br5b")
-expand_mode = 1
-
-[node name="CloudFar" type="TextureRect" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_824g0")
-layout_mode = 0
-offset_right = 575.5
-offset_bottom = 324.5
-scale = Vector2(2, 2)
-texture = ExtResource("2_wv540")
-expand_mode = 1
-stretch_mode = 1
-
-[node name="CloudNear" type="TextureRect" parent="."]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_wv540")
-layout_mode = 0
-offset_right = 575.0
-offset_bottom = 325.0
-scale = Vector2(2, 2)
-texture = ExtResource("3_dsf7a")
-expand_mode = 1
-stretch_mode = 1
+[node name="BackgroundCloud" parent="." instance=ExtResource("3_5p4sa")]
+layout_mode = 1
 
 [node name="GameTitle" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 331.0
-offset_top = 89.0
-offset_right = 817.0
-offset_bottom = 370.0
-texture = SubResource("AtlasTexture_uv4ns")
+offset_left = 185.0
+offset_top = -25.0
+offset_right = 970.0
+offset_bottom = 503.0
+texture = ExtResource("4_5p4sa")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -299,6 +260,34 @@ offset_right = -6.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MiniButton" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -101.0
+offset_right = -40.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("7_uv4ns")
+TargetScenePath = "uid://ct65da0t3qpy"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/MiniButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = -13.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_to824")
 
 [editable path="MarginContainer/VBoxContainer/ButtonContainer/ButtonStart"]
 [editable path="MarginContainer/VBoxContainer/ButtonContainer/ButtonQuit"]
