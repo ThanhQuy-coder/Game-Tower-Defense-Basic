@@ -1,12 +1,9 @@
 using Godot;
 
-public partial class Level1 : Node2D
+public partial class Level1 : LevelBase
 {
-	[Export] public AudioStream BackgroundMusic;
-
-	public override void _Ready()
+	protected override void InitLevel()
 	{
-		var music = GetNode<MusicManager>("/root/MusicManager");
-		music.PlayMusic(BackgroundMusic);
+		GD.Print("Khởi tạo riêng cho Level 1");
 	}
 }

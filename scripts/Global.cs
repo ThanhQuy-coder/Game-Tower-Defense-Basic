@@ -4,6 +4,7 @@ using System.Threading.Tasks; // Cần thêm thư viện này để dùng Task.D
 
 public partial class Global : Node
 {
+
 	public static Global Instance { get; private set; }
 
 	[Signal] public delegate void StatsChangedEventHandler();
@@ -18,7 +19,7 @@ public partial class Global : Node
 	[Export] public int InitialHealth = 20;
 
 	// [MỚI] Biến lưu level cao nhất đã mở khóa. Mặc định là 1.
-	[Export] public int UnlockedLevel = 1; 
+	[Export] public int UnlockedLevel = 1;
 
 	public int Gold
 	{
@@ -33,7 +34,7 @@ public partial class Global : Node
 		{
 			_health = value;
 			EmitSignal(SignalName.StatsChanged); // Cập nhật UI ngay lập tức
-			
+
 			if (_health <= 0)
 			{
 				// Gọi hàm xử lý thua với độ trễ
@@ -53,22 +54,22 @@ public partial class Global : Node
 	{
 		Instance = this;
 		ProcessMode = ProcessModeEnum.Always;
-		
+
 		// [LƯU Ý] Nếu sau này bạn làm tính năng Load Game từ file save, 
 		// bạn sẽ cập nhật UnlockedLevel ở đây.
-		
+
 		StartNewGame();
 	}
 
 	public void StartNewGame()
 	{
-		GetTree().Paused = false; 
-		
+		GetTree().Paused = false;
+
 		// [ĐÃ SỬA] Đảm bảo gán lại giá trị gốc khi bắt đầu game/màn mới
 		Gold = InitialGold;
 		Health = InitialHealth;
 		Wave = 1;
-		
+
 		// Lưu ý: Không reset UnlockedLevel ở đây để giữ tiến độ chơi
 		// Cập nhật UI ngay lập tức
 		EmitSignal(SignalName.StatsChanged);
@@ -82,7 +83,7 @@ public partial class Global : Node
 		{
 			UnlockedLevel = levelToUnlock;
 			GD.Print($"Global: New Level Unlocked -> {UnlockedLevel}");
-			
+
 			// Nếu có hệ thống Save Game, hãy gọi hàm Save() tại đây
 		}
 	}
@@ -96,7 +97,7 @@ public partial class Global : Node
 		if (GetTree().Paused) return;
 		GD.Print("GAME OVER!");
 		EmitSignal(SignalName.GameOver);
-		GetTree().Paused = true; 
+		GetTree().Paused = true;
 	}
 
 	public async void TriggerVictory()

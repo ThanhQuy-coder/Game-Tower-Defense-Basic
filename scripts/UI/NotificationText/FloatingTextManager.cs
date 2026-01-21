@@ -7,7 +7,7 @@ public partial class FloatingTextManager : Node
 	public override void _Ready()
 	{
 		// Tự load scene khi khởi động game
-		_floatingTextScene = GD.Load<PackedScene>("res://scenes/ui/FloatingText.tscn");
+		_floatingTextScene = GD.Load<PackedScene>("res://scenes/ui/components/FloatingText.tscn");
 
 		if (_floatingTextScene == null)
 			GD.PrintErr("Không load được FloatingText.tscn. Kiểm tra lại đường dẫn!");

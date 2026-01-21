@@ -1,0 +1,202 @@
+[gd_scene load_steps=20 format=3 uid="uid://ct2gi2kuvbt2x"]
+
+[ext_resource type="Script" uid="uid://c4ihve05qg510" path="res://scripts/UI/Pause/PauseMenu.cs" id="1_ce8rb"]
+[ext_resource type="Texture2D" uid="uid://i73dkj685vdb" path="res://assets/ui/Win_loose.png" id="2_j8kvk"]
+[ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="3_chhxm"]
+[ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="3_uacdg"]
+[ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="4_1bogr"]
+[ext_resource type="Script" uid="uid://byt1bucr6vrnq" path="res://scripts/Audio/SfxToggleButton.cs" id="4_chhxm"]
+[ext_resource type="Texture2D" uid="uid://cxtenff7bgjvm" path="res://assets/ui/Buttons/SoundEffectOn.tres" id="5_1bogr"]
+[ext_resource type="Texture2D" uid="uid://6uspuqjekwrp" path="res://assets/ui/Buttons/SoundEffectOff.tres" id="6_u2j1c"]
+[ext_resource type="Script" uid="uid://bbywtxeui3tg" path="res://scripts/Audio/MusicToggleButton.cs" id="7_xmnf7"]
+[ext_resource type="Texture2D" uid="uid://boogty18fbavc" path="res://assets/ui/Buttons/MusicOn.tres" id="8_lqg5l"]
+[ext_resource type="Texture2D" uid="uid://comlnntlak34b" path="res://assets/ui/Buttons/MusicOff.tres" id="9_lvn5f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awwyc"]
+atlas = ExtResource("2_j8kvk")
+region = Rect2(9.652439, 298.0053, 92.40297, 76.471405)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uacdg"]
+font_size = 64
+font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uacdg"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(13.043484, 273.6191, 56.835392, 13.1297)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chhxm"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(91.47933, 273.9862, 59.24955, 13.166595)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bogr"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(11.932367, 289.1613, 58.862892, 14.715729)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2j1c"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(92.110596, 289.17584, 58.512238, 15.641876)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmnf7"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(12.223097, 401.8425, 58.106956, 13.710632)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqg5l"]
+atlas = ExtResource("3_chhxm")
+region = Rect2(92.31637, 402.6103, 58.106956, 13.275391)
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ce8rb")
+
+[node name="OpacityBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 320.0
+offset_top = 88.0
+offset_right = 412.0
+offset_bottom = 164.0
+scale = Vector2(6, 6)
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_awwyc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -215.0
+offset_right = 120.0
+offset_bottom = -127.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PAUSE"
+label_settings = SubResource("LabelSettings_uacdg")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonBack" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -345.0
+offset_top = 119.0
+offset_right = -316.0
+offset_bottom = 149.0
+grow_horizontal = 0
+
+[node name="BtnResume" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 307.0
+offset_right = 700.0
+offset_bottom = 360.0
+texture_normal = SubResource("AtlasTexture_uacdg")
+texture_pressed = SubResource("AtlasTexture_chhxm")
+stretch_mode = 0
+
+[node name="BtnRestart" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 369.0
+offset_right = 700.0
+offset_bottom = 422.0
+texture_normal = SubResource("AtlasTexture_1bogr")
+texture_pressed = SubResource("AtlasTexture_u2j1c")
+stretch_mode = 0
+
+[node name="BtnToTitle" type="TextureButton" parent="Buttons"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 429.0
+offset_right = 701.0
+offset_bottom = 482.0
+texture_normal = SubResource("AtlasTexture_xmnf7")
+texture_pressed = SubResource("AtlasTexture_lqg5l")
+stretch_mode = 0
+script = ExtResource("4_1bogr")
+TargetScenePath = "uid://bl7fukjm08jfr"
+
+[node name="ButtonSoundEffect" parent="Buttons" instance=ExtResource("3_uacdg")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -541.0
+offset_top = 221.0
+offset_right = -487.0
+offset_bottom = 274.0
+grow_horizontal = 0
+toggle_mode = true
+script = ExtResource("4_chhxm")
+OnTexture = ExtResource("5_1bogr")
+OffTexture = ExtResource("6_u2j1c")
+
+[node name="TextureRect" type="TextureRect" parent="Buttons/ButtonSoundEffect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -22.5
+offset_right = 21.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonMusic" parent="Buttons" instance=ExtResource("3_uacdg")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -607.0
+offset_top = 221.0
+offset_right = -553.0
+offset_bottom = 274.0
+grow_horizontal = 0
+toggle_mode = true
+script = ExtResource("7_xmnf7")
+OnTexture = ExtResource("8_lqg5l")
+OffTexture = ExtResource("9_lvn5f")
+
+[node name="TextureRect" type="TextureRect" parent="Buttons/ButtonMusic"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Buttons/ButtonBack" to="." method="OnResumePressed"]
+[connection signal="pressed" from="Buttons/BtnResume" to="." method="OnResumePressed"]
+[connection signal="pressed" from="Buttons/BtnRestart" to="." method="OnRestartPressed"]

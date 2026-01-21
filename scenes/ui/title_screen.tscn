@@ -53,6 +53,7 @@ atlas = ExtResource("15_tqags")
 region = Rect2(18.200607, 64.641335, 11.534348, 15.451675)
 
 [node name="TitleScreen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -261,7 +262,7 @@ offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MiniButton" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
+[node name="ButtonInfoScreen" parent="MarginContainer/VBoxContainer/ButtonContainer" instance=ExtResource("8_tjte5")]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -276,7 +277,7 @@ grow_vertical = 0
 script = ExtResource("7_uv4ns")
 TargetScenePath = "uid://ct65da0t3qpy"
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/MiniButton"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ButtonContainer/ButtonInfoScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

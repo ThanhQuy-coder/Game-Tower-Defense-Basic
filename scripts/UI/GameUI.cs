@@ -27,6 +27,7 @@ public partial class GameUI : Control
 	// [MỚI] Thêm reference tới 2 nút mới
 	[Export] public Button BtnNextLevel;
 	[Export] public Button BtnMenu;
+	[Signal] public delegate void TogglePauseRequestedEventHandler();
 
 	private TowerSlot _selectedSlot;
 
@@ -85,7 +86,7 @@ public partial class GameUI : Control
 				WaveTimerLabel.Modulate = Colors.Red;
 
 				// Hoặc nếu muốn ẩn đi thì dùng dòng dưới:
-				// WaveTimerLabel.Visible = false;
+				// WaveTimerLabel.Visible = false
 			}
 		}
 	}
@@ -306,5 +307,12 @@ public partial class GameUI : Control
 			_selectedSlot.BuildTower(towerIndex);
 			HideAllPanels();
 		}
+	}
+
+	// Hàm này sẽ được gọi khi nhấn vào ButtonPause trong Scene
+	public void OnButtonPausePressed()
+	{
+		// 2. Phát tín hiệu đi, không cần biết ai nhận
+		EmitSignal(SignalName.TogglePauseRequested);
 	}
 }

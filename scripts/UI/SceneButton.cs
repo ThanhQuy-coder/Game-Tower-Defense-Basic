@@ -31,6 +31,7 @@ public partial class SceneButton : TextureButton
 			case ButtonAction.ChangeScene:
 				if (!string.IsNullOrEmpty(TargetScenePath))
 				{
+					GetTree().Paused = false;
 					// Lưu scene hiện tại lại
 					var current = GetTree().CurrentScene.SceneFilePath;
 					SceneHistory.Instance.LastScenePath = current;
