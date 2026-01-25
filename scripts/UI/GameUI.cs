@@ -27,6 +27,13 @@ public partial class GameUI : Control
 	// [MỚI] Thêm reference tới 2 nút mới
 	[Export] public Button BtnNextLevel;
 	[Export] public Button BtnMenu;
+	
+	// [MỚI - QUAN TRỌNG] Cài đặt level sẽ mở khóa sau khi thắng màn này
+	// Bạn hãy chỉnh số này trong Inspector của Godot cho từng màn chơi
+	// Ví dụ: Đang làm Scene Level 1 -> Chỉnh số này thành 2
+	// [LƯU Ý]: Nếu đây là MÀN CUỐI CÙNG, hãy chỉnh số này thành 0
+	[Export] public int NextLevelIndex = 2; 
+
 	[Signal] public delegate void TogglePauseRequestedEventHandler();
 
 	private TowerSlot _selectedSlot;
@@ -129,8 +136,22 @@ public partial class GameUI : Control
 		ResultLabel.Text = "🏆 VICTORY!";
 		ResultLabel.AddThemeColorOverride("font_color", Colors.Gold);
 
-		// [MỚI] Hiện nút Next Level khi thắng
-		if (BtnNextLevel != null) BtnNextLevel.Visible = true;
+		// Logic kiểm tra màn cuối cùng (Nếu NextLevelIndex <= 0 tức là hết game)
+		bool isLastLevel = (NextLevelIndex <= 0);
+
+		// [MỚI] Hiện nút Next Level khi thắng (chỉ hiện nếu KHÔNG PHẢI màn cuối)
+		if (BtnNextLevel != null) 
+		{
+			BtnNextLevel.Visible = !isLastLevel;
+		}
+
+		// [LOGIC LƯU GAME - ĐƯỢC THÊM VÀO ĐÂY]
+		// Khi bảng chiến thắng hiện lên, ta báo cho Global biết để mở khóa level tiếp theo
+		// Chỉ thực hiện nếu không phải màn cuối
+		if (Global.Instance != null && !isLastLevel)
+		{
+			Global.Instance.UnlockLevel(NextLevelIndex);
+		}
 	}
 
 	public void OnBtnRestartPressed()
@@ -284,7 +305,7 @@ public partial class GameUI : Control
 			// 2. Cập nhật thông tin (Dòng này có thể giữ hoặc bỏ vì menu sắp đóng)
 			UpdateActionInfo();
 
-			// 3. THÊM DÒNG NÀY: Tắt toàn bộ menu ngay lập tức
+			// 3. Tóm Tắt toàn bộ menu ngay lập tức
 			HideAllPanels();
 		}
 	}

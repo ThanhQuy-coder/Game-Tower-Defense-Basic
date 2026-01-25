@@ -10,20 +10,28 @@ public partial class LevelSelectManager : Control
 
 	public override void _Ready()
 	{
-		// Lấy reference tới các nút theo tên trong Scene
+		// 1. Lấy reference tới các nút theo tên trong Scene
 		// Level 1 luôn mở nên không cần xử lý khóa
 		_btnLevel2 = GetNodeOrNull<TextureButton>("Level2");
 		_btnLevel3 = GetNodeOrNull<TextureButton>("Level3");
 		_btnLevel4 = GetNodeOrNull<TextureButton>("Level4");
 
-		// Lấy dữ liệu từ Global (Level cao nhất đã mở)
-		int unlockedLevel = 1;
+		// 2. Tải dữ liệu từ ổ cứng (Đây là bước quan trọng để giữ tiến độ khi tắt máy)
+		int unlockedLevel = SaveManager.LoadProgress();
+
+		// (Tùy chọn) Đồng bộ ngược lại vào Global nếu bạn dùng Global ở chỗ khác
 		if (Global.Instance != null)
 		{
-			unlockedLevel = Global.Instance.UnlockedLevel;
+			// Nếu dữ liệu trong file save cao hơn trong Global (do mới bật game), cập nhật Global
+			if (unlockedLevel > Global.Instance.UnlockedLevel)
+			{
+				Global.Instance.UnlockedLevel = unlockedLevel;
+			}
 		}
 
-		// Cập nhật trạng thái cho từng nút
+		GD.Print($"[LevelSelect] Đang hiển thị menu với cấp độ mở khóa: {unlockedLevel}");
+
+		// 3. Cập nhật giao diện
 		UpdateLevelButton(_btnLevel2, 2, unlockedLevel);
 		UpdateLevelButton(_btnLevel3, 3, unlockedLevel);
 		UpdateLevelButton(_btnLevel4, 4, unlockedLevel);

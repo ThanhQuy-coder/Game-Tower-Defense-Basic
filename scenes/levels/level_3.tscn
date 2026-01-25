@@ -1,15 +1,15 @@
 [gd_scene load_steps=35 format=4 uid="uid://c4i1qajscxjfy"]
 
-[ext_resource type="Texture2D" uid="uid://bnxmctfs0rgqi" path="res://assets/tilesets/tileset1.png" id="1_0ljxa"]
+[ext_resource type="Texture2D" uid="uid://cnicj3jkgweya" path="res://assets/tilesets/tileset1.png" id="1_0ljxa"]
 [ext_resource type="Script" uid="uid://b5u362tvdo3u3" path="res://scripts/UI/Levels/Level3.cs" id="1_apo5x"]
-[ext_resource type="Texture2D" uid="uid://caf2cu3nfdle6" path="res://assets/tilesets/freelavatileset-Sheet.png" id="2_0ljxa"]
-[ext_resource type="AudioStream" uid="uid://d3o1tauyg3csk" path="res://assets/audios/musics/Pixel 8.ogg" id="2_josfm"]
-[ext_resource type="Texture2D" uid="uid://ch2a8q3jh751i" path="res://assets/tilesets/tilemap_packed.png" id="4_pimnq"]
-[ext_resource type="Texture2D" uid="uid://h177rphnd84e" path="res://assets/tilesets/Cave_objects_source.png" id="4_ugcn1"]
-[ext_resource type="Texture2D" uid="uid://coghsd8rsce5e" path="res://assets/tilesets/tileset.png" id="6_pimnq"]
-[ext_resource type="Texture2D" uid="uid://chvrohg35ndil" path="res://assets/tilesets/Objects_Cemetery.png" id="7_2bnyt"]
+[ext_resource type="Texture2D" uid="uid://dh8th1xkyp1lu" path="res://assets/tilesets/freelavatileset-Sheet.png" id="2_0ljxa"]
+[ext_resource type="AudioStream" uid="uid://bmghqxk0d8t6o" path="res://assets/audios/musics/Pixel 8.ogg" id="2_josfm"]
+[ext_resource type="Texture2D" uid="uid://cmojewfbkfn8f" path="res://assets/tilesets/tilemap_packed.png" id="4_pimnq"]
+[ext_resource type="Texture2D" uid="uid://c5txtqjls6ky2" path="res://assets/tilesets/Cave_objects_source.png" id="4_ugcn1"]
+[ext_resource type="Texture2D" uid="uid://8q5ox2aycd41" path="res://assets/tilesets/tileset.png" id="6_pimnq"]
+[ext_resource type="Texture2D" uid="uid://br3xk2iey7nqh" path="res://assets/tilesets/Objects_Cemetery.png" id="7_2bnyt"]
 [ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_pimnq"]
-[ext_resource type="Texture2D" uid="uid://dqmlxslw5rc12" path="res://assets/tilesets/props.png" id="9_t4txi"]
+[ext_resource type="Texture2D" uid="uid://ci2l638pmf7jx" path="res://assets/tilesets/props.png" id="9_t4txi"]
 [ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemys/rat_enemy.tscn" id="10_f6egh"]
 [ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemys/tank_enemy.tscn" id="11_t4txi"]
 [ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemys/soldier_enemy.tscn" id="12_apo5x"]
@@ -4104,6 +4104,7 @@ EnemyPrefabs = Array[PackedScene]([ExtResource("10_f6egh"), ExtResource("11_t4tx
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameUI" parent="CanvasLayer" instance=ExtResource("14_t4txi")]
+NextLevelIndex = 4
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("16_fhpes")]
 visible = false
