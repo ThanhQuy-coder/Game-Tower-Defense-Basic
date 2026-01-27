@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbitcxxmefp01"]
+[gd_scene load_steps=13 format=3 uid="uid://cbitcxxmefp01"]
 
 [ext_resource type="Script" uid="uid://r76al0epb34k" path="res://scripts/Manager/LevelSelectManager.cs" id="1_4r381"]
 [ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="2_gh3it"]
@@ -9,12 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="9_mrod5"]
 [ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="10_5ohrm"]
 [ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="10_mc72k"]
+[ext_resource type="Texture2D" uid="uid://kfsgsa0wjidx" path="res://assets/icons/Icons.png" id="10_oupng"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mc72k"]
 atlas = ExtResource("10_5ohrm")
 region = Rect2(366.81622, 288.84656, 15.582825, 15.277283)
 
-[node name="SelectScreen" type="Control"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mvk0"]
+atlas = ExtResource("10_oupng")
+region = Rect2(2.6481829, 1.6213956, 12.161748, 12.026617)
+
+[node name="SelectScreen" type="Control" node_paths=PackedStringArray("_confirmDialog", "_resetButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +27,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4r381")
+_confirmDialog = NodePath("ResetConfirmDialog")
+_resetButton = NodePath("ResetProgress")
 
 [node name="BackgroundCloud" parent="." instance=ExtResource("2_gh3it")]
 layout_mode = 1
@@ -237,3 +244,34 @@ rotation = 1.5707964
 texture = SubResource("AtlasTexture_mc72k")
 expand_mode = 1
 flip_v = true
+
+[node name="ResetProgress" parent="." instance=ExtResource("9_mrod5")]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 17.0
+offset_right = 152.0
+offset_bottom = 70.0
+
+[node name="TextureRect" type="TextureRect" parent="ResetProgress"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_0mvk0")
+
+[node name="ResetConfirmDialog" type="ConfirmationDialog" parent="."]
+oversampling_override = 1.0
+title = "Cảnh "
+size = Vector2i(625, 100)
+ok_button_text = "Xác nhận"
+dialog_text = "Hành động này sẽ xóa tất cả dữ liệu bạn chơi trước đó. Bạn vẫn chắc muốn xóa"
+dialog_autowrap = true
+cancel_button_text = "Hủy"

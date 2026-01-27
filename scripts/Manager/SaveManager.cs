@@ -46,4 +46,15 @@ public static class SaveManager
         // Lấy giá trị ra, mặc định là 1 nếu lỗi
         return (int)config.GetValue(SECTION, KEY_UNLOCKED, 1);
     }
+
+    public static void ResetProgress()
+    {
+        using var dir = DirAccess.Open("user://");
+
+        if (dir.FileExists("savegame.cfg"))
+        {
+            dir.Remove("savegame.cfg");
+            GD.Print("File deleted success");
+        }
+    }
 }

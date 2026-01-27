@@ -3,6 +3,10 @@ using System;
 
 public partial class LevelSelectManager : Control
 {
+	// Kéo thả các node từ Scene Tree vào đây hoặc dùng GetNode
+	[Export] private ConfirmationDialog _confirmDialog;
+	[Export] private TextureButton _resetButton;
+
 	// Không cần export từng nút nếu đặt tên đúng chuẩn trong Scene
 	private TextureButton _btnLevel2;
 	private TextureButton _btnLevel3;
@@ -10,6 +14,12 @@ public partial class LevelSelectManager : Control
 
 	public override void _Ready()
 	{
+		// 1. Khi bấm nút Reset (hình đầu lâu) thì hiện Dialog xác nhận
+		_resetButton.Pressed += OnResetButtonPressed;
+
+		// 2. Khi người chơi nhấn "OK" trên Dialog
+		_confirmDialog.Confirmed += OnResetConfirmed;
+
 		// 1. Lấy reference tới các nút theo tên trong Scene
 		// Level 1 luôn mở nên không cần xử lý khóa
 		_btnLevel2 = GetNodeOrNull<TextureButton>("Level2");
@@ -48,10 +58,10 @@ public partial class LevelSelectManager : Control
 		{
 			// --- TRẠNG THÁI KHÓA ---
 			btn.Disabled = true;
-			
+
 			// Làm tối nút đi (Hiệu ứng Disable)
-			btn.Modulate = new Color(0.3f, 0.3f, 0.3f, 1); 
-			
+			btn.Modulate = new Color(0.3f, 0.3f, 0.3f, 1);
+
 			// Đổi con trỏ chuột thành cấm
 			btn.MouseDefaultCursorShape = CursorShape.Forbidden;
 
@@ -62,15 +72,33 @@ public partial class LevelSelectManager : Control
 		{
 			// --- TRẠNG THÁI MỞ ---
 			btn.Disabled = false;
-			
+
 			// Màu sắc bình thường
 			btn.Modulate = new Color(1, 1, 1, 1);
-			
+
 			// Đổi con trỏ chuột thành bàn tay
 			btn.MouseDefaultCursorShape = CursorShape.PointingHand;
 
 			// Ẩn ổ khóa
 			if (lockIcon != null) lockIcon.Visible = false;
 		}
+	}
+
+	private void OnResetButtonPressed()
+	{
+		// Hiển thị dialog ở chính giữa màn hình
+		_confirmDialog.PopupCentered();
+	}
+
+	private void OnResetConfirmed()
+	{
+		// Gọi hàm xóa file save đã viết ở SaveManager
+		SaveManager.ResetProgress();
+
+		// Cập nhật lại giao diện ngay lập tức
+		// Cách nhanh nhất là load lại scene này
+		GetTree().ReloadCurrentScene();
+
+		GD.Print("Tiến độ đã được reset!");
 	}
 }
