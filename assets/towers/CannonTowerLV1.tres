@@ -14,3 +14,5 @@ script = ExtResource("2_5yebe")
 Name = "Tháp pháo I"
 Icon = SubResource("AtlasTexture_5yebe")
 Description = "Tháp pháo được thiết kế với sự ưu tiên cho sức mạnh, số tiền bỏ ra đắt hơn và bắn chậm hơn nhưng mang lại những cú bắn chất lượng. Sát thương cao và lan ra xung quanh."
+Damage = 13
+Speed = "Chậm"

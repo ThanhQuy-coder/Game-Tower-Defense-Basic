@@ -14,3 +14,5 @@ script = ExtResource("2_hblur")
 Name = "Tháp pháo II"
 Icon = SubResource("AtlasTexture_hblur")
 Description = "Tháp pháo II mang đến cải thiện về tầm bắn và sát thương."
+Damage = 20
+Speed = "Chậm"

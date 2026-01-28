@@ -14,3 +14,5 @@ script = ExtResource("2_ixbrs")
 Name = "Tháp phép II"
 Icon = SubResource("AtlasTexture_ixbrs")
 Description = "Tháp phép II kế thừa và tiếp tục cải tiến thêm về nguồn sức mạnh phép thuật và tầm bắn."
+Damage = 22
+Speed = "Vừa"

@@ -14,3 +14,5 @@ script = ExtResource("2_c35kh")
 Name = "Tháp phép III"
 Icon = SubResource("AtlasTexture_c35kh")
 Description = "Tháp phép III kế thừa và tiếp tục cải tiến thêm về nguồn sức mạnh phép thuật và tăng nhẹ tầm bắn, tăng thêm hiệu ứng làm chậm."
+Damage = 28
+Speed = "Nhanh"

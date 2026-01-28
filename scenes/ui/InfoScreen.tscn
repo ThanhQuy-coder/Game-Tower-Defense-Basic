@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ct65da0t3qpy"]
+[gd_scene load_steps=26 format=3 uid="uid://ct65da0t3qpy"]
 
 [ext_resource type="Script" uid="uid://o8wodhpxgfh6" path="res://scripts/UI/Encyclopedia/InfoScreen.cs" id="1_4lsrl"]
 [ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="1_12rx6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cbtn5jdyfpaav" path="res://assets/sprites/Enemies/Orc/Orc.tres" id="4_s2fr3"]
 [ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="5_0udoy"]
 [ext_resource type="Texture2D" uid="uid://cmiwl5yq6wctm" path="res://assets/towers/ArcherTowerLV1.tres" id="5_8x3s7"]
+[ext_resource type="Texture2D" uid="uid://deok40pyil5dg" path="res://assets/sprites/Enemies/OrcBoss/orc_boss.tres" id="5_q7s4b"]
 [ext_resource type="Texture2D" uid="uid://kotms3mq4m8" path="res://assets/towers/ArcherTowerLV2.tres" id="6_pq7s7"]
 [ext_resource type="Texture2D" uid="uid://cwo38656642vc" path="res://assets/icons/cthulhu.png" id="6_xkgmb"]
 [ext_resource type="Texture2D" uid="uid://ds1jgik1w2nw7" path="res://assets/icons/castle-tower.png" id="7_4lsrl"]
@@ -21,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dvsynsirxtvcf" path="res://assets/towers/MagicTowerLV2.tres" id="12_k5bb5"]
 [ext_resource type="Texture2D" uid="uid://dlhw41wxcaeds" path="res://assets/towers/MagicTowerLV3.tres" id="13_p4lmg"]
 [ext_resource type="PackedScene" uid="uid://c4dsfhnyyduwx" path="res://scenes/ui/Components/InfoListEntry.tscn" id="14_pq7s7"]
-
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkgmb"]
 atlas = ExtResource("5_0udoy")
@@ -43,7 +43,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4lsrl")
-EnemyList = Array[Resource]([ExtResource("2_3poyh"), ExtResource("3_ds3tn"), ExtResource("4_s2fr3")])
+EnemyList = Array[Resource]([ExtResource("2_3poyh"), ExtResource("3_ds3tn"), ExtResource("4_s2fr3"), ExtResource("5_q7s4b")])
 TowerList = Array[Resource]([ExtResource("5_8x3s7"), ExtResource("6_pq7s7"), ExtResource("7_q7s4b"), ExtResource("8_bbvqk"), ExtResource("9_4o1j8"), ExtResource("10_d0t8c"), ExtResource("11_ttoj7"), ExtResource("12_k5bb5"), ExtResource("13_p4lmg")])
 _categoryPanel = NodePath("CategoryPanel")
 _contentPanel = NodePath("ContentPanel")

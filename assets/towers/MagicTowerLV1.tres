@@ -14,3 +14,5 @@ script = ExtResource("2_p845n")
 Name = "Tháp phép I"
 Icon = SubResource("AtlasTexture_p845n")
 Description = "Tháp phép được dựng nên bởi các pháp sư tài năng, Họ có khả năng làm chậm kẻ địch và nguồn sát thương ổn định bù lại số tiền bỏ ra cho họ lại rất đắt."
+Damage = 15
+Speed = "Vừa"

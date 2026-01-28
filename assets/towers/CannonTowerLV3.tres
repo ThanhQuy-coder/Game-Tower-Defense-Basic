@@ -14,3 +14,5 @@ script = ExtResource("2_1tl5j")
 Name = "Tháp pháo III"
 Icon = SubResource("AtlasTexture_1tl5j")
 Description = "Tháp pháo III cải thiện tầm bắn, sức tấn công, sức tấn công tầm bắn lan."
+Damage = 25
+Speed = "Chậm"
