@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://d1jtfmmsg38sa"]
 
-[ext_resource type="Texture2D" uid="uid://cgtxg5d40x6rj" path="res://assets/sprites/Enemys/Mouse/D_Run.png" id="1_cssv4"]
+[ext_resource type="Texture2D" uid="uid://cgtxg5d40x6rj" path="res://assets/sprites/Enemies/Mouse/D_Run.png" id="1_cssv4"]
 [ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_v6cyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cssv4"]
@@ -14,3 +14,6 @@ script = ExtResource("2_v6cyj")
 Name = "Chuột"
 Icon = SubResource("AtlasTexture_cssv4")
 Description = "Những con chuột to lớn. Chúng có lượng máu và sát thương ít tuy nhiên số lượng thì rất đông đảo."
+Health = "Thấp"
+Damage = 1
+Speed = "Trung bình"

@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://cbtn5jdyfpaav"]
 
-[ext_resource type="Texture2D" uid="uid://ddlp5mhm6c5o0" path="res://assets/sprites/Enemys/Goblin/D_Walk.png" id="1_ipx2e"]
+[ext_resource type="Texture2D" uid="uid://ddlp5mhm6c5o0" path="res://assets/sprites/Enemies/Orc/D_Walk.png" id="1_ipx2e"]
 [ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_q1srh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ipx2e"]
@@ -11,6 +11,9 @@ region = Rect2(13.431343, 14.53985, 18.512894, 24.86403)
 atlas = ExtResource("1_ipx2e")
 region = Rect2(12.704828, 15.232896, 21.252348, 23.954956)
 script = ExtResource("2_q1srh")
-Name = "Goblin"
+Name = "Orc khổng lồ"
 Icon = SubResource("AtlasTexture_ipx2e")
-Description = "Những tên goblin khổng lồ này mang một lượng máu đáng kinh ngạc. Chúng gây khó khăn cho những tháp có lượng sát thương ít."
+Description = "Những tên orc  khổng lồ này mang một lượng máu đáng kinh ngạc. Chúng gây khó khăn cho những tháp có lượng sát thương ít."
+Health = "Cao"
+Damage = 4
+Speed = "Chậm"

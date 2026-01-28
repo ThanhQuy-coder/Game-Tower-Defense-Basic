@@ -13,6 +13,12 @@ public partial class FloatingTextManager : Node
 			GD.PrintErr("Không load được FloatingText.tscn. Kiểm tra lại đường dẫn!");
 	}
 
+	/// <summary>
+	/// Hiển thị tin nhắn đỏ nổi lên
+	/// </summary>
+	/// <param name="message">nội dung tin nhắn</param>
+	/// <param name="globalPos">vị trí nổi lên</param>
+	/// <param name="color">màu sắc</param>
 	public void ShowMessage(string message, Vector2 globalPos, Color color)
 	{
 		if (_floatingTextScene == null)

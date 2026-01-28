@@ -14,10 +14,8 @@ public partial class LevelSelectManager : Control
 
 	public override void _Ready()
 	{
-		// 1. Khi bấm nút Reset (hình đầu lâu) thì hiện Dialog xác nhận
+		// Phần khởi tạo nút reset lại tất cả level
 		_resetButton.Pressed += OnResetButtonPressed;
-
-		// 2. Khi người chơi nhấn "OK" trên Dialog
 		_confirmDialog.Confirmed += OnResetConfirmed;
 
 		// 1. Lấy reference tới các nút theo tên trong Scene
@@ -29,7 +27,6 @@ public partial class LevelSelectManager : Control
 		// 2. Tải dữ liệu từ ổ cứng (Đây là bước quan trọng để giữ tiến độ khi tắt máy)
 		int unlockedLevel = SaveManager.LoadProgress();
 
-		// (Tùy chọn) Đồng bộ ngược lại vào Global nếu bạn dùng Global ở chỗ khác
 		if (Global.Instance != null)
 		{
 			// Nếu dữ liệu trong file save cao hơn trong Global (do mới bật game), cập nhật Global

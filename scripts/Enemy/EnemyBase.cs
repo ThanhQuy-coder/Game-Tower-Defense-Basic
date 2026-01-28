@@ -20,6 +20,7 @@ public abstract partial class EnemyBase : Area2D
 	private bool _isDead = false;
 	private AnimatedSprite2D _animatedSprite;
 	private Tween _fadeTween;
+	public float DistanceTravelled => (GetParent() as PathFollow2D)?.Progress ?? 0f;
 
 	public override void _Ready()
 	{
@@ -60,7 +61,7 @@ public abstract partial class EnemyBase : Area2D
 		if (HealthBar != null && HealthBar.Visible)
 		{
 			// Vector2(0, -50) là khoảng cách phía trên đầu, có thể chỉnh lại
-			HealthBar.GlobalPosition = GlobalPosition + new Vector2(-HealthBar.Size.X / 2, -20);
+			HealthBar.GlobalPosition = GlobalPosition + new Vector2(-HealthBar.Size.X / 2, -35);
 			HealthBar.Rotation = 0; // Đảm bảo luôn nằm ngang
 		}
 	}

@@ -12,9 +12,10 @@ public abstract partial class TowerBase : Node2D
 	[Export] public float Range = 200.0f;
 	[Export] public float FireRate = 1.0f;
 	[Export] public int BaseCost = 100;
+	[Export] public int Damage = 0;
 
 	[ExportCategory("Visuals")]
-	[Export] public Texture2D[] BaseTextures;   // Ảnh đế tháp
+	[Export] public Texture2D[] BaseTextures;   // Ảnh tháp
 	[Export] public Texture2D[] TurretTextures; // Ảnh lính
 	[Export] public Vector2[] TurretPositions;  // Vị trí lính
 
@@ -30,16 +31,14 @@ public abstract partial class TowerBase : Node2D
 	protected EnemyBase CurrentTarget;
 	protected float FireCooldown = 0.0f;
 
-	// [MỚI] Biến static để lưu tháp đang được chọn duy nhất trên toàn bản đồ
-	public static TowerBase SelectedTower { get; private set; }
-	private bool _isSelected = false;
-
-	public int Level { get; private set; } = 1;
+	public static TowerBase SelectedTower { get; private set; } // Biến static để lưu tháp đang được chọn duy nhất trên toàn bản đồ
+	private bool _isSelected = false; // biến lính canh xem tháp được chọn hay không
+	public int Level { get; private set; } = 1; // Cấp độ của tháp
 	public int maxLevel { get; private set; } = 3;
 
 	public override void _Ready()
 	{
-		// An toàn: Đưa lính lên lớp trên cùng để không bị đế tháp che
+		// Đưa lính lên lớp trên cùng để không bị đế tháp che
 		if (TurretSprite != null) TurretSprite.ZIndex = 1;
 		if (BaseSprite != null) BaseSprite.ZIndex = 0;
 
@@ -54,7 +53,7 @@ public abstract partial class TowerBase : Node2D
 	}
 
 	/// <summary>
-	/// [ĐÃ SỬA] Dùng _Input để bắt sự kiện chọn tháp (Ưu tiên cao nhất)
+	/// Dùng _Input để bắt sự kiện chọn tháp (Ưu tiên cao nhất)
 	/// </summary>
 	public override void _Input(InputEvent @event)
 	{
@@ -69,29 +68,24 @@ public abstract partial class TowerBase : Node2D
 					SelectedTower.Deselect();
 				}
 
-				// 2. Chọn tháp này (Hiện tầm bắn)
+				// 2. Chọn tháp (Hiện tầm bắn)
 				if (!_isSelected)
 				{
 					_isSelected = true;
 					SelectedTower = this; // Gán static
 					QueueRedraw();
 				}
-
-				// LƯU Ý: Không dùng SetInputAsHandled() ở đây để sự kiện click vẫn truyền
-				// xuống được TowerSlot (hoặc Button) bên dưới để mở UI Nâng Cấp.
 			}
 		}
 	}
 
 	/// <summary>
-	/// [ĐÃ SỬA] Dùng _UnhandledInput để xử lý khi click vào VÙNG TRỐNG
+	/// Dùng _UnhandledInput để xử lý khi click vào VÙNG TRỐNG
 	/// </summary>
 	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
 		{
-			// Sự kiện chạy vào đây nghĩa là không click vào UI hay Button nào (Click đất trống)
-
 			// Nếu tháp này đang được chọn -> Bỏ chọn và đóng luôn UI
 			if (_isSelected)
 			{
@@ -131,7 +125,12 @@ public abstract partial class TowerBase : Node2D
 	public override void _PhysicsProcess(double delta)
 	{
 		UpdateCooldown((float)delta);
-		FindTarget();
+
+		// Chỉ tìm mục tiêu mới nếu mục tiêu hiện tại không còn hợp lệ
+		if (CurrentTarget == null || !IsInstanceValid(CurrentTarget) || !EnemiesInRange.Contains(CurrentTarget))
+		{
+			FindTarget();
+		}
 
 		if (CurrentTarget != null && IsInstanceValid(CurrentTarget))
 		{
@@ -156,9 +155,13 @@ public abstract partial class TowerBase : Node2D
 			return;
 		}
 
+		// CurrentTarget = EnemiesInRange
+		// 	.OrderBy(e => e.GlobalPosition.DistanceSquaredTo(GlobalPosition))
+		// 	.FirstOrDefault();
+
 		CurrentTarget = EnemiesInRange
-			.OrderBy(e => e.GlobalPosition.DistanceSquaredTo(GlobalPosition))
-			.FirstOrDefault();
+		.OrderByDescending(e => e.DistanceTravelled)
+		.FirstOrDefault();
 	}
 
 	private void RotateTurret(float delta)
@@ -180,36 +183,38 @@ public abstract partial class TowerBase : Node2D
 		}
 	}
 
+	/// <summary>
+	/// Chức năng bắn - kích hoạt việc tạo đạn bắn tới kẻ địch
+	/// </summary>
 	protected virtual void Shoot()
 	{
-		if (BulletScene == null || Muzzle == null) return;
-		var bullet = BulletScene.Instantiate<BulletBase>();
-		GetTree().Root.AddChild(bullet);
-
-		float bulletRotation = 0;
-		if (IsSideView && CurrentTarget != null)
-			bulletRotation = (CurrentTarget.GlobalPosition - Muzzle.GlobalPosition).Angle();
-		else
-			bulletRotation = (TurretSprite != null) ? TurretSprite.GlobalRotation : 0f;
-
-		bullet.Setup(Muzzle.GlobalPosition, bulletRotation, CurrentTarget);
-		bullet.Damage += (Level - 1) * 5;
+		//
+		// Để tháp kế thừa tự viết sát thương, hiệu ứng riêng
+		//
 	}
 
+	/// <summary>
+	/// Hàm xử lý việc nâng cấp trụ
+	/// </summary>
 	public void Upgrade()
 	{
+		var textManager = GetNode<FloatingTextManager>("/root/FloatingTextManager");
 		maxLevel = (BaseTextures != null) ? BaseTextures.Length : 3;
 
-		if (Level >= maxLevel) return;
+		if (Level >= maxLevel)
+		{
+			textManager.ShowMessage("Trụ đã nâng cấp tối đa", GlobalPosition, Colors.Red);
+			return;
+		}
 
 		int cost = GetUpgradeCost();
 		if (Global.Instance.Gold >= cost)
 		{
 			Global.Instance.Gold -= cost;
 			Level++;
-			FireRate *= 1.1f;
-			Range *= 1.1f;
-			if (RangeShape.Shape is CircleShape2D circle) circle.Radius = Range;
+
+			// Từng loại trụ nâng cấp từng thuộc tính khác nhau
+			ApplyUpgradeStats();
 
 			if (_isSelected) QueueRedraw();
 
@@ -218,17 +223,36 @@ public abstract partial class TowerBase : Node2D
 		}
 		else
 		{
-			// GỌI THÔNG BÁO TẠI ĐÂY
-			var textManager = GetNode<FloatingTextManager>("/root/FloatingTextManager");
-
-			// "this.GlobalPosition" chính là vị trí của trụ hiện tại
+			// Gọi thông báo không đủ vàng
 			textManager.ShowMessage("Không đủ vàng!", GlobalPosition, Colors.Red);
-
-			// Có thể kết hợp phát âm thanh "Error" đã làm ở bước trước
-			// SfxManager.Instance.PlaySfx(ErrorSfx);
 		}
 	}
 
+	protected float GetBulletRotation()
+	{
+		if (IsSideView && CurrentTarget != null)
+			return (CurrentTarget.GlobalPosition - Muzzle.GlobalPosition).Angle();
+		return (TurretSprite != null) ? TurretSprite.GlobalRotation : 0f;
+	}
+
+	/// <summary>
+	/// Hàm sử dụng để cho tháp kế thừa tự điều chỉnh phần thuộc tính riêng khi lên cấp
+	/// </summary>
+	/// <param name="levelCurrent">Level hiện tại của tháp dùng để linh hoạt thay đổi thuộc tính nâng cấp</param>
+	protected virtual void ApplyUpgradeStats()
+	{
+		// Công thức tăng trưởng chung (Tăng 10% mỗi cấp)
+		Range *= 1.1f;
+	}
+
+	protected void UpdateRangeCircle()
+	{
+		if (RangeShape.Shape is CircleShape2D circle) circle.Radius = Range;
+	}
+
+	/// <summary>
+	/// Cập nhật giao diện của trụ
+	/// </summary>
 	private void UpdateTowerVisual()
 	{
 		int index = Level - 1;
@@ -256,7 +280,11 @@ public abstract partial class TowerBase : Node2D
 		QueueFree();
 	}
 
-	public int GetUpgradeCost() => BaseCost / 2 * Level;
+	/// <summary>
+	/// Hàm lấy giá tiền cần để nâng cấp
+	/// </summary>
+	/// <returns>giá tiền</returns>
+	public virtual int GetUpgradeCost() => BaseCost / 2 * Level;
 
 	private void OnEnemyEnter(Area2D area) { if (area is EnemyBase enemy) EnemiesInRange.Add(enemy); }
 	private void OnEnemyExit(Area2D area) { if (area is EnemyBase enemy) EnemiesInRange.Remove(enemy); }

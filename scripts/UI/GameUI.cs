@@ -27,12 +27,12 @@ public partial class GameUI : Control
 	// [MỚI] Thêm reference tới 2 nút mới
 	[Export] public Button BtnNextLevel;
 	[Export] public Button BtnMenu;
-	
-	// [MỚI - QUAN TRỌNG] Cài đặt level sẽ mở khóa sau khi thắng màn này
+
+	// Cài đặt level sẽ mở khóa sau khi thắng màn này
 	// Bạn hãy chỉnh số này trong Inspector của Godot cho từng màn chơi
 	// Ví dụ: Đang làm Scene Level 1 -> Chỉnh số này thành 2
 	// [LƯU Ý]: Nếu đây là MÀN CUỐI CÙNG, hãy chỉnh số này thành 0
-	[Export] public int NextLevelIndex = 2; 
+	[Export] public int NextLevelIndex = 2;
 
 	[Signal] public delegate void TogglePauseRequestedEventHandler();
 
@@ -87,7 +87,6 @@ public partial class GameUI : Control
 			// Nếu hết thời gian đếm ngược (Đang trong trận đấu)
 			else
 			{
-				// Bạn có thể chọn hiện chữ COMBAT! hoặc ẩn luôn Label đi cho đỡ rối
 				WaveTimerLabel.Visible = true;
 				WaveTimerLabel.Text = "COMBAT!";
 				WaveTimerLabel.Modulate = Colors.Red;
@@ -98,7 +97,7 @@ public partial class GameUI : Control
 		}
 	}
 
-	// [MỚI] Hàm hiển thị thông báo Wave chuyên nghiệp
+	// Hàm hiển thị thông báo Wave chuyên nghiệp
 	public void ShowWaveNotification(int waveIndex)
 	{
 		if (CenterNotificationLabel == null) return;
@@ -125,7 +124,7 @@ public partial class GameUI : Control
 		ResultLabel.Text = "☠️ GAME OVER";
 		ResultLabel.AddThemeColorOverride("font_color", Colors.Red);
 
-		// [MỚI] Ẩn nút Next Level khi thua
+		// Ẩn nút Next Level khi thua
 		if (BtnNextLevel != null) BtnNextLevel.Visible = false;
 	}
 
@@ -139,8 +138,8 @@ public partial class GameUI : Control
 		// Logic kiểm tra màn cuối cùng (Nếu NextLevelIndex <= 0 tức là hết game)
 		bool isLastLevel = (NextLevelIndex <= 0);
 
-		// [MỚI] Hiện nút Next Level khi thắng (chỉ hiện nếu KHÔNG PHẢI màn cuối)
-		if (BtnNextLevel != null) 
+		// Hiện nút Next Level khi thắng (chỉ hiện nếu KHÔNG PHẢI màn cuối)
+		if (BtnNextLevel != null)
 		{
 			BtnNextLevel.Visible = !isLastLevel;
 		}
@@ -159,7 +158,7 @@ public partial class GameUI : Control
 		if (Global.Instance != null) Global.Instance.RestartGame();
 	}
 
-	// [MỚI] Xử lý nút Màn kế tiếp
+	// Xử lý nút Màn kế tiếp
 	public void OnBtnNextLevelPressed()
 	{
 		GetTree().Paused = false;
@@ -291,6 +290,8 @@ public partial class GameUI : Control
 		}
 	}
 
+	// Các nút nhận tín hiệu xây dựng tháp
+	// 0. cung, 1. pháo, 2. Phép
 	public void OnBtnBuildArcherPressed() => RequestBuild(0);
 	public void OnBtnBuildCannonPressed() => RequestBuild(1);
 	public void OnBtnBuildMagicPressed() => RequestBuild(2);
@@ -321,6 +322,10 @@ public partial class GameUI : Control
 
 	public void OnBtnClosePressed() => HideAllPanels();
 
+	/// <summary>
+	/// Nhận yêu cầu xây tháp và chuyển nhiệm vụ này tới TowerSlot
+	/// </summary>
+	/// <param name="towerIndex">Loại tháp người dùng đã chọn</param>
 	private void RequestBuild(int towerIndex)
 	{
 		if (_selectedSlot != null)

@@ -1,0 +1,18 @@
+[gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://deok40pyil5dg"]
+
+[ext_resource type="Texture2D" uid="uid://cifshxxag1xam" path="res://assets/sprites/Enemies/Others/orc3_walk_full.png" id="1_sxd4q"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_tjqc1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjqc1"]
+atlas = ExtResource("1_sxd4q")
+region = Rect2(8.978813, 8.992937, 38.09735, 37.116302)
+
+[resource]
+atlas = ExtResource("1_sxd4q")
+region = Rect2(7.937725, 9.948302, 38.94216, 35.011086)
+script = ExtResource("2_tjqc1")
+Name = "Orc chỉ huy"
+Icon = SubResource("AtlasTexture_tjqc1")
+Description = "Orc chỉ huy là kẻ thù cuối cùng. Hắn có lượng máu lớn khủng khiếp và sức mạnh đủ sức quét tan một đạo quân."
+Damage = 9999
+Speed = "Vô cùng chậm"

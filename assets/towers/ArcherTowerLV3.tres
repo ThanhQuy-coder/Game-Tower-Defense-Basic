@@ -14,3 +14,5 @@ script = ExtResource("2_7dttj")
 Name = "Tháp cung tên III"
 Icon = SubResource("AtlasTexture_7dttj")
 Description = "Tháp cung cải tiến III tiếp tục duy trì, kế thừa và phát huy từ phiên bản tiền nhiệm II."
+Damage = 20
+Speed = "Rất nhanh"

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://o8wodhpxgfh6" path="res://scripts/UI/Encyclopedia/InfoScreen.cs" id="1_4lsrl"]
 [ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="1_12rx6"]
-[ext_resource type="Texture2D" uid="uid://d1jtfmmsg38sa" path="res://assets/sprites/Enemys/Mouse/Mouse.tres" id="2_3poyh"]
+[ext_resource type="Texture2D" uid="uid://d1jtfmmsg38sa" path="res://assets/sprites/Enemies/Mouse/Mouse.tres" id="2_3poyh"]
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="2_5aivy"]
 [ext_resource type="Texture2D" uid="uid://bjc76yg7ija8y" path="res://assets/images/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png" id="3_blwqs"]
-[ext_resource type="Texture2D" uid="uid://bidcy5kareyb5" path="res://assets/sprites/Enemys/Horse/Hourse.tres" id="3_ds3tn"]
+[ext_resource type="Texture2D" uid="uid://bidcy5kareyb5" path="res://assets/sprites/Enemies/Horse/Hourse.tres" id="3_ds3tn"]
 [ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="4_blwqs"]
-[ext_resource type="Texture2D" uid="uid://cbtn5jdyfpaav" path="res://assets/sprites/Enemys/Goblin/Goblin.tres" id="4_s2fr3"]
+[ext_resource type="Texture2D" uid="uid://cbtn5jdyfpaav" path="res://assets/sprites/Enemies/Orc/Orc.tres" id="4_s2fr3"]
 [ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="5_0udoy"]
 [ext_resource type="Texture2D" uid="uid://cmiwl5yq6wctm" path="res://assets/towers/ArcherTowerLV1.tres" id="5_8x3s7"]
 [ext_resource type="Texture2D" uid="uid://kotms3mq4m8" path="res://assets/towers/ArcherTowerLV2.tres" id="6_pq7s7"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dvsynsirxtvcf" path="res://assets/towers/MagicTowerLV2.tres" id="12_k5bb5"]
 [ext_resource type="Texture2D" uid="uid://dlhw41wxcaeds" path="res://assets/towers/MagicTowerLV3.tres" id="13_p4lmg"]
 [ext_resource type="PackedScene" uid="uid://c4dsfhnyyduwx" path="res://scenes/ui/Components/InfoListEntry.tscn" id="14_pq7s7"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkgmb"]
 atlas = ExtResource("5_0udoy")

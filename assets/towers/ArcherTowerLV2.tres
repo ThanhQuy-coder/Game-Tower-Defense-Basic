@@ -14,3 +14,5 @@ script = ExtResource("2_2q3g1")
 Name = "Tháp cung tên II"
 Icon = SubResource("AtlasTexture_2q3g1")
 Description = "Tháp cung được cải tiến II để tăng thêm sát thương và khả năng phát hiện kẻ địch từ xa tốt hơn."
+Damage = 15
+Speed = "Nhanh"

@@ -24,13 +24,13 @@ public partial class Global : Node
 
 	// --- CẤU HÌNH BAN ĐẦU (EXPORT ĐỂ CHỈNH TRONG EDITOR) ---
 	[Export] public int InitialGold = 550;   // Tiền khởi điểm
-	[Export] public int InitialHealth = 20;  // Máu khởi điểm
+	[Export] public int InitialHealth = 10;  // Máu khởi điểm
 
 	// [LƯU TRỮ] Biến lưu level cao nhất đã mở khóa. Mặc định là 1.
 	[Export] public int UnlockedLevel = 1;
 
 	// --- CÁC PROPERTIES (GETTER/SETTER) ---
-	
+
 	/// <summary>
 	/// Số vàng hiện tại. Khi thay đổi sẽ phát tín hiệu StatsChanged.
 	/// </summary>
@@ -76,7 +76,7 @@ public partial class Global : Node
 	{
 		// Thiết lập Singleton
 		Instance = this;
-		
+
 		// Đảm bảo Global luôn chạy kể cả khi game đang Pause (để xử lý menu, restart...)
 		ProcessMode = ProcessModeEnum.Always;
 
@@ -116,10 +116,10 @@ public partial class Global : Node
 		if (levelToUnlock > UnlockedLevel)
 		{
 			UnlockedLevel = levelToUnlock;
-			
+
 			// [QUAN TRỌNG] Gọi SaveManager để ghi xuống ổ cứng ngay lập tức
 			SaveManager.SaveProgress(UnlockedLevel);
-			
+
 			GD.Print($"[Global] New Level Unlocked & Saved -> {UnlockedLevel}");
 		}
 	}
@@ -133,7 +133,7 @@ public partial class Global : Node
 		await ToSignal(GetTree().CreateTimer(0.1f), "timeout");
 
 		if (GetTree().Paused) return; // Nếu game đã pause rồi thì thôi
-		
+
 		GD.Print("GAME OVER!");
 		EmitSignal(SignalName.GameOver); // Phát tín hiệu để hiện UI Game Over
 		GetTree().Paused = true;         // Dừng game lại
@@ -148,7 +148,7 @@ public partial class Global : Node
 		await ToSignal(GetTree().CreateTimer(0.2f), "timeout");
 
 		if (GetTree().Paused) return;
-		
+
 		GD.Print("VICTORY!");
 		EmitSignal(SignalName.Victory); // Phát tín hiệu để hiện UI Victory
 		GetTree().Paused = true;        // Dừng game lại

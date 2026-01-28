@@ -6,7 +6,6 @@ public partial class ArrowBullet : BulletBase
 	public override void _Ready()
 	{
 		base._Ready();
-		Speed = 210.0f; // Mũi tên bay nhanh hơn
 	}
 
 	protected override void ApplyEffect(EnemyBase enemy)

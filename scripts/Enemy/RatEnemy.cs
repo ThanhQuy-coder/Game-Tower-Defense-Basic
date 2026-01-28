@@ -7,7 +7,7 @@ public partial class RatEnemy : EnemyBase
 	{
 		BaseSpeed = 25.0f;
 		MaxHealth = 50;     // Máu giấy
-		GoldReward = 5;
+		GoldReward = 10;
 		base._Ready();
 	}
 }

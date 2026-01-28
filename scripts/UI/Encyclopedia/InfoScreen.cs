@@ -81,7 +81,9 @@ public partial class InfoScreen : Control
 		_nameLabel.Text = data.Name.ToUpper();
 		_iconRect.Texture = data.Icon;
 		_descLabel.Text = data.Description;
-		_statsLabel.Text = $"❤️ HP: {data.Health}\n⚔️ DMG: {data.Damage}\n🏃SPD: {data.Speed}";
+		if (data.Health == null)
+			_statsLabel.Text = $"⚔️ DMG: {data.Damage}\n🏃SPD: {data.Speed}";
+		else _statsLabel.Text = $"❤️ HP: {data.Health}\n⚔️ DMG: {data.Damage}\n🏃SPD: {data.Speed}";
 	}
 
 	public void OnBtnBackPressed()

@@ -6,15 +6,14 @@ using Godot;
 public partial class CannonBall : BulletBase
 {
 	// --- Cấu hình chỉ số đặc trưng ---
-	[Export] public float ExplosionRadius = 100.0f; // Bán kính vụ nổ
+	[Export] public float ExplosionRadius = 50.0f; // Bán kính vụ nổ
 
 	public override void _Ready()
 	{
 		// Gọi Ready của lớp cha để khởi tạo Timer và Signal
 		base._Ready();
 
-		// Ghi đè tốc độ mặc định của đạn cơ bản
-		Speed = 200.0f;
+		Damage = 13;
 	}
 
 	/// <summary>
@@ -41,7 +40,7 @@ public partial class CannonBall : BulletBase
 				if (distance <= ExplosionRadius)
 				{
 					// Gây sát thương lan (giảm còn khoảng 33% so với sát thương gốc)
-					enemy.TakeDamage(Damage / 3);
+					enemy.TakeDamage(Damage / 2);
 				}
 			}
 		}

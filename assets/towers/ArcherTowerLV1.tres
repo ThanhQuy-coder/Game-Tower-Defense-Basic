@@ -14,3 +14,5 @@ script = ExtResource("2_n4t4d")
 Name = "Tháp cung tên I"
 Icon = SubResource("AtlasTexture_n4t4d")
 Description = "Tháp cung được thiết kế với sự linh hoạt. Giá tiền rẻ và có tốc độ tấn công nhanh."
+Damage = 10
+Speed = "Nhanh"

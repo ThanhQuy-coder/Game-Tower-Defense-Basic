@@ -8,15 +8,13 @@ public partial class SoldierEnemy : EnemyBase
 	{
 		BaseSpeed = 30.0f;   // Tốc độ nhanh
 		MaxHealth = 80;      // Máu khá
-		GoldReward = 12;
+		GoldReward = 20;
+		DamageToPlayer = 2;
 
 		// Có thể chỉnh scale nhỏ hơn Tank nhưng to hơn Fast
 		Scale = new Vector2(1.1f, 1.1f);
 
 		// Gọi base._Ready() để thiết lập di chuyển
 		base._Ready();
-
-		// Đổi màu để nhận diện (Ví dụ: Màu xám thép)
-		Modulate = new Color(0.6f, 0.7f, 0.8f);
 	}
 }

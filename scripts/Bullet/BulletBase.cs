@@ -8,7 +8,7 @@ using System;
 public abstract partial class BulletBase : Area2D
 {
 	// --- Các thuộc tính cấu hình ---
-	[Export] public float Speed = 200.0f;     // Tốc độ bay
+	[Export] public float Speed = 150.0f;     // Tốc độ bay
 	[Export] public int Damage = 10;          // Sát thương cơ bản
 	[Export] public float Lifetime = 3.0f;    // Thời gian tồn tại tối đa
 
@@ -28,11 +28,14 @@ public abstract partial class BulletBase : Area2D
 	/// <summary>
 	/// Khởi tạo các thông số ban đầu khi đạn được bắn ra.
 	/// </summary>
-	public void Setup(Vector2 position, float rotation, EnemyBase target = null)
+	public void Setup(Vector2 position, float rotation, int towerDamage, EnemyBase target = null)
 	{
 		GlobalPosition = position;
 		GlobalRotation = rotation;
 		TargetEnemy = target;
+
+		// Gán sát thương của Tháp vào viên đạn này
+		this.Damage = (towerDamage != 0) ? towerDamage : this.Damage;
 
 		// Tính toán hướng ban đầu dựa trên góc xoay
 		Direction = Vector2.Right.Rotated(rotation);
@@ -83,8 +86,6 @@ public abstract partial class BulletBase : Area2D
 			QueueFree();
 		}
 	}
-
-	// --- Các phương thức trừu tượng/ảo để các lớp con kế thừa ---
 
 	/// <summary>
 	/// Định nghĩa hiệu ứng cụ thể khi trúng mục tiêu (Sát thương, làm chậm, nổ lan...)
