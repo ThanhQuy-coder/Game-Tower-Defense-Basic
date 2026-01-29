@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://caf2cu3nfdle6" path="res://assets/tilesets/freelavatileset-Sheet.png" id="5_um320"]
 [ext_resource type="Texture2D" uid="uid://chvrohg35ndil" path="res://assets/tilesets/Objects_Cemetery.png" id="6_glw47"]
 [ext_resource type="Texture2D" uid="uid://dqmlxslw5rc12" path="res://assets/tilesets/props.png" id="7_4wsov"]
-[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_fcb7b"]
+[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Managers/WaveManager.cs" id="9_fcb7b"]
 [ext_resource type="PackedScene" uid="uid://bwp8mgcd0q8sq" path="res://scenes/actors/Enemys/soldier_enemy.tscn" id="10_ov8fk"]
 [ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemys/tank_enemy.tscn" id="11_pmra4"]
 [ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemys/rat_enemy.tscn" id="12_1bx01"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/Components/game_ui.tscn" id="14_xt2o7"]
 [ext_resource type="PackedScene" uid="uid://ct2gi2kuvbt2x" path="res://scenes/ui/Components/PauseMenu.tscn" id="16_vq5n0"]
 [ext_resource type="Script" uid="uid://cqsturm6pltkv" path="res://scripts/UI/NotificationText/FloatingTextManager.cs" id="17_xt2o7"]
+
 
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rej77"]

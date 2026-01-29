@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://h177rphnd84e" path="res://assets/tilesets/Cave_objects_source.png" id="4_ugcn1"]
 [ext_resource type="Texture2D" uid="uid://coghsd8rsce5e" path="res://assets/tilesets/tileset.png" id="6_pimnq"]
 [ext_resource type="Texture2D" uid="uid://chvrohg35ndil" path="res://assets/tilesets/Objects_Cemetery.png" id="7_2bnyt"]
-[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Manager/WaveManager.cs" id="9_pimnq"]
+[ext_resource type="Script" uid="uid://bpkdbovcm0jcv" path="res://scripts/Managers/WaveManager.cs" id="9_pimnq"]
 [ext_resource type="Texture2D" uid="uid://dqmlxslw5rc12" path="res://assets/tilesets/props.png" id="9_t4txi"]
 [ext_resource type="PackedScene" uid="uid://wc228x5pt2sb" path="res://scenes/actors/Enemys/rat_enemy.tscn" id="10_f6egh"]
 [ext_resource type="PackedScene" uid="uid://jnnlbn3tqpjq" path="res://scenes/actors/Enemys/tank_enemy.tscn" id="11_t4txi"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://diok8wj2aypk2" path="res://scenes/ui/Components/game_ui.tscn" id="14_t4txi"]
 [ext_resource type="PackedScene" uid="uid://ct2gi2kuvbt2x" path="res://scenes/ui/Components/PauseMenu.tscn" id="16_fhpes"]
 [ext_resource type="Script" uid="uid://cqsturm6pltkv" path="res://scripts/UI/NotificationText/FloatingTextManager.cs" id="17_vmg1d"]
+
 
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftfob"]

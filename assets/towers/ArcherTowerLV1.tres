@@ -1,7 +1,8 @@
 [gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://cmiwl5yq6wctm"]
 
 [ext_resource type="Texture2D" uid="uid://fv52lac6spmh" path="res://assets/towers/towers.png" id="1_qoeeb"]
-[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_n4t4d"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedias/InfoResource.cs" id="2_n4t4d"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4t4d"]
 atlas = ExtResource("1_qoeeb")

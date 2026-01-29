@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://ct65da0t3qpy"]
 
-[ext_resource type="Script" uid="uid://o8wodhpxgfh6" path="res://scripts/UI/Encyclopedia/InfoScreen.cs" id="1_4lsrl"]
+[ext_resource type="Script" uid="uid://o8wodhpxgfh6" path="res://scripts/UI/Encyclopedias/InfoScreen.cs" id="1_4lsrl"]
 [ext_resource type="PackedScene" uid="uid://cuqnq30yovtrp" path="res://scenes/ui/Components/Background_Cloud.tscn" id="1_12rx6"]
 [ext_resource type="Texture2D" uid="uid://d1jtfmmsg38sa" path="res://assets/sprites/Enemies/Mouse/Mouse.tres" id="2_3poyh"]
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="2_5aivy"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dvsynsirxtvcf" path="res://assets/towers/MagicTowerLV2.tres" id="12_k5bb5"]
 [ext_resource type="Texture2D" uid="uid://dlhw41wxcaeds" path="res://assets/towers/MagicTowerLV3.tres" id="13_p4lmg"]
 [ext_resource type="PackedScene" uid="uid://c4dsfhnyyduwx" path="res://scenes/ui/Components/InfoListEntry.tscn" id="14_pq7s7"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkgmb"]
 atlas = ExtResource("5_0udoy")

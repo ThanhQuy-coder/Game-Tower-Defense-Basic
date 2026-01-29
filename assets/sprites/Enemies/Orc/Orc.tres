@@ -1,7 +1,8 @@
 [gd_resource type="AtlasTexture" load_steps=4 format=3 uid="uid://cbtn5jdyfpaav"]
 
 [ext_resource type="Texture2D" uid="uid://ddlp5mhm6c5o0" path="res://assets/sprites/Enemies/Orc/D_Walk.png" id="1_ipx2e"]
-[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedia/InfoResource.cs" id="2_q1srh"]
+[ext_resource type="Script" uid="uid://c4edsabh4l061" path="res://scripts/UI/Encyclopedias/InfoResource.cs" id="2_q1srh"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ipx2e"]
 atlas = ExtResource("1_ipx2e")

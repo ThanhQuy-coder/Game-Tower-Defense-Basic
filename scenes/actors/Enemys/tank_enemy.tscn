@@ -1,12 +1,13 @@
 [gd_scene load_steps=48 format=3 uid="uid://jnnlbn3tqpjq"]
 
-[ext_resource type="Script" uid="uid://c4jj4s3so7arf" path="res://scripts/Enemy/TankEnemy.cs" id="1_mn1g3"]
+[ext_resource type="Script" uid="uid://c4jj4s3so7arf" path="res://scripts/Enemies/TankEnemy.cs" id="1_mn1g3"]
 [ext_resource type="Texture2D" uid="uid://b8ny7ft25t2cq" path="res://assets/sprites/Enemies/Orc/D_Death.png" id="2_nec3g"]
 [ext_resource type="Texture2D" uid="uid://cpx63sif5ehbl" path="res://assets/sprites/Enemies/Orc/U_Death.png" id="3_anb48"]
 [ext_resource type="Texture2D" uid="uid://wryuq5t7bmpq" path="res://assets/sprites/Enemies/Orc/S_Death.png" id="4_cm8y1"]
 [ext_resource type="Texture2D" uid="uid://ddlp5mhm6c5o0" path="res://assets/sprites/Enemies/Orc/D_Walk.png" id="5_hd1ip"]
 [ext_resource type="Texture2D" uid="uid://lv57qn8iv52a" path="res://assets/sprites/Enemies/Orc/U_Walk.png" id="6_x8ice"]
 [ext_resource type="Texture2D" uid="uid://bbfgnqhhller2" path="res://assets/sprites/Enemies/Orc/S_Walk.png" id="7_sarwa"]
+
 
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7csab"]

@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlk4wylukw76k"]
 
 [ext_resource type="Texture2D" uid="uid://d26wkml8hw2jl" path="res://assets/ui/Buttons/Buttons.png" id="1_vmkyq"]
-[ext_resource type="Script" uid="uid://cbm25ia0dkra1" path="res://scripts/Audio/ButtonSfxComponent.cs" id="2_ccu8j"]
+[ext_resource type="Script" uid="uid://cbm25ia0dkra1" path="res://scripts/Audios/ButtonSfxComponent.cs" id="2_ccu8j"]
 [ext_resource type="AudioStream" uid="uid://bt20nvawofyys" path="res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav" id="3_ce6n7"]
 [ext_resource type="AudioStream" uid="uid://dt6fk3njrff4b" path="res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav" id="4_ewvf2"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbvpu"]
 atlas = ExtResource("1_vmkyq")

@@ -1,9 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://boiogjq3y2f1q"]
 
-[ext_resource type="Script" uid="uid://c7gean2qxrxds" path="res://scripts/Bullet/ArrowBullet.cs" id="1_7842j"]
-[ext_resource type="Texture2D" uid="uid://c3aihr6si0rql" path="res://assets/tilesets/unnamed__1_-removebg-preview.png" id="2_1ffxm"]
-[ext_resource type="Script" uid="uid://cf2gf5loj2688" path="res://scripts/Audio/BulletSfxComponent.cs" id="3_6ga5b"]
+[ext_resource type="Script" uid="uid://c7gean2qxrxds" path="res://scripts/Bullets/ArrowBullet.cs" id="1_7842j"]
+[ext_resource type="Texture2D" uid="uid://c3aihr6si0rql" path="res://assets/bullets/unnamed__1_-removebg-preview.png" id="2_1ffxm"]
+[ext_resource type="Script" uid="uid://cf2gf5loj2688" path="res://scripts/Audios/BulletSfxComponent.cs" id="3_6ga5b"]
 [ext_resource type="AudioStream" uid="uid://bur3lqg0d7in7" path="res://assets/audios/effects/Arrow Impact 09.wav" id="4_1ffxm"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xxd8l"]
 

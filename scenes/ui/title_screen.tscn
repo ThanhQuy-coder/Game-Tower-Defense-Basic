@@ -8,13 +8,14 @@
 [ext_resource type="Script" uid="uid://yp6lo3y0f1qa" path="res://scripts/UI/SceneButton.cs" id="7_uv4ns"]
 [ext_resource type="PackedScene" uid="uid://dlk4wylukw76k" path="res://scenes/ui/Components/MiniButton.tscn" id="8_tjte5"]
 [ext_resource type="AudioStream" uid="uid://bu8nydlni5buc" path="res://assets/audios/musics/Pixel 4.ogg" id="12_1oiph"]
-[ext_resource type="Script" uid="uid://byt1bucr6vrnq" path="res://scripts/Audio/SfxToggleButton.cs" id="12_to824"]
-[ext_resource type="Script" uid="uid://bbywtxeui3tg" path="res://scripts/Audio/MusicToggleButton.cs" id="13_1oiph"]
+[ext_resource type="Script" uid="uid://byt1bucr6vrnq" path="res://scripts/Audios/SfxToggleButton.cs" id="12_to824"]
+[ext_resource type="Script" uid="uid://bbywtxeui3tg" path="res://scripts/Audios/MusicToggleButton.cs" id="13_1oiph"]
 [ext_resource type="Texture2D" uid="uid://cxtenff7bgjvm" path="res://assets/ui/Buttons/SoundEffectOn.tres" id="14_tqags"]
 [ext_resource type="Texture2D" uid="uid://6uspuqjekwrp" path="res://assets/ui/Buttons/SoundEffectOff.tres" id="15_to824"]
 [ext_resource type="Texture2D" uid="uid://kfsgsa0wjidx" path="res://assets/icons/Icons.png" id="15_tqags"]
 [ext_resource type="Texture2D" uid="uid://boogty18fbavc" path="res://assets/ui/Buttons/MusicOn.tres" id="16_y77df"]
 [ext_resource type="Texture2D" uid="uid://comlnntlak34b" path="res://assets/ui/Buttons/MusicOff.tres" id="17_jqmgk"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnytt"]
 atlas = ExtResource("2_kyvdy")

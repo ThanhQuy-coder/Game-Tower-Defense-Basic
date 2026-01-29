@@ -1,8 +1,9 @@
 [gd_scene load_steps=50 format=3 uid="uid://lpdhcqfm2dc8"]
 
-[ext_resource type="Script" uid="uid://2ejvexw4o482" path="res://scripts/Enemy/OrcBoss.cs" id="1_lf78k"]
+[ext_resource type="Script" uid="uid://2ejvexw4o482" path="res://scripts/Enemies/OrcBoss.cs" id="1_lf78k"]
 [ext_resource type="Texture2D" uid="uid://cqlk2cjvywpcy" path="res://assets/sprites/Enemies/OrcBoss/orc3_walk_full.png" id="2_g2265"]
 [ext_resource type="Texture2D" uid="uid://ntl14np1e000" path="res://assets/sprites/Enemies/OrcBoss/orc3_death_full.png" id="2_qbg6o"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sndrm"]
 radius = 20.22375

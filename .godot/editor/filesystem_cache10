@@ -1,256 +1,257 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769623084
-default_bus_layout.tres::AudioBusLayout::1179406173047607452::1769595187::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1768487328::0::1::::<><><>0<>0<><>::
+::res://::1769671332
+default_bus_layout.tres::AudioBusLayout::1179406173047607452::1769671187::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1769625076::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::2505412951711285447::1768487249::1769499444::1::::<><><>0<>0<>30ccb2323abf8d4d3c178dec1376855a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1768487249::0::1::::<><><>0<>0<><>::
-::res://assets/::1769016966
-::res://assets/audios/::1769016966
-::res://assets/audios/effects/::1769499446
-Arrow Impact 09.wav::AudioStreamWAV::3827012548586770634::1769016966::1769499445::1::::<><><>0<>0<>12b25551ded39955e1c723027a80620d<>res://.godot/imported/Arrow Impact 09.wav-6b61e1c757ffdd824d64cdbcf560d34e.sample::
-cannon-shot-326182.wav::AudioStreamWAV::2414512025371678055::1769016967::1769499445::1::::<><><>0<>0<>8d98da659c4cfb9ffe15a817434d3d7f<>res://.godot/imported/cannon-shot-326182.wav-7e105fa715c07fe6a723f7e0b3490350.sample::
-spell.wav::AudioStreamWAV::4966872040309775905::1769016967::1769499445::1::::<><><>0<>0<>84ae9712857ebfd7e3abb46c2cc9dc4c<>res://.godot/imported/spell.wav-a108f57358c903a9f5a710c9cee30a8d.sample::
-UIClick_UI 01_Eric Berzins_SFUI.wav::AudioStreamWAV::8557168724648754055::1769016966::1769499445::1::::<><><>0<>0<>7dcb15a28e5f47501f2c1d9ff9cf4869<>res://.godot/imported/UIClick_UI 01_Eric Berzins_SFUI.wav-2ccf1c159bb9436380b01dfc76488e2d.sample::
-UIClick_UI 02_Eric Berzins_SFUI.wav::AudioStreamWAV::182855936736020502::1769016966::1769499445::1::::<><><>0<>0<>a64f8c6fb8f4df9d5759bb68c6ae4778<>res://.godot/imported/UIClick_UI 02_Eric Berzins_SFUI.wav-e93fee6cd65ee2c7f93ce69642f13a14.sample::
-UIClick_UI 03_Eric Berzins_SFUI.wav::AudioStreamWAV::5848219150408388586::1769016966::1769499445::1::::<><><>0<>0<>393e0a765fb507cc1b3b9202b526c120<>res://.godot/imported/UIClick_UI 03_Eric Berzins_SFUI.wav-037a47898db486d43e967d78b6ae36f8.sample::
-UIClick_UI 04_Eric Berzins_SFUI.wav::AudioStreamWAV::3777289156324121706::1769016966::1769499445::1::::<><><>0<>0<>a1569d0d93d625cc671e7b4136e371e7<>res://.godot/imported/UIClick_UI 04_Eric Berzins_SFUI.wav-233bad8c4be27f82fc5cf822733994e7.sample::
-UIClick_UI 05_Eric Berzins_SFUI.wav::AudioStreamWAV::2008700060123203644::1769016966::1769499445::1::::<><><>0<>0<>fdc5dc4f95655961c303206f645ad5ff<>res://.godot/imported/UIClick_UI 05_Eric Berzins_SFUI.wav-09815da4c6d4784ac679298d506a4305.sample::
-UIClick_UI 06_Eric Berzins_SFUI.wav::AudioStreamWAV::9118953079356904521::1769016966::1769499445::1::::<><><>0<>0<>4afa8d55d363db82a2c6a59c79f4cc15<>res://.godot/imported/UIClick_UI 06_Eric Berzins_SFUI.wav-3e98acd9e30efafaba6e773ccd6bd600.sample::
-UIClick_UI 07_Eric Berzins_SFUI.wav::AudioStreamWAV::2771519634619254182::1769016966::1769499446::1::::<><><>0<>0<>e0737f8e6ae0d13c068b15045d5787cd<>res://.godot/imported/UIClick_UI 07_Eric Berzins_SFUI.wav-e71c2c3b09f061ffcb43d3ca00c0cc85.sample::
-UIClick_UI 08_Eric Berzins_SFUI.wav::AudioStreamWAV::2473385210131533878::1769016966::1769499445::1::::<><><>0<>0<>df7df36bdc7547922645a0619eda8716<>res://.godot/imported/UIClick_UI 08_Eric Berzins_SFUI.wav-adb971ea10fc9cc9b7aca49e6adbc6c9.sample::
-UIClick_UI 09_Eric Berzins_SFUI.wav::AudioStreamWAV::5416190627991526212::1769016966::1769499445::1::::<><><>0<>0<>dd3d4ca8c12f4ce36f0d2a085668fb1c<>res://.godot/imported/UIClick_UI 09_Eric Berzins_SFUI.wav-b38422f5a5db7ee52debcc7b78af8e17.sample::
-UIClick_UI 10_Eric Berzins_SFUI.wav::AudioStreamWAV::5199482338333612934::1769016966::1769499445::1::::<><><>0<>0<>11e14a5ab8d255019060f4110b95fb41<>res://.godot/imported/UIClick_UI 10_Eric Berzins_SFUI.wav-de1b3623deea1704e11f1f56a677fdd4.sample::
-::res://assets/audios/musics/::1769621072
-Pixel 2.ogg::AudioStreamOggVorbis::4560887851737643631::1769016967::1769621072::1::::<><><>0<>0<>42f98fdd37801097ec6a27a0997fee26<>res://.godot/imported/Pixel 2.ogg-830be7107f0e804d07f27a45233b64b8.oggvorbisstr::
-Pixel 3.ogg::AudioStreamOggVorbis::1279923369964578855::1769016967::1769621072::1::::<><><>0<>0<>803922e2044bef9f61238de03926f44c<>res://.godot/imported/Pixel 3.ogg-242b6b1e48ddf4bd554d7f7a2487f15b.oggvorbisstr::
-Pixel 4.ogg::AudioStreamOggVorbis::3859154377462834046::1769016967::1769621072::1::::<><><>0<>0<>eea14c51392bd35912d46df9fe301558<>res://.godot/imported/Pixel 4.ogg-80413b5518253a12a84429321b062a25.oggvorbisstr::
-Pixel 8.ogg::AudioStreamOggVorbis::9155063565392827830::1769016967::1769621072::1::::<><><>0<>0<>e5dc2b2df2bbc6315b1ba56ae0d6bfe5<>res://.godot/imported/Pixel 8.ogg-bc7dfd78d2bb96b3e7b9df7ff04b3aae.oggvorbisstr::
-::res://assets/bullets/::1769499445
-49.png::CompressedTexture2D::8691806949524358623::1769016967::1769499445::1::::<><><>0<>0<>311e1ea54a5295e065905bc7e95aab26<>res://.godot/imported/49.png-fea911f46e24bc317b44c91218b283e0.ctex::
-51.png::CompressedTexture2D::8179757987959267920::1769016967::1769499445::1::::<><><>0<>0<>403f6605d4975565145e0f456e7a30af<>res://.godot/imported/51.png-2ce02bef3fe1b6d8127772630549e9a5.ctex::
-unnamed__1_-removebg-preview.png::CompressedTexture2D::6738628167365995319::1769016967::1769499445::1::::<><><>0<>0<>c2243e305b78c649fb050197e601699c<>res://.godot/imported/unnamed__1_-removebg-preview.png-0dbe8a920deeae86cf79180282d4892d.ctex::
-::res://assets/icons/::1769499445
-castle-tower.png::CompressedTexture2D::8476892662714410552::1769016967::1769499445::1::::<><><>0<>0<>01531a8df36ea17a376a14e7544a6f35<>res://.godot/imported/castle-tower.png-a935b0695dc3eb0c3cea5ae3ce7ce0ae.ctex::
-cthulhu.png::CompressedTexture2D::6347657898995157232::1769016967::1769499445::1::::<><><>0<>0<>6dac6f0e5f27cf88140ab1c0e47d035a<>res://.godot/imported/cthulhu.png-59b9ab2c06b74c6f7f7d44f9a2c3a5fd.ctex::
-Icons.png::CompressedTexture2D::713314892369799141::1769016967::1769499445::1::::<><><>0<>0<>be3bad9da1290b8755289692aacf417f<>res://.godot/imported/Icons.png-6400eac2a46d380b2441efcff5c3c1d6.ctex::
-::res://assets/images/::1769499445
-b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png::CompressedTexture2D::5277523879772430329::1769016967::1769499445::1::::<><><>0<>0<>8df074b5da524c9e284091ee11f0d35c<>res://.godot/imported/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png-19ad5a117323ad0d50192f49cff3296c.ctex::
-level1.png::CompressedTexture2D::7937432998567228046::1768487328::1769499445::1::::<><><>0<>0<>eff7ff1f9bf6e829e94d4779a6fd24be<>res://.godot/imported/level1.png-05275938a553e712e3c0d7be71ab75e6.ctex::
-Level2.png::CompressedTexture2D::266115899596464723::1768487328::1769499445::1::::<><><>0<>0<>fc72d2e0c8ab9369f534c4e5e3dd23a1<>res://.godot/imported/Level2.png-ee99bcbc00681fd8b0d0f8d2796feccf.ctex::
-Level3.png::CompressedTexture2D::3074843744035010651::1768487328::1769499445::1::::<><><>0<>0<>e4332adcc4d7bd2e76e57914458a25ee<>res://.godot/imported/Level3.png-f51b52778693c61e3e5080d31eb40cee.ctex::
-Level4.png::CompressedTexture2D::6848070560091284523::1768487328::1769499445::1::::<><><>0<>0<>72a722aed58fe33a307007efd8951949<>res://.godot/imported/Level4.png-4d3dbf78f278414d940c2dcbadaf0545.ctex::
-Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png::CompressedTexture2D::3024248606617299778::1769016967::1769499445::1::::<><><>0<>0<>8a96ec8e0c0f736efd80a2a64e93187f<>res://.godot/imported/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png-1f4cc79d81ade53096e7b81dd8c367f3.ctex::
+::res://assets/::1769625075
+::res://assets/audios/::1769625075
+::res://assets/audios/effects/::1769625076
+Arrow Impact 09.wav::AudioStreamWAV::3827012548586770634::1769625075::1769499445::1::::<><><>0<>0<>12b25551ded39955e1c723027a80620d<>res://.godot/imported/Arrow Impact 09.wav-6b61e1c757ffdd824d64cdbcf560d34e.sample::
+cannon-shot-326182.wav::AudioStreamWAV::2414512025371678055::1769625076::1769499445::1::::<><><>0<>0<>8d98da659c4cfb9ffe15a817434d3d7f<>res://.godot/imported/cannon-shot-326182.wav-7e105fa715c07fe6a723f7e0b3490350.sample::
+spell.wav::AudioStreamWAV::4966872040309775905::1769625076::1769499445::1::::<><><>0<>0<>84ae9712857ebfd7e3abb46c2cc9dc4c<>res://.godot/imported/spell.wav-a108f57358c903a9f5a710c9cee30a8d.sample::
+UIClick_UI 01_Eric Berzins_SFUI.wav::AudioStreamWAV::8557168724648754055::1769625076::1769499445::1::::<><><>0<>0<>7dcb15a28e5f47501f2c1d9ff9cf4869<>res://.godot/imported/UIClick_UI 01_Eric Berzins_SFUI.wav-2ccf1c159bb9436380b01dfc76488e2d.sample::
+UIClick_UI 02_Eric Berzins_SFUI.wav::AudioStreamWAV::182855936736020502::1769625076::1769499445::1::::<><><>0<>0<>a64f8c6fb8f4df9d5759bb68c6ae4778<>res://.godot/imported/UIClick_UI 02_Eric Berzins_SFUI.wav-e93fee6cd65ee2c7f93ce69642f13a14.sample::
+UIClick_UI 03_Eric Berzins_SFUI.wav::AudioStreamWAV::5848219150408388586::1769625076::1769499445::1::::<><><>0<>0<>393e0a765fb507cc1b3b9202b526c120<>res://.godot/imported/UIClick_UI 03_Eric Berzins_SFUI.wav-037a47898db486d43e967d78b6ae36f8.sample::
+UIClick_UI 04_Eric Berzins_SFUI.wav::AudioStreamWAV::3777289156324121706::1769625076::1769499445::1::::<><><>0<>0<>a1569d0d93d625cc671e7b4136e371e7<>res://.godot/imported/UIClick_UI 04_Eric Berzins_SFUI.wav-233bad8c4be27f82fc5cf822733994e7.sample::
+UIClick_UI 05_Eric Berzins_SFUI.wav::AudioStreamWAV::2008700060123203644::1769625076::1769499445::1::::<><><>0<>0<>fdc5dc4f95655961c303206f645ad5ff<>res://.godot/imported/UIClick_UI 05_Eric Berzins_SFUI.wav-09815da4c6d4784ac679298d506a4305.sample::
+UIClick_UI 06_Eric Berzins_SFUI.wav::AudioStreamWAV::9118953079356904521::1769625076::1769499445::1::::<><><>0<>0<>4afa8d55d363db82a2c6a59c79f4cc15<>res://.godot/imported/UIClick_UI 06_Eric Berzins_SFUI.wav-3e98acd9e30efafaba6e773ccd6bd600.sample::
+UIClick_UI 07_Eric Berzins_SFUI.wav::AudioStreamWAV::2771519634619254182::1769625076::1769499446::1::::<><><>0<>0<>e0737f8e6ae0d13c068b15045d5787cd<>res://.godot/imported/UIClick_UI 07_Eric Berzins_SFUI.wav-e71c2c3b09f061ffcb43d3ca00c0cc85.sample::
+UIClick_UI 08_Eric Berzins_SFUI.wav::AudioStreamWAV::2473385210131533878::1769625076::1769499445::1::::<><><>0<>0<>df7df36bdc7547922645a0619eda8716<>res://.godot/imported/UIClick_UI 08_Eric Berzins_SFUI.wav-adb971ea10fc9cc9b7aca49e6adbc6c9.sample::
+UIClick_UI 09_Eric Berzins_SFUI.wav::AudioStreamWAV::5416190627991526212::1769625076::1769499445::1::::<><><>0<>0<>dd3d4ca8c12f4ce36f0d2a085668fb1c<>res://.godot/imported/UIClick_UI 09_Eric Berzins_SFUI.wav-b38422f5a5db7ee52debcc7b78af8e17.sample::
+UIClick_UI 10_Eric Berzins_SFUI.wav::AudioStreamWAV::5199482338333612934::1769625076::1769499445::1::::<><><>0<>0<>11e14a5ab8d255019060f4110b95fb41<>res://.godot/imported/UIClick_UI 10_Eric Berzins_SFUI.wav-de1b3623deea1704e11f1f56a677fdd4.sample::
+::res://assets/audios/musics/::1769625076
+Pixel 2.ogg::AudioStreamOggVorbis::4560887851737643631::1769625076::1769621072::1::::<><><>0<>0<>42f98fdd37801097ec6a27a0997fee26<>res://.godot/imported/Pixel 2.ogg-830be7107f0e804d07f27a45233b64b8.oggvorbisstr::
+Pixel 3.ogg::AudioStreamOggVorbis::1279923369964578855::1769625076::1769621072::1::::<><><>0<>0<>803922e2044bef9f61238de03926f44c<>res://.godot/imported/Pixel 3.ogg-242b6b1e48ddf4bd554d7f7a2487f15b.oggvorbisstr::
+Pixel 4.ogg::AudioStreamOggVorbis::3859154377462834046::1769625076::1769621072::1::::<><><>0<>0<>eea14c51392bd35912d46df9fe301558<>res://.godot/imported/Pixel 4.ogg-80413b5518253a12a84429321b062a25.oggvorbisstr::
+Pixel 8.ogg::AudioStreamOggVorbis::9155063565392827830::1769625076::1769621072::1::::<><><>0<>0<>e5dc2b2df2bbc6315b1ba56ae0d6bfe5<>res://.godot/imported/Pixel 8.ogg-bc7dfd78d2bb96b3e7b9df7ff04b3aae.oggvorbisstr::
+::res://assets/bullets/::1769625076
+49.png::CompressedTexture2D::8691806949524358623::1769625076::1769499445::1::::<><><>0<>0<>311e1ea54a5295e065905bc7e95aab26<>res://.godot/imported/49.png-fea911f46e24bc317b44c91218b283e0.ctex::
+51.png::CompressedTexture2D::8179757987959267920::1769625076::1769499445::1::::<><><>0<>0<>403f6605d4975565145e0f456e7a30af<>res://.godot/imported/51.png-2ce02bef3fe1b6d8127772630549e9a5.ctex::
+unnamed__1_-removebg-preview.png::CompressedTexture2D::6738628167365995319::1769625076::1769499445::1::::<><><>0<>0<>c2243e305b78c649fb050197e601699c<>res://.godot/imported/unnamed__1_-removebg-preview.png-0dbe8a920deeae86cf79180282d4892d.ctex::
+::res://assets/icons/::1769625076
+castle-tower.png::CompressedTexture2D::8476892662714410552::1769625076::1769499445::1::::<><><>0<>0<>01531a8df36ea17a376a14e7544a6f35<>res://.godot/imported/castle-tower.png-a935b0695dc3eb0c3cea5ae3ce7ce0ae.ctex::
+cthulhu.png::CompressedTexture2D::6347657898995157232::1769625076::1769499445::1::::<><><>0<>0<>6dac6f0e5f27cf88140ab1c0e47d035a<>res://.godot/imported/cthulhu.png-59b9ab2c06b74c6f7f7d44f9a2c3a5fd.ctex::
+Icons.png::CompressedTexture2D::713314892369799141::1769625076::1769499445::1::::<><><>0<>0<>be3bad9da1290b8755289692aacf417f<>res://.godot/imported/Icons.png-6400eac2a46d380b2441efcff5c3c1d6.ctex::
+toppng.com-artnering-with-rats-to-save-human-lives-rat-flat-ico-961x599.ico::OtherFile::-1::1769625076::0::1::::<><><>0<>0<><>::
+::res://assets/images/::1769625076
+b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png::CompressedTexture2D::5277523879772430329::1769625076::1769499445::1::::<><><>0<>0<>8df074b5da524c9e284091ee11f0d35c<>res://.godot/imported/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png-19ad5a117323ad0d50192f49cff3296c.ctex::
+level1.png::CompressedTexture2D::7937432998567228046::1769625076::1769499445::1::::<><><>0<>0<>eff7ff1f9bf6e829e94d4779a6fd24be<>res://.godot/imported/level1.png-05275938a553e712e3c0d7be71ab75e6.ctex::
+Level2.png::CompressedTexture2D::266115899596464723::1769625076::1769499445::1::::<><><>0<>0<>fc72d2e0c8ab9369f534c4e5e3dd23a1<>res://.godot/imported/Level2.png-ee99bcbc00681fd8b0d0f8d2796feccf.ctex::
+Level3.png::CompressedTexture2D::3074843744035010651::1769625076::1769499445::1::::<><><>0<>0<>e4332adcc4d7bd2e76e57914458a25ee<>res://.godot/imported/Level3.png-f51b52778693c61e3e5080d31eb40cee.ctex::
+Level4.png::CompressedTexture2D::6848070560091284523::1769625076::1769499445::1::::<><><>0<>0<>72a722aed58fe33a307007efd8951949<>res://.godot/imported/Level4.png-4d3dbf78f278414d940c2dcbadaf0545.ctex::
+Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png::CompressedTexture2D::3024248606617299778::1769625076::1769499445::1::::<><><>0<>0<>8a96ec8e0c0f736efd80a2a64e93187f<>res://.godot/imported/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png-1f4cc79d81ade53096e7b81dd8c367f3.ctex::
 ::res://assets/sprites/::1769623084
-::res://assets/sprites/Animals/::1769499445
-Free Chicken Sprites.png::CompressedTexture2D::97578308343774568::1768487328::1769499445::1::::<><><>0<>0<>b2b1a9e3538be922a1640b6e8ff2986f<>res://.godot/imported/Free Chicken Sprites.png-ddce04ae7eac86400032185e1b73a84a.ctex::
-Free Cow Sprites.png::CompressedTexture2D::6610782212906716105::1768487328::1769499445::1::::<><><>0<>0<>d98315617ef51f692578df6146e889e3<>res://.godot/imported/Free Cow Sprites.png-c6ce30ecc48449a1af9168d99b97f688.ctex::
-::res://assets/sprites/Characters/::1769499445
-characters.png::CompressedTexture2D::7068737970344069308::1768487328::1769499445::1::::<><><>0<>0<>141e97244f35de894ea99fb365e88696<>res://.godot/imported/characters.png-6560ad26e478b0568169004b284fe88b.ctex::
+::res://assets/sprites/Animals/::1769625076
+Free Chicken Sprites.png::CompressedTexture2D::97578308343774568::1769625076::1769499445::1::::<><><>0<>0<>b2b1a9e3538be922a1640b6e8ff2986f<>res://.godot/imported/Free Chicken Sprites.png-ddce04ae7eac86400032185e1b73a84a.ctex::
+Free Cow Sprites.png::CompressedTexture2D::6610782212906716105::1769625076::1769499445::1::::<><><>0<>0<>d98315617ef51f692578df6146e889e3<>res://.godot/imported/Free Cow Sprites.png-c6ce30ecc48449a1af9168d99b97f688.ctex::
+::res://assets/sprites/Characters/::1769625076
+characters.png::CompressedTexture2D::7068737970344069308::1769625076::1769499445::1::::<><><>0<>0<>141e97244f35de894ea99fb365e88696<>res://.godot/imported/characters.png-6560ad26e478b0568169004b284fe88b.ctex::
 ::res://assets/sprites/Enemies/::1769621140
-::res://assets/sprites/Enemies/Horse/::1769623084
-D_Attack.png::CompressedTexture2D::746894779662553937::1768487328::1769623085::1::::<><><>0<>0<>0bef959d3274c1999452b18d9c4c980c<>res://.godot/imported/D_Attack.png-3759a67bb94074e1b230f0666936a17e.ctex::
-D_Death.png::CompressedTexture2D::7005978860087211492::1768487328::1769623085::1::::<><><>0<>0<>afeee617cd4521925eb57ecdf5e82346<>res://.godot/imported/D_Death.png-ff6f6a394a6c0ffca7ae29c327ff05c1.ctex::
-D_Run.png::CompressedTexture2D::5545253589435955800::1768487328::1769623085::1::::<><><>0<>0<>b2b1c5dba6a8740307c255b767706dbe<>res://.godot/imported/D_Run.png-2ae621812fd404ca73f85bfe89657b70.ctex::
-D_Special.png::CompressedTexture2D::8807270166623465338::1768487328::1769623085::1::::<><><>0<>0<>b17a97352a09a72154be4fdbc6838f7a<>res://.godot/imported/D_Special.png-400ef98bcc22887813cb4d8cd4d4ebb1.ctex::
-Hourse.tres::AtlasTexture::2954290450270241104::1769623084::0::1::::<><><>0<>0<><>::uid://clafrtan2ubkq::::res://assets/sprites/Enemies/Horse/D_Run.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-S_Attack.png::CompressedTexture2D::1157250370257828362::1768487328::1769623085::1::::<><><>0<>0<>eccaae16b3136ebee3f6ad83664c8fce<>res://.godot/imported/S_Attack.png-58b955cf1e2a6b16a6afd127c507ef72.ctex::
-S_Death.png::CompressedTexture2D::1376232852697659972::1768487328::1769623085::1::::<><><>0<>0<>e0a9b863505ca0dac12f690af71ed6f3<>res://.godot/imported/S_Death.png-51faf0de85ece074d9ac0669f22f43c0.ctex::
-S_Run.png::CompressedTexture2D::6406179199069949267::1768487328::1769623085::1::::<><><>0<>0<>1438898825b27bd0c9ec6ba006d085dc<>res://.godot/imported/S_Run.png-5fa8c186604f3879427e1571fc25b330.ctex::
-S_Special.png::CompressedTexture2D::8794990720946278691::1768487328::1769623085::1::::<><><>0<>0<>c9915ed9b472190b915ca27be00aa21d<>res://.godot/imported/S_Special.png-9558b28825fa15d2bf5b8f0b5e6b919a.ctex::
-U_Attack.png::CompressedTexture2D::1008420030896380333::1768487328::1769623085::1::::<><><>0<>0<>fcdca6106824915b6861846443bc83d3<>res://.godot/imported/U_Attack.png-9ff56b0c738650a757af473e86b9d7aa.ctex::
-U_Death.png::CompressedTexture2D::5832536141072447373::1768487328::1769623085::1::::<><><>0<>0<>83a615959e0073a9ac92afb8fff96261<>res://.godot/imported/U_Death.png-66425046743283ff8fb5c6edb7fde101.ctex::
-U_Run.png::CompressedTexture2D::5893050920441674435::1768487328::1769623085::1::::<><><>0<>0<>f47110515b5879408edf98387fc9e1df<>res://.godot/imported/U_Run.png-9d2e8b95344eba0d71bac0965809935f.ctex::
-U_Special.png::CompressedTexture2D::7644566665710269753::1768487328::1769623085::1::::<><><>0<>0<>4eadcdf83ca9af587b763c61af8cc3f4<>res://.godot/imported/U_Special.png-0d238eeaf2d2fb124f8b3f0f63690e13.ctex::
-::res://assets/sprites/Enemies/Mouse/::1769623084
-D_Attack.png::CompressedTexture2D::2723782640303601103::1768487328::1769623085::1::::<><><>0<>0<>f67752ef4d770501373fd92f322271ea<>res://.godot/imported/D_Attack.png-933a4cff7ee33bb9f8a11af118ee4cc9.ctex::
-D_Death.png::CompressedTexture2D::6178458808876259856::1768487328::1769623085::1::::<><><>0<>0<>d1746f03274d6adb75926bcccfc05627<>res://.godot/imported/D_Death.png-72bd04fceb6f40b2fc3802ee0a31e90a.ctex::
-D_Run.png::CompressedTexture2D::5234606393825483887::1768487328::1769623085::1::::<><><>0<>0<>d1ea916fc450b7732d90e68ea3bc1157<>res://.godot/imported/D_Run.png-36b46ef3cf202af1f4ca584c2e696428.ctex::
-D_Special.png::CompressedTexture2D::4966571156982320818::1768487328::1769623085::1::::<><><>0<>0<>b266b2e09c21e3ca1ab87549fa01fd95<>res://.godot/imported/D_Special.png-b536343cc3bd7736cdfb9e532ed90a8e.ctex::
-Mouse.tres::AtlasTexture::9003914586931620072::1769623084::0::1::::<><><>0<>0<><>::uid://cgtxg5d40x6rj::::res://assets/sprites/Enemies/Mouse/D_Run.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-S_Attack.png::CompressedTexture2D::4392122184985965564::1768487328::1769623085::1::::<><><>0<>0<>5b33235ece1a50670221f2822fefa5a7<>res://.godot/imported/S_Attack.png-dac75ff7ae2bf92b0285e1e0c4937981.ctex::
-S_Death.png::CompressedTexture2D::9050829992320872288::1768487328::1769623085::1::::<><><>0<>0<>b9ad5c10a2171913b901a675895b0889<>res://.godot/imported/S_Death.png-ef0b81bb0fbbd1939137be5a1c940949.ctex::
-S_Run.png::CompressedTexture2D::2092991808954103401::1768487328::1769623085::1::::<><><>0<>0<>7248ed8ac169f56b998425fa663f69b4<>res://.godot/imported/S_Run.png-cae476f935511717a035efcc43d1eb72.ctex::
-S_Special.png::CompressedTexture2D::7326528510716334879::1768487328::1769623084::1::::<><><>0<>0<>ee602988da5732a1afa39fe04f5374c8<>res://.godot/imported/S_Special.png-ba2cca08fe6f427cb8be9fa99aca23e1.ctex::
-U_Attack.png::CompressedTexture2D::569561042068251378::1768487328::1769623084::1::::<><><>0<>0<>26a31096cd71575c591c9c9661f426a5<>res://.godot/imported/U_Attack.png-e0b659dc381f9f998dd9cdb1f1d5007f.ctex::
-U_Death.png::CompressedTexture2D::4722943414766076367::1768487328::1769623084::1::::<><><>0<>0<>630ca55e511989e421880d37edae32f9<>res://.godot/imported/U_Death.png-ecffcb26c1362d86caed279a9ef3c8f9.ctex::
-U_Run.png::CompressedTexture2D::4576872105017491552::1768487328::1769623084::1::::<><><>0<>0<>9510fc2de5c959deceeb5075d1d5226b<>res://.godot/imported/U_Run.png-10ac6213bfeb12beaef55658cfbc89b0.ctex::
-U_Special.png::CompressedTexture2D::961936795053705427::1768487328::1769623084::1::::<><><>0<>0<>52e3158e575dfa42385b8a47e63b6eb2<>res://.godot/imported/U_Special.png-12315ddfd9c6dab5aca70f8e1f5f73f0.ctex::
-::res://assets/sprites/Enemies/Orc/::1769623084
-D_Attack.png::CompressedTexture2D::3390425756721167989::1768487328::1769623084::1::::<><><>0<>0<>22050b25e840a913c759b27afb934400<>res://.godot/imported/D_Attack.png-8f8b543f8b78ee79cea84b097405cbd4.ctex::
-D_Death.png::CompressedTexture2D::4731004081017957848::1768487328::1769623084::1::::<><><>0<>0<>71dedd2167945ae8589c7f2ee24b513f<>res://.godot/imported/D_Death.png-b83e7ddc82835fc0a76bf5c0fa276f75.ctex::
-D_Walk.png::CompressedTexture2D::7393501707677299629::1768487328::1769623084::1::::<><><>0<>0<>65d83ef6fb0128aaab8e3fa259dd0bf8<>res://.godot/imported/D_Walk.png-350034fc7e701266d0f436f1bf32006e.ctex::
-Orc.tres::AtlasTexture::4883096761516767133::1769623084::0::1::::<><><>0<>0<><>::uid://ddlp5mhm6c5o0::::res://assets/sprites/Enemies/Orc/D_Walk.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-S_Attack.png::CompressedTexture2D::2406816202621930656::1768487328::1769623084::1::::<><><>0<>0<>78db955a94010e6ae88b128d49d0975b<>res://.godot/imported/S_Attack.png-d517933c1303319ae00fad24a221528d.ctex::
-S_Death.png::CompressedTexture2D::1580742793184045990::1768487328::1769623085::1::::<><><>0<>0<>5e78a28cb191a78a21adaf227b60b3f3<>res://.godot/imported/S_Death.png-b6de0e33a4bc20fa875d912d9886f6a8.ctex::
-S_Walk.png::CompressedTexture2D::2467319784899213205::1768487328::1769623085::1::::<><><>0<>0<>3efff24aec231c6e2faf92ce9906e592<>res://.godot/imported/S_Walk.png-70efb6e392504ed3774d56e0437616f3.ctex::
-U_Attack.png::CompressedTexture2D::369330495254852163::1768487328::1769623085::1::::<><><>0<>0<>30de03f142703bc097f29f898e174abf<>res://.godot/imported/U_Attack.png-01d713994e96e5144dac81cc6de05ebe.ctex::
-U_Death.png::CompressedTexture2D::5875087897351330665::1768487328::1769623085::1::::<><><>0<>0<>4a7cb05ed54f855feca8aade9c5fc0bc<>res://.godot/imported/U_Death.png-60924de7a1d1d7dc364a46dff410cff6.ctex::
-U_Walk.png::CompressedTexture2D::817308730008542486::1768487328::1769623085::1::::<><><>0<>0<>7708dd4717432e44327b71f0acefd3e4<>res://.godot/imported/U_Walk.png-a197c3436dc36e6beb60e0dff80e91a7.ctex::
-::res://assets/sprites/Enemies/OrcBoss/::1769623084
-orc3_death_full.png::CompressedTexture2D::952394006159589807::1769621185::1769623085::1::::<><><>0<>0<>59c658d637336a1dce4afa6fed5cd56b<>res://.godot/imported/orc3_death_full.png-80fb1e468d9b28124dcd81c0c19d3670.ctex::
-orc3_walk_full.png::CompressedTexture2D::5919226527189512744::1769621155::1769623085::1::::<><><>0<>0<>c3e857d9b1863229fcc438edb7ce407d<>res://.godot/imported/orc3_walk_full.png-39c75c096879a897fe2dd039d5c4558d.ctex::
-orc_boss.tres::AtlasTexture::7469579009496604028::1769623084::0::1::::<><><>0<>0<><>::uid://cifshxxag1xam::::res://assets/sprites/Enemies/Others/orc3_walk_full.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-::res://assets/sprites/Enemies/Others/::1769621150
-mahoraga_by_saxcreed_dggesg8-fullview.jpg::CompressedTexture2D::648586531315141590::1768487328::1769623085::1::::<><><>0<>0<>cdc9d035beebe729fa068dc5cf3835f0<>res://.godot/imported/mahoraga_by_saxcreed_dggesg8-fullview.jpg-f196428e86a19aedbb23aadfb77d1b14.ctex::
-orc3_walk_full.png::CompressedTexture2D::5345780655264512088::1769621149::1769623085::1::::<><><>0<>0<>318ae28dd0191759100e201a4e0bd22b<>res://.godot/imported/orc3_walk_full.png-c2f9be6794dd625fcca8e897619c0b91.ctex::
-unnamed.jpg::CompressedTexture2D::8013554055563363842::1768487328::1769623085::1::::<><><>0<>0<>2ed137bb8bd5270d9e6499935c1e963b<>res://.godot/imported/unnamed.jpg-7163dadd8fe7eed0d07cb34335731af3.ctex::
-::res://assets/tilesets/::1769499445
-Blue-gray_ruins3.png::CompressedTexture2D::2687385471442149061::1768487328::1769499444::1::::<><><>0<>0<>453446e936f1b9218659ee1bd8b6460f<>res://.godot/imported/Blue-gray_ruins3.png-7b25e9c76e81a071544b7cc9a0c14ffd.ctex::
-Blue-gray_ruins4.png::CompressedTexture2D::7373073132693327549::1768487328::1769499444::1::::<><><>0<>0<>1d7469dc580b15e8d2c41d4ac0f06484<>res://.godot/imported/Blue-gray_ruins4.png-d4a610735c4bcfdaac94741b0b54cb51.ctex::
-Blue-gray_ruins5.png::CompressedTexture2D::2852758331591494313::1768487328::1769499444::1::::<><><>0<>0<>e28dac8a8ab2923a1fe09462b01c910c<>res://.godot/imported/Blue-gray_ruins5.png-a581ae64d5b114f242c7107ad789b4d9.ctex::
-Brown-gray_ruins2.png::CompressedTexture2D::2923413534664919267::1768487328::1769499444::1::::<><><>0<>0<>478156770c257f09617fd597b38ad2a2<>res://.godot/imported/Brown-gray_ruins2.png-58282cfd501365b213c48b34b11c2d36.ctex::
-Brown-gray_ruins4.png::CompressedTexture2D::534479765830788204::1768487328::1769499444::1::::<><><>0<>0<>0febd88977c3ba987089009ffd065da3<>res://.godot/imported/Brown-gray_ruins4.png-c61f70827189a7712a25377c32cbf68e.ctex::
-Brown_ruins3.png::CompressedTexture2D::9199799854159595490::1768487328::1769499444::1::::<><><>0<>0<>d7c8ab58914f760608645ef80ae44bf2<>res://.godot/imported/Brown_ruins3.png-efd003a25a01da0e161479449d2bc74e.ctex::
-Cave_objects_source.png::CompressedTexture2D::546996732649860458::1768487328::1769499444::1::::<><><>0<>0<>560e38e7c5f25b7291a75dad5eb6b442<>res://.godot/imported/Cave_objects_source.png-7c4f74341862cfe9b4a0251f07a05df9.ctex::
-freelavatileset-Sheet.png::CompressedTexture2D::4784807280868004827::1768487328::1769499444::1::::<><><>0<>0<>f3617eb95f97a8381d94007c9bcf549e<>res://.godot/imported/freelavatileset-Sheet.png-afdf16d033c89efd87a506c84a20841a.ctex::
-Objects_Cemetery.png::CompressedTexture2D::5308572773924456687::1768487328::1769499445::1::::<><><>0<>0<>413524b2e2c08909b8a93ac63accbc72<>res://.godot/imported/Objects_Cemetery.png-622845710e7245b947f8a691ad7be7ca.ctex::
-props.png::CompressedTexture2D::8307766005970274303::1768487328::1769499445::1::::<><><>0<>0<>aa431492970bd9fe649c3c41eb3af833<>res://.godot/imported/props.png-44932c25b27bc6ab09ffb3c440e96b97.ctex::
-soldier.jpg::CompressedTexture2D::1389755172173221169::1768487328::1769499445::1::::<><><>0<>0<>252f96347721c26e095829f7c5941ce0<>res://.godot/imported/soldier.jpg-09947d0041aa4ea8b9b415e942a687dc.ctex::
-tilemap_packed.png::CompressedTexture2D::5319961287458596740::1768487328::1769499445::1::::<><><>0<>0<>c8408b549d3c21c1c52e03f50428ed96<>res://.godot/imported/tilemap_packed.png-6415571a0c3fb5eaa9d749131b8eda17.ctex::
-tileset1.png::CompressedTexture2D::3347089521351500760::1768487328::1769499445::1::::<><><>0<>0<>8d0c2ae328fd4e333ec7fc33e6a7325a<>res://.godot/imported/tileset1.png-a6bc1116f3758d976341faaa82531ca5.ctex::
-tileset.png::CompressedTexture2D::5768328817427804192::1768487328::1769499445::1::::<><><>0<>0<>cdd5248146bf0602f136cd37aa337b62<>res://.godot/imported/tileset.png-07d912f8b4c07111b880b883656d8231.ctex::
-Tilled_Dirt.png::CompressedTexture2D::5972901707851159822::1768487328::1769499445::1::::<><><>0<>0<>d94f546a214c2324cbf0181fc47d82f1<>res://.godot/imported/Tilled_Dirt.png-050e8e7620d9c6649eaa3330fc5db053.ctex::
-Water.png::CompressedTexture2D::2163579626870421361::1768487328::1769499445::1::::<><><>0<>0<>a69de6b400a36ddd0211feda218653e8<>res://.godot/imported/Water.png-27d957a399157eada5b7797d22cb3803.ctex::
-White_ruins2.png::CompressedTexture2D::5821373994214212067::1768487328::1769499445::1::::<><><>0<>0<>37b29e2371a8778077204f25f600ec33<>res://.godot/imported/White_ruins2.png-a8060c2b03b2060e9a8b77084f72c0a8.ctex::
-White_ruins4.png::CompressedTexture2D::4817957253025502800::1768487328::1769499445::1::::<><><>0<>0<>dea173ef6f4ae927c0d1967916a42e8c<>res://.godot/imported/White_ruins4.png-9f14d7b62b10068afc215bfd4d3b16a9.ctex::
-Wood Bridge.png::CompressedTexture2D::1408487364068090495::1768487328::1769499445::1::::<><><>0<>0<>749946fd52bc264c797599d6d4a6e37f<>res://.godot/imported/Wood Bridge.png-75a07af8d3b49471b438338e9880a9a2.ctex::
-world_tileset.png::CompressedTexture2D::6047601203543629561::1768487328::1769499445::1::::<><><>0<>0<>1c21d18b3ddacfcda484ce784c907603<>res://.godot/imported/world_tileset.png-a558ce5668feb977163096060c4516db.ctex::
-Yellow_ruins1.png::CompressedTexture2D::5297391804716894654::1768487328::1769499445::1::::<><><>0<>0<>9a3422be88a42d3a3f4076ea92e4b007<>res://.godot/imported/Yellow_ruins1.png-b032c24f79692313e3968563e2ba276d.ctex::
-::res://assets/towers/::1769599782
-ArcherTowerLV1.tres::AtlasTexture::5632979544193956154::1769599765::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-ArcherTowerLV2.tres::AtlasTexture::21528404899093229::1769599765::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-ArcherTowerLV3.tres::AtlasTexture::4848694643695978242::1769599782::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-CannonTowerLV1.tres::AtlasTexture::5685802178767093637::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-CannonTowerLV2.tres::AtlasTexture::946677900397907506::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-CannonTowerLV3.tres::AtlasTexture::6628075788323980333::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-MagicTowerLV1.tres::AtlasTexture::2780903664186843481::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-MagicTowerLV2.tres::AtlasTexture::8671867948780864965::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-MagicTowerLV3.tres::AtlasTexture::7947178937880675080::1769016967::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
-towers.png::CompressedTexture2D::396166455133717403::1769016967::1769499445::1::::<><><>0<>0<>56cefb2d7fea7b31c593de372564a681<>res://.godot/imported/towers.png-63c559805e950e30323c57e825de2545.ctex::
-::res://assets/ui/::1769499444
-Settings.png::CompressedTexture2D::6665718136810762322::1769016967::1769499444::1::::<><><>0<>0<>588222c24e8be96762e8cc6f5d572c30<>res://.godot/imported/Settings.png-a3b1f1043d2db488755043abeb29ef9a.ctex::
-Win_loose.png::CompressedTexture2D::629276811003889499::1769016967::1769499444::1::::<><><>0<>0<>04da09921f0dec784e0c9c30dcf5a9e8<>res://.godot/imported/Win_loose.png-1905b6422d5d5a812d189d719b41e4c2.ctex::
-::res://assets/ui/Backgrounds/::1769499445
-1.png::CompressedTexture2D::836933427825124461::1768487328::1769499445::1::::<><><>0<>0<>554cde851a641066fbbacbdfa672cfa2<>res://.godot/imported/1.png-6191ce7f57dc98bf867c9058fe785647.ctex::
-2.png::CompressedTexture2D::7065739445274204466::1768487328::1769499445::1::::<><><>0<>0<>b65d0d7172c2a5eae3638e095fc255fc<>res://.godot/imported/2.png-974b46e69b3987154fdcc593610f1741.ctex::
-3.png::CompressedTexture2D::5386423735559411847::1768487328::1769499445::1::::<><><>0<>0<>f6e5a353949e03b288bf0b86d1a22c8b<>res://.godot/imported/3.png-86c6aa2c2a2b4a52a07282c28914e31e.ctex::
-4.png::CompressedTexture2D::2140862587994685007::1768487328::1769499445::1::::<><><>0<>0<>8b0519d229364855c365149a2be20879<>res://.godot/imported/4.png-431bf49cc87099e7253f10ecba851ed7.ctex::
-::res://assets/ui/Buttons/::1769499445
-Buttons.png::CompressedTexture2D::9119710820244611625::1768487328::1769499445::1::::<><><>0<>0<>bff7e1d9e3a77cf2b7a313a10b3fe4d8<>res://.godot/imported/Buttons.png-c88385079e200f8ece6a4a5de4880833.ctex::
-MusicOff.tres::AtlasTexture::5780949526263619387::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
-MusicOn.tres::AtlasTexture::3398365317454592068::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
-SoundEffectOff.tres::AtlasTexture::2218262476237125977::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
-SoundEffectOn.tres::AtlasTexture::6426674303476201850::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
-::res://assets/ui/Texts/::1769499444
-Text1.png::CompressedTexture2D::5212677574102448938::1768487328::1769499444::1::::<><><>0<>0<>a2ef9b0e93426c2c56f1093b501aa2c1<>res://.godot/imported/Text1.png-229bf2908ea490bee10d60d279dfb25a.ctex::
-Text2.png::CompressedTexture2D::3215696795269851029::1768487328::1769499444::1::::<><><>0<>0<>08c3c065dafe406a53a2877ebbc11059<>res://.godot/imported/Text2.png-a245b4f8923a24afa33589a06f5cdc94.ctex::
+::res://assets/sprites/Enemies/Horse/::1769625076
+D_Attack.png::CompressedTexture2D::746894779662553937::1769625076::1769623085::1::::<><><>0<>0<>0bef959d3274c1999452b18d9c4c980c<>res://.godot/imported/D_Attack.png-3759a67bb94074e1b230f0666936a17e.ctex::
+D_Death.png::CompressedTexture2D::7005978860087211492::1769625076::1769623085::1::::<><><>0<>0<>afeee617cd4521925eb57ecdf5e82346<>res://.godot/imported/D_Death.png-ff6f6a394a6c0ffca7ae29c327ff05c1.ctex::
+D_Run.png::CompressedTexture2D::5545253589435955800::1769625076::1769623085::1::::<><><>0<>0<>b2b1c5dba6a8740307c255b767706dbe<>res://.godot/imported/D_Run.png-2ae621812fd404ca73f85bfe89657b70.ctex::
+D_Special.png::CompressedTexture2D::8807270166623465338::1769625076::1769623085::1::::<><><>0<>0<>b17a97352a09a72154be4fdbc6838f7a<>res://.godot/imported/D_Special.png-400ef98bcc22887813cb4d8cd4d4ebb1.ctex::
+Hourse.tres::AtlasTexture::2954290450270241104::1769625076::0::1::::<><><>0<>0<><>::uid://clafrtan2ubkq::::res://assets/sprites/Enemies/Horse/D_Run.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+S_Attack.png::CompressedTexture2D::1157250370257828362::1769625076::1769623085::1::::<><><>0<>0<>eccaae16b3136ebee3f6ad83664c8fce<>res://.godot/imported/S_Attack.png-58b955cf1e2a6b16a6afd127c507ef72.ctex::
+S_Death.png::CompressedTexture2D::1376232852697659972::1769625076::1769623085::1::::<><><>0<>0<>e0a9b863505ca0dac12f690af71ed6f3<>res://.godot/imported/S_Death.png-51faf0de85ece074d9ac0669f22f43c0.ctex::
+S_Run.png::CompressedTexture2D::6406179199069949267::1769625076::1769623085::1::::<><><>0<>0<>1438898825b27bd0c9ec6ba006d085dc<>res://.godot/imported/S_Run.png-5fa8c186604f3879427e1571fc25b330.ctex::
+S_Special.png::CompressedTexture2D::8794990720946278691::1769625076::1769623085::1::::<><><>0<>0<>c9915ed9b472190b915ca27be00aa21d<>res://.godot/imported/S_Special.png-9558b28825fa15d2bf5b8f0b5e6b919a.ctex::
+U_Attack.png::CompressedTexture2D::1008420030896380333::1769625076::1769623085::1::::<><><>0<>0<>fcdca6106824915b6861846443bc83d3<>res://.godot/imported/U_Attack.png-9ff56b0c738650a757af473e86b9d7aa.ctex::
+U_Death.png::CompressedTexture2D::5832536141072447373::1769625076::1769623085::1::::<><><>0<>0<>83a615959e0073a9ac92afb8fff96261<>res://.godot/imported/U_Death.png-66425046743283ff8fb5c6edb7fde101.ctex::
+U_Run.png::CompressedTexture2D::5893050920441674435::1769625076::1769623085::1::::<><><>0<>0<>f47110515b5879408edf98387fc9e1df<>res://.godot/imported/U_Run.png-9d2e8b95344eba0d71bac0965809935f.ctex::
+U_Special.png::CompressedTexture2D::7644566665710269753::1769625076::1769623085::1::::<><><>0<>0<>4eadcdf83ca9af587b763c61af8cc3f4<>res://.godot/imported/U_Special.png-0d238eeaf2d2fb124f8b3f0f63690e13.ctex::
+::res://assets/sprites/Enemies/Mouse/::1769625076
+D_Attack.png::CompressedTexture2D::2723782640303601103::1769625076::1769623085::1::::<><><>0<>0<>f67752ef4d770501373fd92f322271ea<>res://.godot/imported/D_Attack.png-933a4cff7ee33bb9f8a11af118ee4cc9.ctex::
+D_Death.png::CompressedTexture2D::6178458808876259856::1769625076::1769623085::1::::<><><>0<>0<>d1746f03274d6adb75926bcccfc05627<>res://.godot/imported/D_Death.png-72bd04fceb6f40b2fc3802ee0a31e90a.ctex::
+D_Run.png::CompressedTexture2D::5234606393825483887::1769625076::1769623085::1::::<><><>0<>0<>d1ea916fc450b7732d90e68ea3bc1157<>res://.godot/imported/D_Run.png-36b46ef3cf202af1f4ca584c2e696428.ctex::
+D_Special.png::CompressedTexture2D::4966571156982320818::1769625076::1769623085::1::::<><><>0<>0<>b266b2e09c21e3ca1ab87549fa01fd95<>res://.godot/imported/D_Special.png-b536343cc3bd7736cdfb9e532ed90a8e.ctex::
+Mouse.tres::AtlasTexture::9003914586931620072::1769625076::0::1::::<><><>0<>0<><>::uid://cgtxg5d40x6rj::::res://assets/sprites/Enemies/Mouse/D_Run.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+S_Attack.png::CompressedTexture2D::4392122184985965564::1769625076::1769623085::1::::<><><>0<>0<>5b33235ece1a50670221f2822fefa5a7<>res://.godot/imported/S_Attack.png-dac75ff7ae2bf92b0285e1e0c4937981.ctex::
+S_Death.png::CompressedTexture2D::9050829992320872288::1769625076::1769623085::1::::<><><>0<>0<>b9ad5c10a2171913b901a675895b0889<>res://.godot/imported/S_Death.png-ef0b81bb0fbbd1939137be5a1c940949.ctex::
+S_Run.png::CompressedTexture2D::2092991808954103401::1769625076::1769623085::1::::<><><>0<>0<>7248ed8ac169f56b998425fa663f69b4<>res://.godot/imported/S_Run.png-cae476f935511717a035efcc43d1eb72.ctex::
+S_Special.png::CompressedTexture2D::7326528510716334879::1769625076::1769623084::1::::<><><>0<>0<>ee602988da5732a1afa39fe04f5374c8<>res://.godot/imported/S_Special.png-ba2cca08fe6f427cb8be9fa99aca23e1.ctex::
+U_Attack.png::CompressedTexture2D::569561042068251378::1769625076::1769623084::1::::<><><>0<>0<>26a31096cd71575c591c9c9661f426a5<>res://.godot/imported/U_Attack.png-e0b659dc381f9f998dd9cdb1f1d5007f.ctex::
+U_Death.png::CompressedTexture2D::4722943414766076367::1769625076::1769623084::1::::<><><>0<>0<>630ca55e511989e421880d37edae32f9<>res://.godot/imported/U_Death.png-ecffcb26c1362d86caed279a9ef3c8f9.ctex::
+U_Run.png::CompressedTexture2D::4576872105017491552::1769625076::1769623084::1::::<><><>0<>0<>9510fc2de5c959deceeb5075d1d5226b<>res://.godot/imported/U_Run.png-10ac6213bfeb12beaef55658cfbc89b0.ctex::
+U_Special.png::CompressedTexture2D::961936795053705427::1769625076::1769623084::1::::<><><>0<>0<>52e3158e575dfa42385b8a47e63b6eb2<>res://.godot/imported/U_Special.png-12315ddfd9c6dab5aca70f8e1f5f73f0.ctex::
+::res://assets/sprites/Enemies/Orc/::1769625076
+D_Attack.png::CompressedTexture2D::3390425756721167989::1769625076::1769623084::1::::<><><>0<>0<>22050b25e840a913c759b27afb934400<>res://.godot/imported/D_Attack.png-8f8b543f8b78ee79cea84b097405cbd4.ctex::
+D_Death.png::CompressedTexture2D::4731004081017957848::1769625076::1769623084::1::::<><><>0<>0<>71dedd2167945ae8589c7f2ee24b513f<>res://.godot/imported/D_Death.png-b83e7ddc82835fc0a76bf5c0fa276f75.ctex::
+D_Walk.png::CompressedTexture2D::7393501707677299629::1769625076::1769623084::1::::<><><>0<>0<>65d83ef6fb0128aaab8e3fa259dd0bf8<>res://.godot/imported/D_Walk.png-350034fc7e701266d0f436f1bf32006e.ctex::
+Orc.tres::AtlasTexture::4883096761516767133::1769625076::0::1::::<><><>0<>0<><>::uid://ddlp5mhm6c5o0::::res://assets/sprites/Enemies/Orc/D_Walk.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+S_Attack.png::CompressedTexture2D::2406816202621930656::1769625076::1769623084::1::::<><><>0<>0<>78db955a94010e6ae88b128d49d0975b<>res://.godot/imported/S_Attack.png-d517933c1303319ae00fad24a221528d.ctex::
+S_Death.png::CompressedTexture2D::1580742793184045990::1769625076::1769623085::1::::<><><>0<>0<>5e78a28cb191a78a21adaf227b60b3f3<>res://.godot/imported/S_Death.png-b6de0e33a4bc20fa875d912d9886f6a8.ctex::
+S_Walk.png::CompressedTexture2D::2467319784899213205::1769625076::1769623085::1::::<><><>0<>0<>3efff24aec231c6e2faf92ce9906e592<>res://.godot/imported/S_Walk.png-70efb6e392504ed3774d56e0437616f3.ctex::
+U_Attack.png::CompressedTexture2D::369330495254852163::1769625076::1769623085::1::::<><><>0<>0<>30de03f142703bc097f29f898e174abf<>res://.godot/imported/U_Attack.png-01d713994e96e5144dac81cc6de05ebe.ctex::
+U_Death.png::CompressedTexture2D::5875087897351330665::1769625076::1769623085::1::::<><><>0<>0<>4a7cb05ed54f855feca8aade9c5fc0bc<>res://.godot/imported/U_Death.png-60924de7a1d1d7dc364a46dff410cff6.ctex::
+U_Walk.png::CompressedTexture2D::817308730008542486::1769625076::1769623085::1::::<><><>0<>0<>7708dd4717432e44327b71f0acefd3e4<>res://.godot/imported/U_Walk.png-a197c3436dc36e6beb60e0dff80e91a7.ctex::
+::res://assets/sprites/Enemies/OrcBoss/::1769625076
+orc3_death_full.png::CompressedTexture2D::952394006159589807::1769625076::1769623085::1::::<><><>0<>0<>59c658d637336a1dce4afa6fed5cd56b<>res://.godot/imported/orc3_death_full.png-80fb1e468d9b28124dcd81c0c19d3670.ctex::
+orc3_walk_full.png::CompressedTexture2D::5919226527189512744::1769625076::1769623085::1::::<><><>0<>0<>c3e857d9b1863229fcc438edb7ce407d<>res://.godot/imported/orc3_walk_full.png-39c75c096879a897fe2dd039d5c4558d.ctex::
+orc_boss.tres::AtlasTexture::7469579009496604028::1769625076::0::1::::<><><>0<>0<><>::uid://cifshxxag1xam::::res://assets/sprites/Enemies/Others/orc3_walk_full.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+::res://assets/sprites/Enemies/Others/::1769625076
+mahoraga_by_saxcreed_dggesg8-fullview.jpg::CompressedTexture2D::648586531315141590::1769625076::1769623085::1::::<><><>0<>0<>cdc9d035beebe729fa068dc5cf3835f0<>res://.godot/imported/mahoraga_by_saxcreed_dggesg8-fullview.jpg-f196428e86a19aedbb23aadfb77d1b14.ctex::
+orc3_walk_full.png::CompressedTexture2D::5345780655264512088::1769625076::1769623085::1::::<><><>0<>0<>318ae28dd0191759100e201a4e0bd22b<>res://.godot/imported/orc3_walk_full.png-c2f9be6794dd625fcca8e897619c0b91.ctex::
+unnamed.jpg::CompressedTexture2D::8013554055563363842::1769625076::1769623085::1::::<><><>0<>0<>2ed137bb8bd5270d9e6499935c1e963b<>res://.godot/imported/unnamed.jpg-7163dadd8fe7eed0d07cb34335731af3.ctex::
+::res://assets/tilesets/::1769625076
+Blue-gray_ruins3.png::CompressedTexture2D::2687385471442149061::1769625076::1769499444::1::::<><><>0<>0<>453446e936f1b9218659ee1bd8b6460f<>res://.godot/imported/Blue-gray_ruins3.png-7b25e9c76e81a071544b7cc9a0c14ffd.ctex::
+Blue-gray_ruins4.png::CompressedTexture2D::7373073132693327549::1769625076::1769499444::1::::<><><>0<>0<>1d7469dc580b15e8d2c41d4ac0f06484<>res://.godot/imported/Blue-gray_ruins4.png-d4a610735c4bcfdaac94741b0b54cb51.ctex::
+Blue-gray_ruins5.png::CompressedTexture2D::2852758331591494313::1769625076::1769499444::1::::<><><>0<>0<>e28dac8a8ab2923a1fe09462b01c910c<>res://.godot/imported/Blue-gray_ruins5.png-a581ae64d5b114f242c7107ad789b4d9.ctex::
+Brown-gray_ruins2.png::CompressedTexture2D::2923413534664919267::1769625076::1769499444::1::::<><><>0<>0<>478156770c257f09617fd597b38ad2a2<>res://.godot/imported/Brown-gray_ruins2.png-58282cfd501365b213c48b34b11c2d36.ctex::
+Brown-gray_ruins4.png::CompressedTexture2D::534479765830788204::1769625076::1769499444::1::::<><><>0<>0<>0febd88977c3ba987089009ffd065da3<>res://.godot/imported/Brown-gray_ruins4.png-c61f70827189a7712a25377c32cbf68e.ctex::
+Brown_ruins3.png::CompressedTexture2D::9199799854159595490::1769625076::1769499444::1::::<><><>0<>0<>d7c8ab58914f760608645ef80ae44bf2<>res://.godot/imported/Brown_ruins3.png-efd003a25a01da0e161479449d2bc74e.ctex::
+Cave_objects_source.png::CompressedTexture2D::546996732649860458::1769625076::1769499444::1::::<><><>0<>0<>560e38e7c5f25b7291a75dad5eb6b442<>res://.godot/imported/Cave_objects_source.png-7c4f74341862cfe9b4a0251f07a05df9.ctex::
+freelavatileset-Sheet.png::CompressedTexture2D::4784807280868004827::1769625076::1769499444::1::::<><><>0<>0<>f3617eb95f97a8381d94007c9bcf549e<>res://.godot/imported/freelavatileset-Sheet.png-afdf16d033c89efd87a506c84a20841a.ctex::
+Objects_Cemetery.png::CompressedTexture2D::5308572773924456687::1769625076::1769499445::1::::<><><>0<>0<>413524b2e2c08909b8a93ac63accbc72<>res://.godot/imported/Objects_Cemetery.png-622845710e7245b947f8a691ad7be7ca.ctex::
+props.png::CompressedTexture2D::8307766005970274303::1769625076::1769499445::1::::<><><>0<>0<>aa431492970bd9fe649c3c41eb3af833<>res://.godot/imported/props.png-44932c25b27bc6ab09ffb3c440e96b97.ctex::
+soldier.jpg::CompressedTexture2D::1389755172173221169::1769625076::1769499445::1::::<><><>0<>0<>252f96347721c26e095829f7c5941ce0<>res://.godot/imported/soldier.jpg-09947d0041aa4ea8b9b415e942a687dc.ctex::
+tilemap_packed.png::CompressedTexture2D::5319961287458596740::1769625076::1769499445::1::::<><><>0<>0<>c8408b549d3c21c1c52e03f50428ed96<>res://.godot/imported/tilemap_packed.png-6415571a0c3fb5eaa9d749131b8eda17.ctex::
+tileset1.png::CompressedTexture2D::3347089521351500760::1769625076::1769499445::1::::<><><>0<>0<>8d0c2ae328fd4e333ec7fc33e6a7325a<>res://.godot/imported/tileset1.png-a6bc1116f3758d976341faaa82531ca5.ctex::
+tileset.png::CompressedTexture2D::5768328817427804192::1769625076::1769499445::1::::<><><>0<>0<>cdd5248146bf0602f136cd37aa337b62<>res://.godot/imported/tileset.png-07d912f8b4c07111b880b883656d8231.ctex::
+Tilled_Dirt.png::CompressedTexture2D::5972901707851159822::1769625076::1769499445::1::::<><><>0<>0<>d94f546a214c2324cbf0181fc47d82f1<>res://.godot/imported/Tilled_Dirt.png-050e8e7620d9c6649eaa3330fc5db053.ctex::
+Water.png::CompressedTexture2D::2163579626870421361::1769625076::1769499445::1::::<><><>0<>0<>a69de6b400a36ddd0211feda218653e8<>res://.godot/imported/Water.png-27d957a399157eada5b7797d22cb3803.ctex::
+White_ruins2.png::CompressedTexture2D::5821373994214212067::1769625076::1769499445::1::::<><><>0<>0<>37b29e2371a8778077204f25f600ec33<>res://.godot/imported/White_ruins2.png-a8060c2b03b2060e9a8b77084f72c0a8.ctex::
+White_ruins4.png::CompressedTexture2D::4817957253025502800::1769625076::1769499445::1::::<><><>0<>0<>dea173ef6f4ae927c0d1967916a42e8c<>res://.godot/imported/White_ruins4.png-9f14d7b62b10068afc215bfd4d3b16a9.ctex::
+Wood Bridge.png::CompressedTexture2D::1408487364068090495::1769625076::1769499445::1::::<><><>0<>0<>749946fd52bc264c797599d6d4a6e37f<>res://.godot/imported/Wood Bridge.png-75a07af8d3b49471b438338e9880a9a2.ctex::
+world_tileset.png::CompressedTexture2D::6047601203543629561::1769625076::1769499445::1::::<><><>0<>0<>1c21d18b3ddacfcda484ce784c907603<>res://.godot/imported/world_tileset.png-a558ce5668feb977163096060c4516db.ctex::
+Yellow_ruins1.png::CompressedTexture2D::5297391804716894654::1769625076::1769499445::1::::<><><>0<>0<>9a3422be88a42d3a3f4076ea92e4b007<>res://.godot/imported/Yellow_ruins1.png-b032c24f79692313e3968563e2ba276d.ctex::
+::res://assets/towers/::1769625076
+ArcherTowerLV1.tres::AtlasTexture::5632979544193956154::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+ArcherTowerLV2.tres::AtlasTexture::21528404899093229::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+ArcherTowerLV3.tres::AtlasTexture::4848694643695978242::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+CannonTowerLV1.tres::AtlasTexture::5685802178767093637::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+CannonTowerLV2.tres::AtlasTexture::946677900397907506::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+CannonTowerLV3.tres::AtlasTexture::6628075788323980333::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+MagicTowerLV1.tres::AtlasTexture::2780903664186843481::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+MagicTowerLV2.tres::AtlasTexture::8671867948780864965::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+MagicTowerLV3.tres::AtlasTexture::7947178937880675080::1769625076::0::1::::<><><>0<>0<><>::uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c4edsabh4l061::::res://scripts/UI/Encyclopedia/InfoResource.cs
+towers.png::CompressedTexture2D::396166455133717403::1769625076::1769499445::1::::<><><>0<>0<>56cefb2d7fea7b31c593de372564a681<>res://.godot/imported/towers.png-63c559805e950e30323c57e825de2545.ctex::
+::res://assets/ui/::1769625076
+Settings.png::CompressedTexture2D::6665718136810762322::1769625076::1769499444::1::::<><><>0<>0<>588222c24e8be96762e8cc6f5d572c30<>res://.godot/imported/Settings.png-a3b1f1043d2db488755043abeb29ef9a.ctex::
+Win_loose.png::CompressedTexture2D::629276811003889499::1769625076::1769499444::1::::<><><>0<>0<>04da09921f0dec784e0c9c30dcf5a9e8<>res://.godot/imported/Win_loose.png-1905b6422d5d5a812d189d719b41e4c2.ctex::
+::res://assets/ui/Backgrounds/::1769625076
+1.png::CompressedTexture2D::836933427825124461::1769625076::1769499445::1::::<><><>0<>0<>554cde851a641066fbbacbdfa672cfa2<>res://.godot/imported/1.png-6191ce7f57dc98bf867c9058fe785647.ctex::
+2.png::CompressedTexture2D::7065739445274204466::1769625076::1769499445::1::::<><><>0<>0<>b65d0d7172c2a5eae3638e095fc255fc<>res://.godot/imported/2.png-974b46e69b3987154fdcc593610f1741.ctex::
+3.png::CompressedTexture2D::5386423735559411847::1769625076::1769499445::1::::<><><>0<>0<>f6e5a353949e03b288bf0b86d1a22c8b<>res://.godot/imported/3.png-86c6aa2c2a2b4a52a07282c28914e31e.ctex::
+4.png::CompressedTexture2D::2140862587994685007::1769625076::1769499445::1::::<><><>0<>0<>8b0519d229364855c365149a2be20879<>res://.godot/imported/4.png-431bf49cc87099e7253f10ecba851ed7.ctex::
+::res://assets/ui/Buttons/::1769625076
+Buttons.png::CompressedTexture2D::9119710820244611625::1769625076::1769499445::1::::<><><>0<>0<>bff7e1d9e3a77cf2b7a313a10b3fe4d8<>res://.godot/imported/Buttons.png-c88385079e200f8ece6a4a5de4880833.ctex::
+MusicOff.tres::AtlasTexture::5780949526263619387::1769625076::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
+MusicOn.tres::AtlasTexture::3398365317454592068::1769625076::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
+SoundEffectOff.tres::AtlasTexture::2218262476237125977::1769625076::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
+SoundEffectOn.tres::AtlasTexture::6426674303476201850::1769625076::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png
+::res://assets/ui/Texts/::1769625076
+Text1.png::CompressedTexture2D::5212677574102448938::1769625076::1769499444::1::::<><><>0<>0<>a2ef9b0e93426c2c56f1093b501aa2c1<>res://.godot/imported/Text1.png-229bf2908ea490bee10d60d279dfb25a.ctex::
+Text2.png::CompressedTexture2D::3215696795269851029::1769625076::1769499444::1::::<><><>0<>0<>08c3c065dafe406a53a2877ebbc11059<>res://.godot/imported/Text2.png-a245b4f8923a24afa33589a06f5cdc94.ctex::
 ::res://diagrams/::1768487249
 ::res://docs/::1768487249
 ::res://docs/meeting/::1768487249
 ::res://scenes/::1768487249
-::res://scenes/actors/::1768487328
-::res://scenes/actors/Animals/::1769016967
-Cow.tscn::PackedScene::1943175994317981429::1769016967::0::1::::<><><>0<>0<><>::uid://c1gku8qnrtall::::res://assets/sprites/Animals/Free Cow Sprites.png<>uid://fn4khbghek7s::::res://scripts/Cow.cs
-::res://scenes/actors/Bullet/::1769016967
-arrow_bullet.tscn::PackedScene::3386440768052546288::1769016967::0::1::::<><><>0<>0<><>::uid://c7gean2qxrxds::::res://scripts/Bullet/ArrowBullet.cs<>uid://c3aihr6si0rql::::res://assets/tilesets/unnamed__1_-removebg-preview.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://bur3lqg0d7in7::::res://assets/audios/effects/Arrow Impact 09.wav
-cannon_ball.tscn::PackedScene::3959411041206106336::1769016967::0::1::::<><><>0<>0<><>::uid://d3grh4uuqphof::::res://scripts/Bullet/CannonBall.cs<>uid://dv3m145s4cro6::::res://assets/tilesets/49.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://banuwpkfv1d56::::res://assets/audios/effects/cannon-shot-326182.wav
-magic_missile.tscn::PackedScene::1515741542452011988::1769016967::0::1::::<><><>0<>0<><>::uid://sgstq1e6w88b::::res://scripts/Bullet/MagicMissile.cs<>uid://dosloil0r2suy::::res://assets/tilesets/51.png<>uid://cf2gf5loj2688::::res://scripts/Audio/BulletSfxComponent.cs<>uid://cc08wlkialb3n::::res://assets/audios/effects/spell.wav
-::res://scenes/actors/Bushes/::1769016967
-Bush_Green.tscn::PackedScene::1109670555196192534::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-Bush_Green_Berries.tscn::PackedScene::4194271571942628757::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-::res://scenes/actors/Enemys/::1769623084
-orc_boss.tscn::PackedScene::803237727872735401::1769623084::0::1::::<><><>0<>0<><>::uid://2ejvexw4o482::::res://scripts/Enemy/OrcBoss.cs<>uid://cqlk2cjvywpcy::::res://assets/sprites/Enemies/OrcBoss/orc3_walk_full.png<>uid://ntl14np1e000::::res://assets/sprites/Enemies/OrcBoss/orc3_death_full.png
-rat_enemy.tscn::PackedScene::1549972660969901401::1769623084::0::1::::<><><>0<>0<><>::uid://dj67rc63vd0b0::::res://scripts/Enemy/RatEnemy.cs<>uid://cgtxg5d40x6rj::::res://assets/sprites/Enemies/Mouse/D_Run.png<>uid://d17j324jo400c::::res://assets/sprites/Enemies/Mouse/S_Death.png<>uid://424jfkyax0y4::::res://assets/sprites/Enemies/Mouse/S_Run.png<>uid://b8j3gnltic5x0::::res://assets/sprites/Enemies/Mouse/U_Death.png<>uid://cua5kw4pjt1vw::::res://assets/sprites/Enemies/Mouse/D_Death.png<>uid://b6hcodupoj4sa::::res://assets/sprites/Enemies/Mouse/U_Run.png
-soldier_enemy.tscn::PackedScene::3963566318728954216::1769623084::0::1::::<><><>0<>0<><>::uid://cvsaluennbwoj::::res://scripts/Enemy/SoldierEnemy.cs<>uid://clafrtan2ubkq::::res://assets/sprites/Enemies/Horse/D_Run.png<>uid://c620pifulk2yi::::res://assets/sprites/Enemies/Horse/D_Death.png<>uid://cp7vxm7l0au88::::res://assets/sprites/Enemies/Horse/U_Run.png<>uid://cpdlau6mx6086::::res://assets/sprites/Enemies/Horse/U_Death.png<>uid://cxjg3n1xrim40::::res://assets/sprites/Enemies/Horse/S_Run.png<>uid://tuwmbifm30ey::::res://assets/sprites/Enemies/Horse/S_Death.png
-tank_enemy.tscn::PackedScene::659345542088022766::1769623084::0::1::::<><><>0<>0<><>::uid://c4jj4s3so7arf::::res://scripts/Enemy/TankEnemy.cs<>uid://b8ny7ft25t2cq::::res://assets/sprites/Enemies/Orc/D_Death.png<>uid://cpx63sif5ehbl::::res://assets/sprites/Enemies/Orc/U_Death.png<>uid://wryuq5t7bmpq::::res://assets/sprites/Enemies/Orc/S_Death.png<>uid://ddlp5mhm6c5o0::::res://assets/sprites/Enemies/Orc/D_Walk.png<>uid://lv57qn8iv52a::::res://assets/sprites/Enemies/Orc/U_Walk.png<>uid://bbfgnqhhller2::::res://assets/sprites/Enemies/Orc/S_Walk.png
-::res://scenes/actors/ForestPatches/::1768487328
-Forest_Patch_Column.tscn::PackedScene::2553199237569880843::1768487328::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn
-Forest_Patch_Row.tscn::PackedScene::715142992328529701::1768487328::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn<>uid://cl4qo0iv2rv7m::::res://Scenes/Actors/Grass/GrassGreen01.tscn<>uid://ddwjrempthau6::::res://Scenes/Actors/Grass/GrassGreen02.tscn
-::res://scenes/actors/Grass/::1769016967
-GrassGreen01.tscn::PackedScene::5605783401704331256::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-GrassGreen02.tscn::PackedScene::7415821933352247951::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-GrassGreen03.tscn::PackedScene::4982116327823689117::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-::res://scenes/actors/Towers/::1769016967
-archer_tower.tscn::PackedScene::7535001643721400304::1769016967::0::1::::<><><>0<>0<><>::uid://bc3hx2vovvmy5::::res://scripts/Tower/ArcherTower.cs<>uid://boiogjq3y2f1q::::res://scenes/actors/Bullet/arrow_bullet.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
-cannon_tower.tscn::PackedScene::985508963322169235::1769016967::0::1::::<><><>0<>0<><>::uid://bl63vun5x2xct::::res://scripts/Tower/CannonTower.cs<>uid://bwn76ldt4qom7::::res://scenes/actors/Bullet/cannon_ball.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
-magic_tower.tscn::PackedScene::4535440244863718742::1769016967::0::1::::<><><>0<>0<><>::uid://b51topyau31gx::::res://scripts/Tower/MagicTower.cs<>uid://vuibojaepuam::::res://scenes/actors/Bullet/magic_missile.tscn<>uid://fv52lac6spmh::::res://assets/tilesets/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
-TowerSlot2.tscn::PackedScene::6672693425643646259::1769016967::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png
-TowerSlot.tscn::PackedScene::4965682862671625029::1769016967::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png<>uid://dwqqmqjo6sgff::::res://scripts/Tower/TowerSlot.cs<>uid://dfmam147l76pg::::res://scenes/actors/Towers/archer_tower.tscn<>uid://obngocmdnf4n::::res://scenes/actors/Towers/cannon_tower.tscn<>uid://b5vabkfj0qfrq::::res://scenes/actors/Towers/magic_tower.tscn
-::res://scenes/actors/Trees/::1769016967
-TreeGreen01.tscn::PackedScene::4679476802158272037::1769016967::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
-::res://scenes/levels/::1769621596
-level_1.tscn::PackedScene::8084334480006183560::1769621596::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://dyfijkflyc1kc::::res://scripts/UI/Levels/Level1.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://b58lfk8ugwd5x::::res://assets/audios/musics/Pixel 2.ogg<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://chqdjfbllast7::::res://assets/tilesets/Yellow_ruins1.png<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn
-level_2.tscn::PackedScene::6639106278267314708::1769621596::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b4ncegbmvuh5k::::res://scripts/UI/Levels/Level2.cs<>uid://b58lfk8ugwd5x::::res://assets/audios/musics/Pixel 2.ogg<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://53b3tpgd85jp::::res://assets/tilesets/Water.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://crdk23fnspaxi::::res://assets/tilesets/Tilled_Dirt.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://p2sd2m4vt7xa::::res://scenes/actors/Bushes/Bush_Green.tscn<>uid://b000bmiekktcv::::res://scenes/actors/Bushes/Bush_Green_Berries.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://ucjt00xxpyih::::res://assets/tilesets/Wood Bridge.png<>uid://bhwegubd0gujb::::res://assets/tilesets/Brown-gray_ruins2.png<>uid://hu52la314kjk::::res://assets/tilesets/Brown-gray_ruins4.png<>uid://bej131co2f0jx::::res://assets/tilesets/Blue-gray_ruins3.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
-level_3.tscn::PackedScene::6826440084160690494::1769621596::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b5u362tvdo3u3::::res://scripts/UI/Levels/Level3.cs<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://d3o1tauyg3csk::::res://assets/audios/musics/Pixel 8.ogg<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
-level_4.tscn::PackedScene::1729418566581159279::1769621596::0::1::::<><><>0<>0<><>::uid://dtcl17ywc3onc::::res://scripts/UI/Levels/Level4.cs<>uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://siafepexbinv::::res://assets/audios/musics/Pixel 3.ogg<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://bpkdbovcm0jcv::::res://scripts/Manager/WaveManager.cs<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
-::res://scenes/ui/::1769623084
-InfoScreen.tscn::PackedScene::181536823928553734::1769623084::0::1::::<><><>0<>0<><>::uid://o8wodhpxgfh6::::res://scripts/UI/Encyclopedia/InfoScreen.cs<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://d1jtfmmsg38sa::::res://assets/sprites/Enemies/Mouse/Mouse.tres<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bjc76yg7ija8y::::res://assets/images/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png<>uid://bidcy5kareyb5::::res://assets/sprites/Enemies/Horse/Hourse.tres<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://cbtn5jdyfpaav::::res://assets/sprites/Enemies/Orc/Orc.tres<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cmiwl5yq6wctm::::res://assets/towers/ArcherTowerLV1.tres<>uid://kotms3mq4m8::::res://assets/towers/ArcherTowerLV2.tres<>uid://cwo38656642vc::::res://assets/icons/cthulhu.png<>uid://ds1jgik1w2nw7::::res://assets/icons/castle-tower.png<>uid://cbc0j68v7akdu::::res://assets/towers/ArcherTowerLV3.tres<>uid://cnaili3vl57nl::::res://assets/towers/CannonTowerLV1.tres<>uid://nqtv8uhoomrq::::res://assets/towers/CannonTowerLV2.tres<>uid://c1oxo7qimfjqb::::res://assets/towers/CannonTowerLV3.tres<>uid://bfvdcvcsdkmsf::::res://assets/towers/MagicTowerLV1.tres<>uid://dvsynsirxtvcf::::res://assets/towers/MagicTowerLV2.tres<>uid://dlhw41wxcaeds::::res://assets/towers/MagicTowerLV3.tres<>uid://c4dsfhnyyduwx::::res://scenes/ui/Components/InfoListEntry.tscn
-select_screen.tscn::PackedScene::4860703671625425360::1769536080::0::1::::<><><>0<>0<><>::uid://r76al0epb34k::::res://scripts/Manager/LevelSelectManager.cs<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://dlc7mkixv1xm1::::res://assets/images/level1.png<>uid://d155i3a1plxb::::res://assets/images/Level2.png<>uid://bj2qhyw2tebt8::::res://assets/images/Level3.png<>uid://c4tiysgegg4e6::::res://assets/images/Level4.png<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png
-title_screen.tscn::PackedScene::3224897892399982647::1769016967::0::1::::<><><>0<>0<><>::uid://km276afe2vvy::::res://scenes/ui/Components/Button.tscn<>uid://bn0ge2wfu0uu7::::res://scripts/UI/TitleScreen.cs<>uid://bl2yb6gx5rwk8::::res://assets/ui/Texts/Text2.png<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://chgqbuu42rf5r::::res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bu8nydlni5buc::::res://assets/audios/musics/Pixel 4.ogg<>uid://byt1bucr6vrnq::::res://scripts/Audio/SfxToggleButton.cs<>uid://bbywtxeui3tg::::res://scripts/Audio/MusicToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
-::res://scenes/ui/Components/::1769537947
-Background_Cloud.tscn::PackedScene::6210467688204169829::1769016967::0::1::::<><><>0<>0<><>::uid://l6of28682b4h::::res://assets/ui/Backgrounds/1.png<>uid://d1sdal462g7s8::::res://scenes/ui/Shaders/title_screen.gdshader<>uid://c7wxxw8grqbp7::::res://assets/ui/Backgrounds/2.png<>uid://5rbxuktc3vtv::::res://assets/ui/Backgrounds/4.png
-Button.tscn::PackedScene::728359102096155502::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audio/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
-FloatingText.tscn::PackedScene::7023023675319922219::1769016967::0::1::::<><><>0<>0<><>::uid://c1esijxcdtpcf::::res://scripts/UI/NotificationText/FloatingText.cs
-game_over_ui.tscn::PackedScene::7959863735867120054::1769016967::0::1::::<><><>0<>0<><>::uid://cfm6r1hfkyylq::::res://Scripts/GameOverUI.cs
-game_ui.tscn::PackedScene::7750341360511585675::1769537947::0::1::::<><><>0<>0<><>::uid://dri4iy48ed8si::::res://scripts/UI/GameUI.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png
-InfoListEntry.tscn::PackedScene::6815613189859213867::1769016967::0::1::::<><><>0<>0<><>::uid://b7ubn40x1sace::::res://scripts/UI/Encyclopedia/InfoListEntry.cs<>uid://cbm25ia0dkra1::::res://scripts/Audio/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
-MiniButton.tscn::PackedScene::7953784467370618936::1769016967::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audio/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
-PauseMenu.tscn::PackedScene::6162547618691601105::1769016967::0::1::::<><><>0<>0<><>::uid://c4ihve05qg510::::res://scripts/UI/Pause/PauseMenu.cs<>uid://i73dkj685vdb::::res://assets/ui/Win_loose.png<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://byt1bucr6vrnq::::res://scripts/Audio/SfxToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://bbywtxeui3tg::::res://scripts/Audio/MusicToggleButton.cs<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
-::res://scenes/ui/Shaders/::1769599765
-title_screen.gdshader::Shader::9021513560220552837::1769599765::0::1::::<><><>0<>0<><>::
-::res://scripts/::1769375175
-Cow.cs::CSharpScript::379560149212607626::1768487328::0::1::::<>Node2D<><>0<>0<><>::
-Global.cs::CSharpScript::-1::1769534546::0::1::::<>Node<><>0<>0<><>::
-SceneHistory.cs::CSharpScript::6585622029216787604::1769016967::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/Audio/::1769016967
-BulletSfxComponent.cs::CSharpScript::5179898609204675303::1769016967::0::1::::<>Node<><>0<>0<><>::
-ButtonSfxComponent.cs::CSharpScript::4869496098021901694::1769016967::0::1::::<>Node<><>0<>0<><>::
-MusicManager.cs::CSharpScript::1929326540926008587::1769016967::0::1::::<>Node<><>0<>0<><>::
-MusicToggleButton.cs::CSharpScript::73750750367365180::1769016967::0::1::::<>TextureButton<><>0<>0<><>::
-SfxManager.cs::CSharpScript::3354384795607161912::1769016967::0::1::::<>Node<><>0<>0<><>::
-SfxToggleButton.cs::CSharpScript::4111757590310132806::1769016967::0::1::::<>TextureButton<><>0<>0<><>::
-::res://scripts/Bullet/::1769016967
-ArrowBullet.cs::CSharpScript::7031514223570331404::1769533559::0::1::::<>Area2D<><>0<>0<><>::
-BulletBase.cs::CSharpScript::16472694489586522::1769617290::0::1::::<>Area2D<><>1<>0<><>::
-CannonBall.cs::CSharpScript::9137982183906863221::1769622339::0::1::::<>Area2D<><>0<>0<><>::
-MagicMissile.cs::CSharpScript::1276913168725520135::1769598894::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/Enemy/::1769621652
-EnemyBase.cs::CSharpScript::2131157713118821451::1769622120::0::1::::<>Area2D<><>1<>0<><>::
-OrcBoss.cs::CSharpScript::1903940490512834609::1769621763::0::1::::<>Area2D<><>0<>0<><>::
-RatEnemy.cs::CSharpScript::7856930810698396743::1769615359::0::1::::<>Area2D<><>0<>0<><>::
-SoldierEnemy.cs::CSharpScript::6283986584345230645::1769620001::0::1::::<>Area2D<><>0<>0<><>::
-TankEnemy.cs::CSharpScript::6827496463146450279::1769615412::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/Manager/::1769375175
-LevelFactory.cs::CSharpScript::85138923701397969::1769622500::0::1::::<><><>0<>0<><>::
-LevelSelectManager.cs::CSharpScript::1261153273331045132::1769534387::0::1::::<>Control<><>0<>0<><>::
-note.md::TextFile::-1::1768487328::0::1::::<><><>0<>0<><>::
-PathSpawner.cs::CSharpScript::6115622614466434808::1768487328::0::1::::<><><>0<>0<><>::
-SaveManager.cs::CSharpScript::8294113347639798944::1769502917::0::1::::<><><>0<>0<><>::
-WaveData.cs::CSharpScript::7447850323030298684::1769621864::0::1::::<><><>0<>0<><>::
-WaveManager.cs::CSharpScript::3460081820452083589::1769612697::0::1::::<>Node<><>0<>0<><>::
-WaveState.cs::CSharpScript::5943051089071074252::1768487328::0::1::::<><><>0<>0<><>::
-::res://scripts/Tower/::1769016967
-ArcherTower.cs::CSharpScript::2585068491528363126::1769619442::0::1::::<>Node2D<><>0<>0<><>::
-CannonTower.cs::CSharpScript::3224232323501120763::1769619492::0::1::::<>Node2D<><>0<>0<><>::
-MagicTower.cs::CSharpScript::4546939263370273771::1769619501::0::1::::<>Node2D<><>0<>0<><>::
-TowerBase.cs::CSharpScript::5318092902925544103::1769599086::0::1::::<>Node2D<><>1<>0<><>::
-TowerSlot.cs::CSharpScript::8737440411547173191::1769537368::0::1::::<>Node2D<><>0<>0<><>::
-::res://scripts/UI/::1769375175
-GameUI.cs::CSharpScript::8370763800964401064::1769622840::0::1::::<>Control<><>0<>0<><>::
-SceneButton.cs::CSharpScript::1717400563837899456::1769016967::0::1::::<>TextureButton<><>0<>0<><>::
-TitleScreen.cs::CSharpScript::3350857992342296128::1769016967::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/UI/Encyclopedia/::1769016967
-InfoListEntry.cs::CSharpScript::4673836730382594584::1769016967::0::1::::<>Button<><>0<>0<><>::
-InfoResource.cs::CSharpScript::6816789641076036324::1769016967::0::1::::<>Resource<><>0<>0<><>::
-InfoScreen.cs::CSharpScript::1052129220868147041::1769599713::0::1::::<>Control<><>0<>0<><>::
-::res://scripts/UI/Levels/::1769499673
-Level1.cs::CSharpScript::8854618528739149294::1769016967::0::1::::<>Node2D<><>0<>0<><>::
-Level2.cs::CSharpScript::4448862954418958418::1769499673::0::1::::<>Node2D<><>0<>0<><>::
-Level3.cs::CSharpScript::4535130431764254900::1769016967::0::1::::<>Node2D<><>0<>0<><>::
-Level4.cs::CSharpScript::8497694872097876148::1769016967::0::1::::<>Node2D<><>0<>0<><>::
-LevelBase.cs::CSharpScript::7808858879259808758::1769016967::0::1::::<>Node2D<><>0<>0<><>::
-::res://scripts/UI/NotificationText/::1769016967
-FloatingText.cs::CSharpScript::6607116513548615629::1769016967::0::1::::<>Marker2D<><>0<>0<><>::
-FloatingTextManager.cs::CSharpScript::5934211916772060253::1769536186::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/UI/Pause/::1769016967
-PauseMenu.cs::CSharpScript::6825295625641214005::1769016967::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/actors/::1769625076
+::res://scenes/actors/Animals/::1769625076
+Cow.tscn::PackedScene::1943175994317981429::1769625076::0::1::::<><><>0<>0<><>::uid://c1gku8qnrtall::::res://assets/sprites/Animals/Free Cow Sprites.png<>uid://fn4khbghek7s::::res://scripts/Cow.cs
+::res://scenes/actors/Bullet/::1769671323
+arrow_bullet.tscn::PackedScene::3386440768052546288::1769671323::0::1::::<><><>0<>0<><>::uid://c7gean2qxrxds::::res://scripts/Bullets/ArrowBullet.cs<>uid://c3aihr6si0rql::::res://assets/bullets/unnamed__1_-removebg-preview.png<>uid://cf2gf5loj2688::::res://scripts/Audios/BulletSfxComponent.cs<>uid://bur3lqg0d7in7::::res://assets/audios/effects/Arrow Impact 09.wav
+cannon_ball.tscn::PackedScene::3959411041206106336::1769671323::0::1::::<><><>0<>0<><>::uid://d3grh4uuqphof::::res://scripts/Bullets/CannonBall.cs<>uid://dv3m145s4cro6::::res://assets/bullets/49.png<>uid://cf2gf5loj2688::::res://scripts/Audios/BulletSfxComponent.cs<>uid://banuwpkfv1d56::::res://assets/audios/effects/cannon-shot-326182.wav
+magic_missile.tscn::PackedScene::1515741542452011988::1769671323::0::1::::<><><>0<>0<><>::uid://sgstq1e6w88b::::res://scripts/Bullets/MagicMissile.cs<>uid://dosloil0r2suy::::res://assets/bullets/51.png<>uid://cf2gf5loj2688::::res://scripts/Audios/BulletSfxComponent.cs<>uid://cc08wlkialb3n::::res://assets/audios/effects/spell.wav
+::res://scenes/actors/Bushes/::1769625076
+Bush_Green.tscn::PackedScene::1109670555196192534::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+Bush_Green_Berries.tscn::PackedScene::4194271571942628757::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+::res://scenes/actors/Enemys/::1769671327
+orc_boss.tscn::PackedScene::803237727872735401::1769671327::0::1::::<><><>0<>0<><>::uid://2ejvexw4o482::::res://scripts/Enemies/OrcBoss.cs<>uid://cqlk2cjvywpcy::::res://assets/sprites/Enemies/OrcBoss/orc3_walk_full.png<>uid://ntl14np1e000::::res://assets/sprites/Enemies/OrcBoss/orc3_death_full.png
+rat_enemy.tscn::PackedScene::1549972660969901401::1769671327::0::1::::<><><>0<>0<><>::uid://dj67rc63vd0b0::::res://scripts/Enemies/RatEnemy.cs<>uid://cgtxg5d40x6rj::::res://assets/sprites/Enemies/Mouse/D_Run.png<>uid://d17j324jo400c::::res://assets/sprites/Enemies/Mouse/S_Death.png<>uid://424jfkyax0y4::::res://assets/sprites/Enemies/Mouse/S_Run.png<>uid://b8j3gnltic5x0::::res://assets/sprites/Enemies/Mouse/U_Death.png<>uid://cua5kw4pjt1vw::::res://assets/sprites/Enemies/Mouse/D_Death.png<>uid://b6hcodupoj4sa::::res://assets/sprites/Enemies/Mouse/U_Run.png
+soldier_enemy.tscn::PackedScene::3963566318728954216::1769671327::0::1::::<><><>0<>0<><>::uid://cvsaluennbwoj::::res://scripts/Enemies/SoldierEnemy.cs<>uid://clafrtan2ubkq::::res://assets/sprites/Enemies/Horse/D_Run.png<>uid://c620pifulk2yi::::res://assets/sprites/Enemies/Horse/D_Death.png<>uid://cp7vxm7l0au88::::res://assets/sprites/Enemies/Horse/U_Run.png<>uid://cpdlau6mx6086::::res://assets/sprites/Enemies/Horse/U_Death.png<>uid://cxjg3n1xrim40::::res://assets/sprites/Enemies/Horse/S_Run.png<>uid://tuwmbifm30ey::::res://assets/sprites/Enemies/Horse/S_Death.png
+tank_enemy.tscn::PackedScene::659345542088022766::1769671327::0::1::::<><><>0<>0<><>::uid://c4jj4s3so7arf::::res://scripts/Enemies/TankEnemy.cs<>uid://b8ny7ft25t2cq::::res://assets/sprites/Enemies/Orc/D_Death.png<>uid://cpx63sif5ehbl::::res://assets/sprites/Enemies/Orc/U_Death.png<>uid://wryuq5t7bmpq::::res://assets/sprites/Enemies/Orc/S_Death.png<>uid://ddlp5mhm6c5o0::::res://assets/sprites/Enemies/Orc/D_Walk.png<>uid://lv57qn8iv52a::::res://assets/sprites/Enemies/Orc/U_Walk.png<>uid://bbfgnqhhller2::::res://assets/sprites/Enemies/Orc/S_Walk.png
+::res://scenes/actors/ForestPatches/::1769625076
+Forest_Patch_Column.tscn::PackedScene::2553199237569880843::1769625076::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn
+Forest_Patch_Row.tscn::PackedScene::715142992328529701::1769625076::0::1::::<><><>0<>0<><>::uid://b7w1kf61pucpp::::res://Scenes/Actors/Trees/TreeGreen01.tscn<>uid://cl4qo0iv2rv7m::::res://Scenes/Actors/Grass/GrassGreen01.tscn<>uid://ddwjrempthau6::::res://Scenes/Actors/Grass/GrassGreen02.tscn
+::res://scenes/actors/Grass/::1769625076
+GrassGreen01.tscn::PackedScene::5605783401704331256::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+GrassGreen02.tscn::PackedScene::7415821933352247951::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+GrassGreen03.tscn::PackedScene::4982116327823689117::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+::res://scenes/actors/Towers/::1769671332
+archer_tower.tscn::PackedScene::7535001643721400304::1769671332::0::1::::<><><>0<>0<><>::uid://bc3hx2vovvmy5::::res://scripts/Towers/ArcherTower.cs<>uid://boiogjq3y2f1q::::res://scenes/actors/Bullet/arrow_bullet.tscn<>uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
+cannon_tower.tscn::PackedScene::985508963322169235::1769671332::0::1::::<><><>0<>0<><>::uid://bl63vun5x2xct::::res://scripts/Towers/CannonTower.cs<>uid://bwn76ldt4qom7::::res://scenes/actors/Bullet/cannon_ball.tscn<>uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
+magic_tower.tscn::PackedScene::4535440244863718742::1769671332::0::1::::<><><>0<>0<><>::uid://b51topyau31gx::::res://scripts/Towers/MagicTower.cs<>uid://vuibojaepuam::::res://scenes/actors/Bullet/magic_missile.tscn<>uid://fv52lac6spmh::::res://assets/towers/towers.png<>uid://c7yfc1l3ow6we::::res://assets/sprites/Characters/characters.png
+TowerSlot2.tscn::PackedScene::6672693425643646259::1769625076::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png
+TowerSlot.tscn::PackedScene::4965682862671625029::1769671332::0::1::::<><><>0<>0<><>::uid://csfrdxe6oihvt::::res://assets/tilesets/world_tileset.png<>uid://dwqqmqjo6sgff::::res://scripts/Towers/TowerSlot.cs<>uid://dfmam147l76pg::::res://scenes/actors/Towers/archer_tower.tscn<>uid://obngocmdnf4n::::res://scenes/actors/Towers/cannon_tower.tscn<>uid://b5vabkfj0qfrq::::res://scenes/actors/Towers/magic_tower.tscn
+::res://scenes/actors/Trees/::1769625076
+TreeGreen01.tscn::PackedScene::4679476802158272037::1769625076::0::1::::<><><>0<>0<><>::uid://dqmlxslw5rc12::::res://assets/tilesets/props.png
+::res://scenes/levels/::1769671330
+level_1.tscn::PackedScene::8084334480006183560::1769671330::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://dyfijkflyc1kc::::res://scripts/UI/Levels/Level1.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://b58lfk8ugwd5x::::res://assets/audios/musics/Pixel 2.ogg<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://chqdjfbllast7::::res://assets/tilesets/Yellow_ruins1.png<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://bpkdbovcm0jcv::::res://scripts/Managers/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn
+level_2.tscn::PackedScene::6639106278267314708::1769671330::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b4ncegbmvuh5k::::res://scripts/UI/Levels/Level2.cs<>uid://b58lfk8ugwd5x::::res://assets/audios/musics/Pixel 2.ogg<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://53b3tpgd85jp::::res://assets/tilesets/Water.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://crdk23fnspaxi::::res://assets/tilesets/Tilled_Dirt.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://p2sd2m4vt7xa::::res://scenes/actors/Bushes/Bush_Green.tscn<>uid://b000bmiekktcv::::res://scenes/actors/Bushes/Bush_Green_Berries.tscn<>uid://kgokhq1sjo7f::::res://scenes/actors/ForestPatches/Forest_Patch_Row.tscn<>uid://bcm123damj1kh::::res://scenes/actors/ForestPatches/Forest_Patch_Column.tscn<>uid://2xj3bm8rkmf2::::res://scenes/actors/Animals/Cow.tscn<>uid://ucjt00xxpyih::::res://assets/tilesets/Wood Bridge.png<>uid://bhwegubd0gujb::::res://assets/tilesets/Brown-gray_ruins2.png<>uid://hu52la314kjk::::res://assets/tilesets/Brown-gray_ruins4.png<>uid://bej131co2f0jx::::res://assets/tilesets/Blue-gray_ruins3.png<>uid://bpkdbovcm0jcv::::res://scripts/Managers/WaveManager.cs<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
+level_3.tscn::PackedScene::6826440084160690494::1769671330::0::1::::<><><>0<>0<><>::uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://b5u362tvdo3u3::::res://scripts/UI/Levels/Level3.cs<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://d3o1tauyg3csk::::res://assets/audios/musics/Pixel 8.ogg<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://bpkdbovcm0jcv::::res://scripts/Managers/WaveManager.cs<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
+level_4.tscn::PackedScene::1729418566581159279::1769671330::0::1::::<><><>0<>0<><>::uid://dtcl17ywc3onc::::res://scripts/UI/Levels/Level4.cs<>uid://bnxmctfs0rgqi::::res://assets/tilesets/tileset1.png<>uid://siafepexbinv::::res://assets/audios/musics/Pixel 3.ogg<>uid://coghsd8rsce5e::::res://assets/tilesets/tileset.png<>uid://h177rphnd84e::::res://assets/tilesets/Cave_objects_source.png<>uid://ch2a8q3jh751i::::res://assets/tilesets/tilemap_packed.png<>uid://caf2cu3nfdle6::::res://assets/tilesets/freelavatileset-Sheet.png<>uid://chvrohg35ndil::::res://assets/tilesets/Objects_Cemetery.png<>uid://dqmlxslw5rc12::::res://assets/tilesets/props.png<>uid://bpkdbovcm0jcv::::res://scripts/Managers/WaveManager.cs<>uid://bwp8mgcd0q8sq::::res://scenes/actors/Enemys/soldier_enemy.tscn<>uid://jnnlbn3tqpjq::::res://scenes/actors/Enemys/tank_enemy.tscn<>uid://wc228x5pt2sb::::res://scenes/actors/Enemys/rat_enemy.tscn<>uid://lpdhcqfm2dc8::::res://scenes/actors/Enemys/orc_boss.tscn<>uid://cc0ocomr0ymt6::::res://scenes/actors/Towers/TowerSlot.tscn<>uid://diok8wj2aypk2::::res://scenes/ui/Components/game_ui.tscn<>uid://ct2gi2kuvbt2x::::res://scenes/ui/Components/PauseMenu.tscn<>uid://cqsturm6pltkv::::res://scripts/UI/NotificationText/FloatingTextManager.cs
+::res://scenes/ui/::1769671330
+InfoScreen.tscn::PackedScene::181536823928553734::1769625076::0::1::::<><><>0<>0<><>::uid://o8wodhpxgfh6::::res://scripts/UI/Encyclopedia/InfoScreen.cs<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://d1jtfmmsg38sa::::res://assets/sprites/Enemies/Mouse/Mouse.tres<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bjc76yg7ija8y::::res://assets/images/Open-Book-Ribbon-NV-GraphicsFairy-removebg-preview.png<>uid://bidcy5kareyb5::::res://assets/sprites/Enemies/Horse/Hourse.tres<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://cbtn5jdyfpaav::::res://assets/sprites/Enemies/Orc/Orc.tres<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cmiwl5yq6wctm::::res://assets/towers/ArcherTowerLV1.tres<>uid://deok40pyil5dg::::res://assets/sprites/Enemies/OrcBoss/orc_boss.tres<>uid://kotms3mq4m8::::res://assets/towers/ArcherTowerLV2.tres<>uid://cwo38656642vc::::res://assets/icons/cthulhu.png<>uid://ds1jgik1w2nw7::::res://assets/icons/castle-tower.png<>uid://cbc0j68v7akdu::::res://assets/towers/ArcherTowerLV3.tres<>uid://cnaili3vl57nl::::res://assets/towers/CannonTowerLV1.tres<>uid://nqtv8uhoomrq::::res://assets/towers/CannonTowerLV2.tres<>uid://c1oxo7qimfjqb::::res://assets/towers/CannonTowerLV3.tres<>uid://bfvdcvcsdkmsf::::res://assets/towers/MagicTowerLV1.tres<>uid://dvsynsirxtvcf::::res://assets/towers/MagicTowerLV2.tres<>uid://dlhw41wxcaeds::::res://assets/towers/MagicTowerLV3.tres<>uid://c4dsfhnyyduwx::::res://scenes/ui/Components/InfoListEntry.tscn
+select_screen.tscn::PackedScene::4860703671625425360::1769671330::0::1::::<><><>0<>0<><>::uid://r76al0epb34k::::res://scripts/Managers/LevelSelectManager.cs<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://dlc7mkixv1xm1::::res://assets/images/level1.png<>uid://d155i3a1plxb::::res://assets/images/Level2.png<>uid://bj2qhyw2tebt8::::res://assets/images/Level3.png<>uid://c4tiysgegg4e6::::res://assets/images/Level4.png<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png
+title_screen.tscn::PackedScene::3224897892399982647::1769671321::0::1::::<><><>0<>0<><>::uid://km276afe2vvy::::res://scenes/ui/Components/Button.tscn<>uid://bn0ge2wfu0uu7::::res://scripts/UI/TitleScreen.cs<>uid://bl2yb6gx5rwk8::::res://assets/ui/Texts/Text2.png<>uid://cuqnq30yovtrp::::res://scenes/ui/Components/Background_Cloud.tscn<>uid://chgqbuu42rf5r::::res://assets/images/b87b6eaa-a6a6-4de4-b29c-0e4b65ad15d9-removebg-preview.png<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://bu8nydlni5buc::::res://assets/audios/musics/Pixel 4.ogg<>uid://byt1bucr6vrnq::::res://scripts/Audios/SfxToggleButton.cs<>uid://bbywtxeui3tg::::res://scripts/Audios/MusicToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
+::res://scenes/ui/Components/::1769671321
+Background_Cloud.tscn::PackedScene::6210467688204169829::1769625076::0::1::::<><><>0<>0<><>::uid://l6of28682b4h::::res://assets/ui/Backgrounds/1.png<>uid://d1sdal462g7s8::::res://scenes/ui/Shaders/title_screen.gdshader<>uid://c7wxxw8grqbp7::::res://assets/ui/Backgrounds/2.png<>uid://5rbxuktc3vtv::::res://assets/ui/Backgrounds/4.png
+Button.tscn::PackedScene::728359102096155502::1769671321::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audios/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
+FloatingText.tscn::PackedScene::7023023675319922219::1769625076::0::1::::<><><>0<>0<><>::uid://c1esijxcdtpcf::::res://scripts/UI/NotificationText/FloatingText.cs
+game_over_ui.tscn::PackedScene::7959863735867120054::1769625076::0::1::::<><><>0<>0<><>::uid://cfm6r1hfkyylq::::res://Scripts/GameOverUI.cs
+game_ui.tscn::PackedScene::7750341360511585675::1769625076::0::1::::<><><>0<>0<><>::uid://dri4iy48ed8si::::res://scripts/UI/GameUI.cs<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://kfsgsa0wjidx::::res://assets/icons/Icons.png
+InfoListEntry.tscn::PackedScene::6815613189859213867::1769671321::0::1::::<><><>0<>0<><>::uid://b7ubn40x1sace::::res://scripts/UI/Encyclopedia/InfoListEntry.cs<>uid://cbm25ia0dkra1::::res://scripts/Audios/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
+MiniButton.tscn::PackedScene::7953784467370618936::1769671321::0::1::::<><><>0<>0<><>::uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://cbm25ia0dkra1::::res://scripts/Audios/ButtonSfxComponent.cs<>uid://bt20nvawofyys::::res://assets/audios/effects/UIClick_UI 04_Eric Berzins_SFUI.wav<>uid://dt6fk3njrff4b::::res://assets/audios/effects/UIClick_UI 01_Eric Berzins_SFUI.wav
+PauseMenu.tscn::PackedScene::6162547618691601105::1769671321::0::1::::<><><>0<>0<><>::uid://c4ihve05qg510::::res://scripts/UI/Pause/PauseMenu.cs<>uid://i73dkj685vdb::::res://assets/ui/Win_loose.png<>uid://d26wkml8hw2jl::::res://assets/ui/Buttons/Buttons.png<>uid://dlk4wylukw76k::::res://scenes/ui/Components/MiniButton.tscn<>uid://yp6lo3y0f1qa::::res://scripts/UI/SceneButton.cs<>uid://byt1bucr6vrnq::::res://scripts/Audios/SfxToggleButton.cs<>uid://cxtenff7bgjvm::::res://assets/ui/Buttons/SoundEffectOn.tres<>uid://6uspuqjekwrp::::res://assets/ui/Buttons/SoundEffectOff.tres<>uid://bbywtxeui3tg::::res://scripts/Audios/MusicToggleButton.cs<>uid://boogty18fbavc::::res://assets/ui/Buttons/MusicOn.tres<>uid://comlnntlak34b::::res://assets/ui/Buttons/MusicOff.tres
+::res://scenes/ui/Shaders/::1769625076
+title_screen.gdshader::Shader::9021513560220552837::1769625076::0::1::::<><><>0<>0<><>::
+::res://scripts/::1769671332
+Cow.cs::CSharpScript::379560149212607626::1769625076::0::1::::<>Node2D<><>0<>0<><>::
+Global.cs::CSharpScript::-1::1769625077::0::1::::<>Node<><>0<>0<><>::
+SceneHistory.cs::CSharpScript::6585622029216787604::1769625077::0::1::::<>Node<><>0<>0<><>::
+::res://scripts/Audios/::1769625076
+BulletSfxComponent.cs::CSharpScript::5179898609204675303::1769625076::0::1::::<><><>0<>0<><>::
+ButtonSfxComponent.cs::CSharpScript::4869496098021901694::1769625076::0::1::::<><><>0<>0<><>::
+MusicManager.cs::CSharpScript::1929326540926008587::1769625076::0::1::::<><><>0<>0<><>::
+MusicToggleButton.cs::CSharpScript::73750750367365180::1769625076::0::1::::<><><>0<>0<><>::
+SfxManager.cs::CSharpScript::3354384795607161912::1769625076::0::1::::<><><>0<>0<><>::
+SfxToggleButton.cs::CSharpScript::4111757590310132806::1769625076::0::1::::<><><>0<>0<><>::
+::res://scripts/Bullets/::1769625076
+ArrowBullet.cs::CSharpScript::7031514223570331404::1769625076::0::1::::<><><>0<>0<><>::
+BulletBase.cs::CSharpScript::16472694489586522::1769625076::0::1::::<><><>0<>0<><>::
+CannonBall.cs::CSharpScript::9137982183906863221::1769625076::0::1::::<><><>0<>0<><>::
+MagicMissile.cs::CSharpScript::1276913168725520135::1769625076::0::1::::<><><>0<>0<><>::
+::res://scripts/Enemies/::1769625077
+EnemyBase.cs::CSharpScript::2131157713118821451::1769625077::0::1::::<><><>0<>0<><>::
+OrcBoss.cs::CSharpScript::1903940490512834609::1769625077::0::1::::<><><>0<>0<><>::
+RatEnemy.cs::CSharpScript::7856930810698396743::1769625077::0::1::::<><><>0<>0<><>::
+SoldierEnemy.cs::CSharpScript::6283986584345230645::1769625077::0::1::::<><><>0<>0<><>::
+TankEnemy.cs::CSharpScript::6827496463146450279::1769625077::0::1::::<><><>0<>0<><>::
+::res://scripts/Managers/::1769625077
+LevelFactory.cs::CSharpScript::85138923701397969::1769625077::0::1::::<><><>0<>0<><>::
+LevelSelectManager.cs::CSharpScript::1261153273331045132::1769625077::0::1::::<><><>0<>0<><>::
+note.md::TextFile::-1::1769625077::0::1::::<><><>0<>0<><>::
+PathSpawner.cs::CSharpScript::6115622614466434808::1769625077::0::1::::<><><>0<>0<><>::
+SaveManager.cs::CSharpScript::8294113347639798944::1769625077::0::1::::<><><>0<>0<><>::
+WaveData.cs::CSharpScript::7447850323030298684::1769625077::0::1::::<><><>0<>0<><>::
+WaveManager.cs::CSharpScript::3460081820452083589::1769625077::0::1::::<><><>0<>0<><>::
+WaveState.cs::CSharpScript::5943051089071074252::1769625077::0::1::::<><><>0<>0<><>::
+::res://scripts/Towers/::1769625077
+ArcherTower.cs::CSharpScript::2585068491528363126::1769625077::0::1::::<><><>0<>0<><>::
+CannonTower.cs::CSharpScript::3224232323501120763::1769625077::0::1::::<><><>0<>0<><>::
+MagicTower.cs::CSharpScript::4546939263370273771::1769625077::0::1::::<><><>0<>0<><>::
+TowerBase.cs::CSharpScript::5318092902925544103::1769625077::0::1::::<><><>0<>0<><>::
+TowerSlot.cs::CSharpScript::8737440411547173191::1769625077::0::1::::<><><>0<>0<><>::
+::res://scripts/UI/::1769625077
+GameUI.cs::CSharpScript::8370763800964401064::1769625077::0::1::::<>Control<><>0<>0<><>::
+SceneButton.cs::CSharpScript::1717400563837899456::1769625077::0::1::::<>TextureButton<><>0<>0<><>::
+TitleScreen.cs::CSharpScript::3350857992342296128::1769625077::0::1::::<>Control<><>0<>0<><>::
+::res://scripts/UI/Encyclopedia/::1769625077
+InfoListEntry.cs::CSharpScript::4673836730382594584::1769625077::0::1::::<>Button<><>0<>0<><>::
+InfoResource.cs::CSharpScript::6816789641076036324::1769625077::0::1::::<>Resource<><>0<>0<><>::
+InfoScreen.cs::CSharpScript::1052129220868147041::1769625077::0::1::::<>Control<><>0<>0<><>::
+::res://scripts/UI/Levels/::1769625077
+Level1.cs::CSharpScript::8854618528739149294::1769625077::0::1::::<>Node2D<><>0<>0<><>::
+Level2.cs::CSharpScript::4448862954418958418::1769625077::0::1::::<>Node2D<><>0<>0<><>::
+Level3.cs::CSharpScript::4535130431764254900::1769625077::0::1::::<>Node2D<><>0<>0<><>::
+Level4.cs::CSharpScript::8497694872097876148::1769625077::0::1::::<>Node2D<><>0<>0<><>::
+LevelBase.cs::CSharpScript::7808858879259808758::1769625077::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/UI/NotificationText/::1769625077
+FloatingText.cs::CSharpScript::6607116513548615629::1769625077::0::1::::<>Marker2D<><>0<>0<><>::
+FloatingTextManager.cs::CSharpScript::5934211916772060253::1769625077::0::1::::<>Node<><>0<>0<><>::
+::res://scripts/UI/Pause/::1769625077
+PauseMenu.cs::CSharpScript::6825295625641214005::1769625077::0::1::::<>Control<><>0<>0<><>::
