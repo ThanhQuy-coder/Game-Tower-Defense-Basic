@@ -42,6 +42,16 @@ public partial class WaveManager : Node
 
 		_spawner = new PathSpawner(EnemyPaths, EnemyPrefabs);
 
+		// THÊM DÒNG NÀY ĐỂ DEBUG
+		if (_wavesConfig == null || _wavesConfig.Count == 0)
+		{
+			GD.PrintErr("CRITICAL: LevelFactory không tìm thấy cấu hình wave cho Level " + CurrentLevel);
+		}
+		else
+		{
+			GD.Print("SUCCESS: Da nap " + _wavesConfig.Count + " waves.");
+		}
+
 		// Reset lại chỉ số Global (Vàng, Máu) khi bắt đầu màn chơi mới.
 		if (Global.Instance != null)
 		{
