@@ -8,7 +8,13 @@ Game Tower Defense Basic là một tựa game có lối chơi phòng thủ tháp
 
 ## 🚀 Cài đặt & Chạy thử
 
-> Đang cập nhật
+### Nếu bạn muốn chơi thử
+
+Vui lòng truy cập vào đường liên kết sau [Bạn đã bị con chuột](https://thanh-quy.itch.io/bn-b-con-chut)
+
+### Để có thể sử dụng project
+
+Bạn hãy phải cần cài đặt **Godot 4.5** và VS Code và chỉ cần clone dự án. Mở Godot để build.
 
 ## 🎮 Gameplay
 
@@ -27,20 +33,65 @@ Game Tower Defense (thủ thành cơ bản) thuộc lĩnh vực trò chơi chi�
 
 ## 🛠️ Cấu trúc dự án
 
-> Đang cập nhật
+Cấu trúc dự án chính như sau:
 
-## 📊 Thiết kế hệ thống
-
-> Đang cập nhật
+```
+C:.
+├───assets
+│   ├───audios
+│   │   ├───effects
+│   │   └───musics
+│   ├───bullets
+│   ├───icons
+│   ├───images
+│   ├───sprites
+│   │   ├───Animals
+│   │   ├───Characters
+│   │   └───Enemies
+│   │       ├───Horse
+│   │       ├───Mouse
+│   │       ├───Orc
+│   │       ├───OrcBoss
+│   │       └───Others
+│   ├───tilesets
+│   ├───towers
+│   └───ui
+│       ├───Backgrounds
+│       ├───Buttons
+│       └───Texts
+├───scenes
+│   ├───actors
+│   │   ├───Animals
+│   │   ├───Bullet
+│   │   ├───Bushes
+│   │   ├───Enemies
+│   │   ├───ForestPatches
+│   │   ├───Grass
+│   │   ├───Towers
+│   │   └───Trees
+│   ├───levels
+│   └───ui
+│       ├───Components
+│       └───Shaders
+└───scripts
+    ├───Audios
+    ├───Bullets
+    ├───Enemies
+    ├───Managers
+    ├───Towers
+    └───UI
+        ├───Encyclopedias
+        ├───Levels
+        ├───NotificationText
+        └───Pause
+```
 
 ## 📅 Tiến độ & Nhiệm vụ
 
-> Đang cập nhật
+Hoàn thành phiên bản v1.0.0.0
 
 ## 🤝 Đóng góp
 
 1. Trần Nguyễn Như Nhật
 2. Huỳnh Thanh Quý
 3. Nguyễn Hoàng Thanh Quý
-
-> Đang cập nhật
